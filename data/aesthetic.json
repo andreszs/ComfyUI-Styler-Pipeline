@@ -1,0 +1,247 @@
+[
+    {
+        "name": "Art Deco",
+        "prompt": "art deco aesthetic, geometric elegance, metallic accents",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Art Nouveau",
+        "prompt": "art nouveau aesthetic, organic flowing forms, ornamental lines",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Armored Futurism",
+        "prompt": "armored futurist aesthetic, reinforced silhouette design, industrial materials, precision mechanical detailing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Artistic Whimsy",
+        "prompt": "whimsical artistic aesthetic, playful details, soft dreamy accents",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Baroque Opulence",
+        "prompt": "baroque aesthetic, ornate detailing, rich decorative tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bauhaus",
+        "prompt": "bauhaus aesthetic, functional geometry, minimal modernist forms",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bohemian",
+        "prompt": "bohemian aesthetic, eclectic patterns, warm earthy tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Concept Art",
+        "prompt": "concept art aesthetic, exploratory design, cinematic illustration",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Cosmic",
+        "prompt": "cosmic aesthetic, ethereal glow, surreal atmospheric tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Cyberpunk",
+        "prompt": "cyberpunk aesthetic, neon glow, synthetic futuristic tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Cyberpunk Noir",
+        "prompt": "cyberpunk noir aesthetic, dark neon tones, moody futuristic atmosphere",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Dark Fantasy",
+        "prompt": "dark fantasy aesthetic, ominous mood, mythic shadowed visuals",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Digital Painting",
+        "prompt": "digital painting aesthetic, painterly brushwork, detailed rendering",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Editorial Fashion",
+        "prompt": "editorial fashion aesthetic, high-concept styling, magazine photography look",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Enchanted Forest",
+        "prompt": "enchanted forest aesthetic, magical glow, lush mystical woods",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Futuristic Chic",
+        "prompt": "futuristic chic aesthetic, sleek surfaces, luminous clean accents",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Gothic",
+        "prompt": "gothic aesthetic, dark ornate architecture, dramatic shadows",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Grimdark",
+        "prompt": "grimdark aesthetic, bleak oppressive atmosphere, harsh realism",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Hard Sci-Fi Spaceship",
+        "prompt": "hard sci-fi spaceship aesthetic, clean futuristic starship design language, functional hull segmentation, engineering-first structural forms",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Illustrated Storybook",
+        "prompt": "storybook illustration aesthetic, narrative visuals, hand-crafted charm",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Industrial Chic",
+        "prompt": "industrial aesthetic, raw materials, metallic urban environment",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Low Poly",
+        "prompt": "low poly aesthetic, geometric simplification, faceted surfaces",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Mecha Core",
+        "prompt": "mecha aesthetic, armored plating, hard-surface paneling, exposed mechanical joints",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Minimalist",
+        "prompt": "minimalist aesthetic, clean lines, restrained visual elements",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Mystical",
+        "prompt": "mystical aesthetic, ethereal atmosphere, soft foggy tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Pastel",
+        "prompt": "pastel aesthetic, soft delicate colors, gentle smooth palette",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Photoreal Editorial",
+        "prompt": "photoreal editorial aesthetic, controlled realism, polished photographic style",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Renaissance",
+        "prompt": "renaissance aesthetic, classical composition, warm rich tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Retro Futurism",
+        "prompt": "retro-futuristic aesthetic, vintage sci-fi tones, bold colors",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Retrowave Cinematic",
+        "prompt": "retrowave cinematic aesthetic, atmospheric haze, saturated accent lighting, moody nostalgic contrast",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Retrowave Classic",
+        "prompt": "retrowave aesthetic, vintage electronic mood, vivid gradient palette, luminous retro atmosphere",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Retrowave Minimal",
+        "prompt": "retrowave minimalist aesthetic, simplified retro-futurist forms, controlled color blocking, clean ambient glow",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Romantic Elegance",
+        "prompt": "romantic elegant aesthetic, graceful composition, soft refined details, timeless beauty",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Robotics Industrial",
+        "prompt": "robotic industrial aesthetic, functional engineering language, articulated components, utilitarian mechanical forms",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Rustic",
+        "prompt": "rustic aesthetic, natural textures, rural handcrafted ambiance",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sci-Fi",
+        "prompt": "sci-fi aesthetic, futuristic details, subtle technological glow",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Space Opera Spaceship",
+        "prompt": "space opera spaceship aesthetic, retro space opera influence, sleek federation-style starship forms, streamlined hull geometry",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Surreal Fantasy",
+        "prompt": "surreal fantasy aesthetic, imaginative elements, dreamlike visuals",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Synthwave Chrome",
+        "prompt": "synthwave chrome aesthetic, glossy reflective surfaces, saturated magenta cyan highlights, clean retro-futuristic finish",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Synthwave Classic",
+        "prompt": "synthwave aesthetic, magenta and cyan palette, retro-digital glow, nostalgic 80s energy",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Synthwave Noir",
+        "prompt": "synthwave noir aesthetic, deep shadows, electric edge highlights, moody retro-futuristic contrast",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Synthwave Pastel",
+        "prompt": "synthwave pastel aesthetic, soft pink blue palette, dreamy glow, low-contrast retro neon tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Synthwave Sunset Gradient",
+        "prompt": "synthwave sunset aesthetic, orange to pink gradient wash, warm neon haze, retro-futurist atmosphere",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Tropical",
+        "prompt": "tropical aesthetic, vibrant palette, lush warm environment",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Urban",
+        "prompt": "urban aesthetic, modern city atmosphere, contemporary structures",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Victorian",
+        "prompt": "victorian aesthetic, ornate architecture, refined historical tone",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Vintage Elegance",
+        "prompt": "vintage elegance aesthetic, soft muted tones, classic refined charm",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Watercolor Dreams",
+        "prompt": "watercolor aesthetic, soft blending, dreamy light palette",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Zen",
+        "prompt": "zen aesthetic, calming minimalism, soft natural balance",
+        "negative_prompt": ""
+    }
+]

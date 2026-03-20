@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Cathedral Interior",
+        "prompt": "gothic cathedral interior, towering arches, stained glass light, solemn atmosphere",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Dark Altar",
+        "prompt": "dark gothic altar, candles and ritual symbols, shadowy ambience",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Gothic Architecture",
+        "prompt": "gothic architecture style, pointed arches, ornate stone details",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Gothic Cemetery",
+        "prompt": "gothic cemetery setting, ancient tombstones, misty night atmosphere",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Gothic Corridor",
+        "prompt": "gothic stone corridor, narrow passageways, dim torchlight",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Gothic Crypt",
+        "prompt": "gothic crypt environment, carved stone tombs, flickering candlelight",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Gothic Library",
+        "prompt": "gothic library interior, towering bookshelves, candlelit study atmosphere",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Gothic Ritual",
+        "prompt": "gothic ritual scene, occult symbols, ceremonial candles, dark ambience",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Gothic Ruins",
+        "prompt": "gothic ruins, crumbling stone arches, overgrown vegetation, somber mood",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Gothic Throne Room",
+        "prompt": "gothic throne room, imposing stone throne, dramatic shadows",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Moonlit Gothic Exterior",
+        "prompt": "moonlit gothic exterior, cold stone walls, dramatic night lighting",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Occult Chamber",
+        "prompt": "occult gothic chamber, arcane markings, low candlelight, mysterious atmosphere",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sacred Gothic Hall",
+        "prompt": "sacred gothic hall, vast vaulted ceilings, reverent silence",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Vampiric Gothic",
+        "prompt": "vampiric gothic atmosphere, dark elegance, crimson accents, nocturnal mood",
+        "negative_prompt": ""
+    }
+]

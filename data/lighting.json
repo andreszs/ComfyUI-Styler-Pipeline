@@ -1,0 +1,427 @@
+[
+  {
+    "name": "Ambient Enveloping",
+    "prompt": "wraparound ambient lighting illuminating subject, soft omnidirectional light on skin and clothing, minimal shadow depth on character, enveloping illumination",
+    "negative_prompt": "hard directional shadows on character"
+  },
+  {
+    "name": "Backlit Rim Glow",
+    "prompt": "backlit rim lighting on subject, strong edge highlights along silhouette, subtle outline glow, dramatic separation from background",
+    "negative_prompt": "front lighting on character, no rim, halo ring, head halo, angel halo, glowing circle behind head"
+  },
+  {
+    "name": "Backlit Silhouette",
+    "prompt": "backlit silhouette lighting on subject, strong edge definition from behind character, rim light on hair and body outline, dramatic outline glow",
+    "negative_prompt": "front lighting on character, no separation"
+  },
+  {
+    "name": "Beauty Wrap",
+    "prompt": "beauty lighting wrap on subject, soft flattering illumination on face and skin from multiple angles, glamour aesthetic on character",
+    "negative_prompt": "harsh single-source light on character"
+  },
+  {
+    "name": "Bioluminescent Organic",
+    "prompt": "bioluminescent lighting illuminating subject, organic blue-green glow on skin and clothing, natural phosphorescence reflecting on character",
+    "negative_prompt": "electric lighting on character, warm tones"
+  },
+  {
+    "name": "Blue Hour Twilight",
+    "prompt": "blue hour lighting on subject, deep blue twilight illuminating character skin, cool ethereal glow on face and body",
+    "negative_prompt": "bright daylight on character, warm tones"
+  },
+  {
+    "name": "Bounced Indirect",
+    "prompt": "bounced light on subject, indirect illumination reflecting onto character, natural soft spread on skin",
+    "negative_prompt": "direct spotlight on character"
+  },
+  {
+    "name": "Butterfly Glamour",
+    "prompt": "butterfly lighting on subject face, centered front-high key light on character, symmetrical nose shadow, glamour illumination",
+    "negative_prompt": "side lighting on character, asymmetric shadows"
+  },
+  {
+    "name": "Candlelight Intimate",
+    "prompt": "candlelight illuminating subject, warm flickering glow on character skin, intimate low-level light on face and body, organic shadows",
+    "negative_prompt": "electric lighting on character, bright illumination"
+  },
+  {
+    "name": "Chiaroscuro Drama",
+    "prompt": "dramatic chiaroscuro lighting on subject, extreme light-dark contrast on character face and body, sculptural shadows on skin",
+    "negative_prompt": "flat even lighting on character"
+  },
+  {
+    "name": "Colored Gel Theater",
+    "prompt": "colored gel lighting on subject, saturated theatrical color filters illuminating character skin, dramatic hue on face and body",
+    "negative_prompt": "neutral white light on character"
+  },
+  {
+    "name": "Cool Temperature",
+    "prompt": "cool color temperature lighting on subject, blue-tinted illumination on character skin, 5500K-7000K on face and body, moonlight aesthetic",
+    "negative_prompt": "warm golden light on character"
+  },
+  {
+    "name": "Dappled Leaf Pattern",
+    "prompt": "dappled sunlight on subject, light through leaves creating patterns on character skin, broken shadow patterns on face and body",
+    "negative_prompt": "uniform lighting on character, solid shadows"
+  },
+  {
+    "name": "Dawn Fresh Start",
+    "prompt": "dawn lighting on subject, early morning glow on character skin, cool to warm transition on face and body",
+    "negative_prompt": "evening light on character, full day"
+  },
+  {
+    "name": "Deep Shadows",
+    "prompt": "deep shadows on subject, rich dark tones on character face, strong shadow density on skin, dramatic depth",
+    "negative_prompt": "shallow thin shadows on character, high fill"
+  },
+  {
+    "name": "Direct Sunlight Hard",
+    "prompt": "direct sunlight on subject, hard unmodified sun rays on character skin, sharp shadows on face and body",
+    "negative_prompt": "diffused light on character, overcast"
+  },
+  {
+    "name": "Dual Source Layered",
+    "prompt": "dual light sources on subject, controlled two-source setup illuminating character, balanced secondary illumination on skin",
+    "negative_prompt": "single source on character, flat lighting"
+  },
+  {
+    "name": "Dusk Evening Fade",
+    "prompt": "dusk lighting on subject, evening twilight on character skin, warm to cool transition on face and body",
+    "negative_prompt": "morning light on character, full day"
+  },
+  {
+    "name": "Film Noir Shadow",
+    "prompt": "film noir lighting on subject, hard dramatic shadows on character face, venetian blind patterns on skin, high contrast",
+    "negative_prompt": "soft diffused light on character, color"
+  },
+  {
+    "name": "Firelight Dancing",
+    "prompt": "firelight illuminating subject, warm dancing orange-red glow on character skin, flickering shadows on face and body",
+    "negative_prompt": "steady electric light on character"
+  },
+  {
+    "name": "Fog Filtered Ethereal",
+    "prompt": "fog filtered lighting on subject, atmospheric light scattering on character skin, softened highlights on face and body",
+    "negative_prompt": "crisp clear light on character"
+  },
+  {
+    "name": "Gobo Pattern Projection",
+    "prompt": "gobo pattern lighting on subject, projected shape shadows on character skin, textured light design on face and body",
+    "negative_prompt": "clean even light on character"
+  },
+  {
+    "name": "Golden Hour Magic",
+    "prompt": "golden hour natural light on subject, warm low-angle sun on character skin, long soft shadows on face and body, magical quality",
+    "negative_prompt": "midday harsh light on character, cool tones"
+  },
+  {
+    "name": "Hair Light Rim",
+    "prompt": "hair light rim on subject, dedicated top-back light on character hair, luminous edge detail on head",
+    "negative_prompt": "flat lighting on character, no rim"
+  },
+  {
+    "name": "Hard Frontal Key",
+    "prompt": "hard frontal key light on subject, sharp shadows on character skin, strong contrast on face, direct illumination",
+    "negative_prompt": "soft diffused light on character"
+  },
+  {
+    "name": "Hard Rim Edge",
+    "prompt": "hard rim light on subject, sharp edge highlights on character silhouette, strong separation, defined outline",
+    "negative_prompt": "soft blended edges on character"
+  },
+  {
+    "name": "Harsh Unforgiving",
+    "prompt": "harsh lighting on subject, hard sharp-edged shadows on character skin, unforgiving illumination on face and body",
+    "negative_prompt": "soft gentle light on character"
+  },
+  {
+    "name": "High Contrast Drama",
+    "prompt": "high contrast lighting on subject, deep shadows on character face, strong highlights on skin, dramatic tonal separation",
+    "negative_prompt": "even flat illumination on character"
+  },
+  {
+    "name": "Kicker Accent",
+    "prompt": "kicker light on subject, three-quarter back accent light on character, edge separation on skin from background",
+    "negative_prompt": "front key only on character"
+  },
+  {
+    "name": "LED Strip Accent",
+    "prompt": "LED strip accent lighting on subject, linear colored glow reflecting on character skin, modern tech aesthetic on face and body",
+    "negative_prompt": "soft diffused light on character, natural sources"
+  },
+  {
+    "name": "LED Underglow",
+    "prompt": "LED underglow lighting on subject, vibrant bottom-lit illumination on character from below, colored uplight on face and body",
+    "negative_prompt": "top lighting on character, natural sources"
+  },
+  {
+    "name": "Lens Flare Optical",
+    "prompt": "optical flare lighting effect, optical artifacts from bright source, streaks and halos in scene",
+    "negative_prompt": "clean optical rendering"
+  },
+  {
+    "name": "Lightning Flash",
+    "prompt": "lightning illumination on subject, dramatic electric flash on character skin, brief intense light on face and body",
+    "negative_prompt": "steady continuous light on character"
+  },
+  {
+    "name": "Loop Portrait Natural",
+    "prompt": "loop lighting on subject face, slight side angle key on character, small nose shadow loop, natural portrait feel",
+    "negative_prompt": "extreme side lighting on character"
+  },
+  {
+    "name": "Low Contrast Soft",
+    "prompt": "low contrast lighting on subject, compressed tonal range on character skin, gentle shadow transitions on face and body",
+    "negative_prompt": "high contrast on character, deep shadows"
+  },
+  {
+    "name": "Midday Harsh",
+    "prompt": "midday sunlight on subject, overhead harsh sun on character, short deep shadows on face and body",
+    "negative_prompt": "soft golden light on character"
+  },
+  {
+    "name": "Midnight Deep Night",
+    "prompt": "midnight lighting on subject, deep night illumination on character skin, minimal ambient light on face and body",
+    "negative_prompt": "daylight on character, bright illumination"
+  },
+  {
+    "name": "Mixed Temperature",
+    "prompt": "mixed color temperature lighting on subject, warm and cool sources combined on character skin, color contrast illumination on face and body",
+    "negative_prompt": "uniform color temperature on character"
+  },
+  {
+    "name": "Moonlight Silver",
+    "prompt": "natural moonlight on subject, cool silvery illumination on character skin, low intensity on face and body",
+    "negative_prompt": "warm sunlight on character, bright daylight"
+  },
+  {
+    "name": "Multi-Source Complex",
+    "prompt": "multiple light sources on subject, complex multi-directional illumination on character, overlapping colored lights on skin",
+    "negative_prompt": "simple single-source lighting on character"
+  },
+  {
+    "name": "Neon Amber Romantic",
+    "prompt": "yellow-orange neon tubes as main light illuminating subject, visible glowing orange neon tubing casting warm peachy-orange glow on character skin and clothing, golden-orange electric light reflecting on face and body, honeyed neon reflections on skin surface, warm orange-tinted illumination on character, apricot light spill coloring the subject",
+    "negative_prompt": "magenta on character, purple on skin, violet, pink, blue, cyan, cool tones, white light on subject, green, daylight, hot beverage, coffee, tea, drinks, siren, beacon, rotating light, emergency light, light fixture in foreground, handheld light, flashlight, lamp prop, amber stone, amber gemstone, resin, fossil resin, gemstone, jewel, crystal, rock, pebble, stone, talisman, amulet"
+  },
+  {
+    "name": "Neon Blue Electric",
+    "prompt": "electric blue neon tubes as main light illuminating subject, visible bright cyan neon tubing casting crisp azure glow on character skin and clothing, 480nm ice-blue electric light reflecting on face and body, sapphire neon reflections on skin surface, modern tech blue-tinted illumination on character, cobalt light spill coloring the subject",
+    "negative_prompt": "magenta on character, purple on skin, violet, pink, red, orange, yellow, warm tones, white light on subject, daylight, siren, beacon, rotating light, emergency light, light fixture in foreground, handheld light, flashlight, lamp prop, gemstone, crystal, jewel, rock"
+  },
+  {
+    "name": "Neon Cyberpunk Multi",
+    "prompt": "multi-color cyberpunk neon tubes as main light illuminating subject, visible cyan AND magenta AND yellow neon tubing casting mixed colored glow on character skin, electric blue hot-pink warm yellow-orange lights reflecting on face and body, tri-color illumination on character, saturated RGB neon colors on skin surface, overlapping colored light spill on subject",
+    "negative_prompt": "single color only on character, monochrome, natural daylight, muted tones, purple-only, soft diffusion, siren, beacon, rotating light, emergency light, light fixture in foreground, handheld light, flashlight, lamp prop, amber stone, amber gemstone, resin, fossil resin, gemstone, jewel, crystal, rock, stone"
+  },
+  {
+    "name": "Neon Green Toxic",
+    "prompt": "toxic lime-green neon tubes as main light illuminating subject, visible bright chartreuse neon tubing casting vibrant green glow on character skin and clothing, 565nm grass-green electric light reflecting on face and body, radioactive kelly-green neon reflections on skin surface, toxic clinical green-tinted illumination on character, sharp acid-green light spill coloring the subject",
+    "negative_prompt": "magenta on character, purple on skin, violet, pink, blue, cyan, teal, warm tones, yellow-green, olive, white light on subject, daylight, siren, beacon, rotating light, emergency light, light fixture in foreground, handheld light, flashlight, lamp prop, gemstone, crystal, jewel, rock"
+  },
+  {
+    "name": "Neon Magenta Electric",
+    "prompt": "electric magenta neon tubes as main light illuminating subject, visible bright magenta neon tubing casting intense fuchsia glow on character skin and clothing, shocking-magenta electric light reflecting on face and body, vibrant cerise neon reflections on skin surface, bold magenta-tinted illumination on character, saturated magenta light spill coloring the subject",
+    "negative_prompt": "purple on character, violet on skin, blue, cyan, orange, red, muted pink, pastel tones, white light on subject, daylight, hot beverage, coffee, tea, drinks, cups, siren, beacon, rotating light, emergency light, light fixture in foreground, handheld light, flashlight, lamp prop, gemstone, crystal, jewel, rock"
+  },
+  {
+    "name": "Neon Purple Dream",
+    "prompt": "deep purple neon tubes as main light illuminating subject, visible rich violet neon tubing casting amethyst-purple glow on character skin and clothing, electric indigo light reflecting on face and body, dreamy grape-colored neon reflections on skin surface, surreal nocturnal purple-tinted illumination on character, plum light spill coloring the subject",
+    "negative_prompt": "pink on character, magenta on skin, fuchsia, blue, cyan, warm tones, orange, white light on subject, daylight, siren, beacon, rotating light, emergency light, light fixture in foreground, handheld light, flashlight, lamp prop, gemstone, crystal, jewel, rock"
+  },
+  {
+    "name": "Neon Red Danger",
+    "prompt": "deep crimson neon tubes as main light illuminating subject, visible bright red neon tubing casting saturated crimson-scarlet glow on character skin and clothing, intense red electric light reflecting on face and body, strong red neon rim highlights and specular reflections on skin/hair, cinematic red-tinted illumination on character, bold red light spill coloring the subject",
+    "negative_prompt": "magenta on character, purple on skin, violet, pink, blue, cyan, orange, yellow, white light on subject, daylight, siren, beacon, alarm light, rotating light, emergency light, police light, ambulance light, warning sign, hazard symbol, exclamation mark sign, strobe, flashing light fixture, signal lamp, red dome light, light fixture in foreground, handheld light, flashlight, lamp prop, gemstone, crystal, jewel, rock"
+  },
+  {
+    "name": "Neon Sign Urban",
+    "prompt": "multi-color neon signs as main light illuminating subject, visible multi-color neon tubing casting varied-color glow on character skin, mixed red blue yellow green neon lights reflecting on face and body, classic retro neon colors on skin surface, multi-colored illumination on character, colorful light spill on subject",
+    "negative_prompt": "single color on character, monochrome, purple-only, natural daylight, soft diffusion, pastel tones, siren, beacon, rotating light, emergency light, light fixture in foreground, handheld light, flashlight, lamp prop, gemstone, crystal, jewel, rock"
+  },
+  {
+    "name": "Neon Sunset Gradient",
+    "prompt": "neon sunset gradient tubes as main light illuminating subject, visible horizontal orange-to-yellow neon tubing casting warm gradient glow on character skin and clothing, layered tangerine golden-yellow light reflecting on face and body, peachy-orange transitioning to honey-gold neon reflections on skin surface, sunset-colored gradient illumination on character, warm golden light spill coloring the subject",
+    "negative_prompt": "purple on character, violet on skin, magenta, pink, blue, cyan, cool tones, single color, white light on subject, daylight, siren, beacon, rotating light, emergency light, light fixture in foreground, handheld light, flashlight, lamp prop, amber stone, amber gemstone, resin, fossil resin, gemstone, jewel, crystal, rock, stone"
+  },
+  {
+    "name": "Neon White Clinical",
+    "prompt": "pure white neon tubes as main light illuminating subject, visible neutral-white neon tubing casting crisp colorless glow on character skin, 5000K clinical white electric light reflecting on face and body, sterile bright white neon reflections on skin surface, sterile clean neutral illumination on character, white light spill on subject",
+    "negative_prompt": "magenta on character, purple on skin, pink, blue tint, cyan, warm yellow, orange, any color cast, colored light on subject, daylight, siren, beacon, rotating light, emergency light, light fixture in foreground, handheld light, flashlight, lamp prop, gemstone, crystal, jewel, rock"
+  },
+  {
+    "name": "Neutral Temperature",
+    "prompt": "neutral color temperature lighting on subject, balanced white light on character skin, 4000K-5000K on face and body",
+    "negative_prompt": "color-tinted lighting on character"
+  },
+  {
+    "name": "Noon Overhead Bright",
+    "prompt": "noon lighting on subject, overhead bright sun on character, minimal shadows on face and body, peak daylight intensity",
+    "negative_prompt": "low angle light on character, soft shadows"
+  },
+  {
+    "name": "Overcast Diffusion",
+    "prompt": "overcast diffusion on subject, completely soft shadowless light on character, cloudy sky illumination on skin",
+    "negative_prompt": "direct sunlight on character, hard shadows"
+  },
+  {
+    "name": "Overcast Soft Day",
+    "prompt": "overcast natural light on subject, soft shadowless cloudy day light on character skin, even diffusion on face and body",
+    "negative_prompt": "direct sun on character, hard shadows"
+  },
+  {
+    "name": "Practical Only Motivated",
+    "prompt": "practical light sources illuminating subject, visible lamps or emitters in scene lighting character, fully motivated illumination on skin",
+    "negative_prompt": "unmotivated studio lighting on character"
+  },
+  {
+    "name": "Practical Plus Fill",
+    "prompt": "practical light with subtle fill on subject, motivated visible source lighting character enhanced with gentle ambient support",
+    "negative_prompt": "unmotivated light sources on character"
+  },
+  {
+    "name": "Rembrandt Classic",
+    "prompt": "rembrandt lighting on subject face, triangle of light on character cheek, 45-degree key light on face",
+    "negative_prompt": "flat frontal lighting on character"
+  },
+  {
+    "name": "RGB Gaming Lights",
+    "prompt": "RGB gaming lights illuminating subject, programmable color-shifting LEDs casting dynamic glow on character skin, gaming setup multi-color on face and body",
+    "negative_prompt": "static single-color light on character, natural sources"
+  },
+  {
+    "name": "Screen Glow Blue",
+    "prompt": "screen glow illuminating subject, cool blue monitor light on character face, digital illumination on skin",
+    "negative_prompt": "warm natural light on character"
+  },
+  {
+    "name": "Side Key Sculptural",
+    "prompt": "side key lighting on subject, strong lateral illumination on character skin, 90-degree side light on face, defined shadow edge",
+    "negative_prompt": "flat frontal lighting on character"
+  },
+  {
+    "name": "Single Source Clean",
+    "prompt": "single light source on subject, clear light hierarchy on character, unified shadow direction on skin",
+    "negative_prompt": "multiple competing light sources on character"
+  },
+  {
+    "name": "Skylight Dominant",
+    "prompt": "skylight-dominant ambient lighting on subject, cool diffuse overhead light on character skin, natural outdoor ceiling illumination",
+    "negative_prompt": "warm direct spotlight on character"
+  },
+  {
+    "name": "Soft Frontal Key",
+    "prompt": "soft frontal key light on subject, gentle diffused illumination on character face, smooth shadows on skin",
+    "negative_prompt": "harsh shadows on character, side lighting"
+  },
+  {
+    "name": "Soft General",
+    "prompt": "soft lighting on subject, gentle diffused illumination on character skin, smooth shadow transitions on face and body",
+    "negative_prompt": "harsh hard light on character"
+  },
+  {
+    "name": "Soft Rim Glow",
+    "prompt": "soft rim light on subject, subtle edge separation on character silhouette, gentle outline glow on body",
+    "negative_prompt": "strong edge highlights on character"
+  },
+  {
+    "name": "Softbox Studio",
+    "prompt": "softbox lighting on subject, large diffused source on character, smooth shadow transitions on skin",
+    "negative_prompt": "hard direct light on character"
+  },
+  {
+    "name": "Specular Glossy",
+    "prompt": "specular lighting on subject, bright highlight reflections on character skin, glossy surface illumination on face and body",
+    "negative_prompt": "matte diffuse surfaces on character"
+  },
+  {
+    "name": "Split Dramatic",
+    "prompt": "split lighting on subject, half face illuminated on character, 90-degree side light, dramatic division",
+    "negative_prompt": "frontal lighting on character"
+  },
+  {
+    "name": "Studio Controlled",
+    "prompt": "studio lighting setup on subject, controlled artificial sources on character, precise three-point placement illuminating skin",
+    "negative_prompt": "natural ambient lighting on character"
+  },
+  {
+    "name": "Sunrise Morning Glow",
+    "prompt": "sunrise lighting on subject, warm morning glow on character skin, low angle illumination on face and body",
+    "negative_prompt": "evening light on character, overhead sun"
+  },
+  {
+    "name": "Sunset Golden Sky",
+    "prompt": "sunset lighting on subject, warm orange-red sky light on character skin, dramatic golden illumination on face and body",
+    "negative_prompt": "morning light on character, cool tones"
+  },
+  {
+    "name": "Synthwave Gradient",
+    "prompt": "synthwave gradient neon tubes as main light illuminating subject, visible layered hot-pink to electric-blue neon casting gradient glow on character skin and clothing, bright fuchsia fading to cyan light reflecting on face and body, magenta-to-azure gradient illumination on character, 80s retro neon colors on skin surface, vivid pink and blue light blend on subject",
+    "negative_prompt": "natural tones on character, neutral white, green, yellow, single color, purple-only, warm-only tones, daylight"
+  },
+  {
+    "name": "Synthwave Grid Floor",
+    "prompt": "synthwave grid floor neon as main light illuminating subject from below, visible bright cyan glowing grid lines casting upward blue glow on character skin, electric blue laser-grid light reflecting on face and body from below, turquoise neon wireframe upcast on character, tron-style azure perspective grid illuminating subject from ground, geometric blue light on skin",
+    "negative_prompt": "natural environment, purple grid on character, magenta-only, green grid, realistic lighting, warm tones, daylight"
+  },
+  {
+    "name": "Synthwave Sun Glow",
+    "prompt": "synthwave sun with horizontal scan lines as main light illuminating subject, large orange-to-pink gradient sun disc casting warm gradient glow on character skin, bright peachy-orange core light fading to hot-pink edges reflecting on face and body, golden-orange and coral retro digital sunset colors on skin surface, yellow-orange sun center illuminating character, warm gradient atmosphere on subject",
+    "negative_prompt": "realistic natural sunset on character, purple sun, blue sun, cool-only tones, single flat color, daylight"
+  },
+  {
+    "name": "Top-Down Key",
+    "prompt": "top-down key lighting on subject, overhead illumination on character, deep eye shadows on face, vertical contrast gradient",
+    "negative_prompt": "underlighting on character, frontal light"
+  },
+  {
+    "name": "Translucent Diffusion",
+    "prompt": "translucent diffusion on subject, light through fabric or paper onto character skin, gentle scattered illumination on face and body",
+    "negative_prompt": "hard spotlight on character"
+  },
+  {
+    "name": "Underglow Sci-Fi",
+    "prompt": "underglow sci-fi lighting on subject, upward neon illumination on character from below, futuristic floor glow on skin, colored uplight on face and body",
+    "negative_prompt": "natural top lighting on character, traditional sources"
+  },
+  {
+    "name": "Underlighting Horror",
+    "prompt": "underlighting on subject, light from below on character face, inverted shadows on skin, unnatural illumination",
+    "negative_prompt": "natural top lighting on character"
+  },
+  {
+    "name": "Vaporwave Pastel Neon",
+    "prompt": "vaporwave pastel neon tubes as main light illuminating subject, visible soft baby-pink and powder-blue neon casting muted glow on character skin and clothing, gentle pastel cyan-pink light reflecting on face and body, peach and periwinkle neon reflections on skin surface, dreamy low-saturation electric colors on character, delicate pastel light spill coloring the subject",
+    "negative_prompt": "harsh vibrant colors on character, deep purple on skin, natural tones, bright saturated neon, dark magenta, intense colors, daylight"
+  },
+  {
+    "name": "Venetian Blind Pattern",
+    "prompt": "patterned shadows from blinds on subject, linear venetian shadow projection on character skin, directional striped occlusion on face and body",
+    "negative_prompt": "uniform lighting on character, shadowless"
+  },
+  {
+    "name": "Volumetric God Rays",
+    "prompt": "volumetric lighting through subject area, visible light beams through atmosphere near character, god rays around body, dusty air illumination",
+    "negative_prompt": "clean invisible light"
+  },
+  {
+    "name": "Warm Temperature",
+    "prompt": "warm color temperature lighting on subject, golden-orange illumination on character skin, 2700K-3500K on face and body",
+    "negative_prompt": "cool blue light on character"
+  },
+  {
+    "name": "Window Daylight Soft",
+    "prompt": "window-diffused daylight on subject, soft directional natural light on character skin, gentle falloff on face and body",
+    "negative_prompt": "artificial studio lighting on character, harsh spotlight"
+  },
+  {
+    "name": "Window Golden Hour",
+    "prompt": "window-diffused golden hour light on subject, warm low-angle illumination on character skin, elongated soft shadows on body, honeyed glow on face",
+    "negative_prompt": "midday sunlight on character, cold tones"
+  },
+  {
+    "name": "Window Moonlight Soft",
+    "prompt": "window-diffused moonlight on subject, soft cool directional night light on character skin, subtle nocturnal illumination on face and body, silvery glow",
+    "negative_prompt": "daylight on character, warm sunlight"
+  }
+]

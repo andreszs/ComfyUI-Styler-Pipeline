@@ -1,0 +1,327 @@
+[
+    {
+        "name":  "Calm/Peaceful",
+        "prompt":  "natural soft lighting, peaceful mood, visual harmony",
+        "negative_prompt":  ""
+    },
+    {
+        "name":  "Calm/Serene",
+        "prompt":  "soft natural lighting, serene mood, airy calm",
+        "negative_prompt":  ""
+    },
+    {
+        "name":  "Calm/Tranquil",
+        "prompt":  "smooth balanced lighting, tranquil mood, controlled calm",
+        "negative_prompt":  ""
+    },
+    {
+        "name":  "Dark/Chiaroscuro",
+        "prompt":  "chiaroscuro lighting, dramatic contrast, sculpted forms emerging from darkness",
+        "negative_prompt":  "soft even lighting, low contrast"
+    },
+    {
+        "name":  "Dark/Cold Low-Key",
+        "prompt":  "cold low-key lighting, deep blue shadows, restrained highlights",
+        "negative_prompt":  "warm tones, bright ambient light"
+    },
+    {
+        "name":  "Dark/Eerie",
+        "prompt":  "low-key lighting, eerie mood, cold light, subtle shadows, quiet tension",
+        "negative_prompt":  ""
+    },
+    {
+        "name":  "Dark/Motivated Practical Light",
+        "prompt":  "motivated practical lighting, lamps or candles as light source, realistic illumination",
+        "negative_prompt":  "unmotivated studio light"
+    },
+    {
+        "name":  "Dark/Mysterious",
+        "prompt":  "low-key lighting, mysterious mood, selective highlights, hidden detail",
+        "negative_prompt":  ""
+    },
+    {
+        "name":  "Dark/Night Ambient",
+        "prompt":  "night ambient lighting, low ambient illumination, realistic darkness",
+        "negative_prompt":  "studio spotlighting"
+    },
+    {
+        "name":  "Dark/Shadow-Dominant",
+        "prompt":  "shadow-dominant lighting, forms defined by darkness",
+        "negative_prompt":  "balanced lighting"
+    },
+    {
+        "name":  "Dark/Silhouette Emphasis",
+        "prompt":  "silhouette-focused lighting, strong outlines against darkness",
+        "negative_prompt":  "full facial detail"
+    },
+    {
+        "name":  "Dark/Single Source Low-Key",
+        "prompt":  "single light source low-key lighting, clear light hierarchy",
+        "negative_prompt":  "multiple light sources"
+    },
+    {
+        "name":  "Dark/Top-Down Isolation",
+        "prompt":  "top-down isolation lighting, overhead light, deep surrounding shadows",
+        "negative_prompt":  "eye-level lighting"
+    },
+    {
+        "name":  "Dark/Underexposed Cinematic",
+        "prompt":  "intentional underexposure, cinematic darkness, preserved highlights",
+        "negative_prompt":  "bright exposure"
+    },
+    {
+        "name":  "Dark/Underlit",
+        "prompt":  "underlit scene lighting, light from below, unsettling shadows",
+        "negative_prompt":  "natural top-down lighting"
+    },
+    {
+        "name":  "Energetic/Aggressive",
+        "prompt":  "harsh lighting, high contrast, aggressive mood, intense atmosphere, confrontational energy",
+        "negative_prompt":  ""
+    },
+    {
+        "name":  "Energetic/Chaotic",
+        "prompt":  "uneven lighting, chaotic energy, dynamic movement, visual turbulence",
+        "negative_prompt":  ""
+    },
+    {
+        "name":  "Energetic/Energetic",
+        "prompt":  "bright vivid lighting, energetic mood, strong motion, active rhythm",
+        "negative_prompt":  ""
+    },
+    {
+        "name":  "Energetic/Exaggerated",
+        "prompt":  "exaggerated features, bold rendering, emphasized forms",
+        "negative_prompt":  "subtle, restrained"
+    },
+    {
+        "name":  "Energetic/Uplifting",
+        "prompt":  "rising bright lighting, uplifting mood, positive momentum",
+        "negative_prompt":  ""
+    },
+    {
+        "name":  "Epic/Dreamy",
+        "prompt":  "diffused lighting, dreamy mood, hazy glow, gentle blur",
+        "negative_prompt":  ""
+    },
+    {
+        "name":  "Epic/Epic",
+        "prompt":  "dramatic lighting, epic scale, cinematic contrast, heroic intensity",
+        "negative_prompt":  ""
+    },
+    {
+        "name":  "Introspective/Ambient Isolation",
+        "prompt":  "isolated ambient lighting, quiet space, emotional separation",
+        "negative_prompt":  "crowded lighting"
+    },
+    {
+        "name":  "Introspective/Dim Indirect Light",
+        "prompt":  "dim indirect lighting, soft peripheral illumination, quiet reflection",
+        "negative_prompt":  "direct sunlight"
+    },
+    {
+        "name":  "Introspective/Quiet Ambient",
+        "prompt":  "quiet ambient lighting, soft diffused enclosure",
+        "negative_prompt":  "bright spotlighting"
+    },
+    {
+        "name":  "Introspective/Subdued Daylight",
+        "prompt":  "subdued daylight, filtered natural light",
+        "negative_prompt":  "harsh sunlight"
+    },
+    {
+        "name":  "Melancholic/Cold Overcast",
+        "prompt":  "cold overcast lighting, flat diffused sky light, muted tones",
+        "negative_prompt":  "direct sunlight"
+    },
+    {
+        "name":  "Melancholic/Desaturated Stillness",
+        "prompt":  "desaturated lighting, reduced color presence",
+        "negative_prompt":  "vivid colors"
+    },
+    {
+        "name":  "Melancholic/Low Contrast Gloom",
+        "prompt":  "low contrast gloomy lighting, compressed tonal range",
+        "negative_prompt":  "high contrast"
+    },
+    {
+        "name":  "Melancholic/Nostalgic",
+        "prompt":  "soft faded lighting, nostalgic mood, gentle contrast, warmth",
+        "negative_prompt":  ""
+    },
+    {
+        "name":  "Melancholic/Rain-Filtered Light",
+        "prompt":  "rain-filtered lighting, softened contrast, damp atmosphere",
+        "negative_prompt":  "clear weather"
+    },
+    {
+        "name":  "Melancholic/Weathered Light",
+        "prompt":  "weathered lighting, light worn by time",
+        "negative_prompt":  "clean modern lighting"
+    },
+    {
+        "name":  "Neon/Bioluminescent Glow",
+        "prompt":  "bioluminescent neon lighting, glowing organic colors, diffuse ethereal luminescence, fantasy atmosphere",
+        "negative_prompt":  "natural daylight, realistic lighting"
+    },
+    {
+        "name":  "Neon/Clinical Blue-White Glow",
+        "prompt":  "clinical neon lighting, blue and white glow, sterile illumination, sci-fi atmosphere",
+        "negative_prompt":  "warm lighting, soft shadows"
+    },
+    {
+        "name":  "Neon/Energetic Saturated Glow",
+        "prompt":  "energetic saturated neon lighting, vibrant colors, dark atmosphere, pulsing energy",
+        "negative_prompt":  "calm lighting, soft pastels"
+    },
+    {
+        "name":  "Neon/Futuristic Clean Glow",
+        "prompt":  "futuristic neon lighting, clean LED glow, high-tech atmosphere, sleek illumination",
+        "negative_prompt":  "rustic lighting, warm natural tones"
+    },
+    {
+        "name":  "Neon/Holographic Glow",
+        "prompt":  "holographic neon lighting, iridescent colors, translucent glow, ethereal futuristic atmosphere",
+        "negative_prompt":  "flat lighting, matte surfaces"
+    },
+    {
+        "name":  "Neon/Noir Contrast",
+        "prompt":  "neon noir lighting, dark moody atmosphere, strong color contrast, cinematic shadows",
+        "negative_prompt":  "bright flat lighting"
+    },
+    {
+        "name":  "Neon/Retro Synthwave",
+        "prompt":  "retro synthwave neon lighting, magenta and cyan glow, nostalgic 80s atmosphere",
+        "negative_prompt":  "modern neutral lighting"
+    },
+    {
+        "name":  "Neon/Romantic Amber Glow",
+        "prompt":  "romantic amber neon lighting, warm orange glow, intimate sensual atmosphere",
+        "negative_prompt":  "cold blue lighting"
+    },
+    {
+        "name":  "Neon/Sci-Fi Linear Glow",
+        "prompt":  "sci-fi linear neon lighting, glowing lines, deep perspective, futuristic atmosphere",
+        "negative_prompt":  "organic shapes, natural lighting"
+    },
+    {
+        "name":  "Neon/Steamy Diffused Glow",
+        "prompt":  "steamy neon lighting, glowing reflections on wet surfaces, warm humid atmosphere, soft diffused light",
+        "negative_prompt":  "dry air, harsh lighting"
+    },
+    {
+        "name":  "Neutral/Balanced Exposure",
+        "prompt":  "balanced exposure lighting, even illumination",
+        "negative_prompt":  "dramatic lighting"
+    },
+    {
+        "name":  "Neutral/Clean",
+        "prompt":  "clean lighting, minimal clutter, precise details, uncluttered look",
+        "negative_prompt":  "messy, noisy"
+    },
+    {
+        "name":  "Neutral/Crisp",
+        "prompt":  "sharp lighting, crisp clarity, sharp edges, clear separation",
+        "negative_prompt":  "soft blur, haze"
+    },
+    {
+        "name":  "Neutral/Flat Realism",
+        "prompt":  "flat realistic lighting, documentary clarity",
+        "negative_prompt":  "cinematic contrast"
+    },
+    {
+        "name":  "Neutral/Minimal",
+        "prompt":  "minimal composition, reduced elements, simple forms",
+        "negative_prompt":  "busy, overly detailed"
+    },
+    {
+        "name":  "Neutral/Polished",
+        "prompt":  "refined lighting, polished finish, professional surfaces",
+        "negative_prompt":  "rough, raw"
+    },
+    {
+        "name":  "Neutral/Soft",
+        "prompt":  "soft lighting, gentle rendering, smooth transitions",
+        "negative_prompt":  "harsh, gritty"
+    },
+    {
+        "name":  "Neutral/Structured",
+        "prompt":  "controlled lighting, structured composition, clear geometry",
+        "negative_prompt":  "chaotic, amorphous"
+    },
+    {
+        "name":  "Neutral/Textured",
+        "prompt":  "texture-focused lighting, tactile feel, strong surface detail",
+        "negative_prompt":  "smooth, textureless"
+    },
+    {
+        "name":  "Romantic/Confessional",
+        "prompt":  "dim intimate lighting, confessional mood, emotional exposure, quiet intensity",
+        "negative_prompt":  ""
+    },
+    {
+        "name":  "Romantic/Evening Warmth",
+        "prompt":  "evening warm light, soft amber tones, relaxed contrast, gentle ambient shadows",
+        "negative_prompt":  ""
+    },
+    {
+        "name":  "Romantic/Firelight Mood",
+        "prompt":  "firelight mood, warm flicker, organic shadows, intimate cozy glow",
+        "negative_prompt":  ""
+    },
+    {
+        "name":  "Romantic/Intimate",
+        "prompt":  "soft close lighting, intimate mood, emotional proximity",
+        "negative_prompt":  ""
+    },
+    {
+        "name":  "Romantic/Low Light Intimate",
+        "prompt":  "low light intimate scene, warm shadows, close framing, subdued highlights",
+        "negative_prompt":  ""
+    },
+    {
+        "name":  "Romantic/Romantic",
+        "prompt":  "warm soft lighting, romantic mood, emotional warmth",
+        "negative_prompt":  ""
+    },
+    {
+        "name":  "Romantic/Soft Romantic Glow",
+        "prompt":  "soft romantic glow, warm diffused light, gentle highlights, close intimate atmosphere",
+        "negative_prompt":  ""
+    },
+    {
+        "name":  "Romantic/Warm Backlight",
+        "prompt":  "warm backlight, soft rim glow, glowing edges, gentle shadow falloff",
+        "negative_prompt":  ""
+    },
+    {
+        "name":  "Tense/Asymmetric Light Pressure",
+        "prompt":  "asymmetric lighting pressure, imbalance, visual unease",
+        "negative_prompt":  "even lighting"
+    },
+    {
+        "name":  "Tense/Claustrophobic Shadows",
+        "prompt":  "claustrophobic shadowing, compressed space",
+        "negative_prompt":  "open lighting"
+    },
+    {
+        "name":  "Tense/Directional Pressure",
+        "prompt":  "strong directional lighting, instability",
+        "negative_prompt":  "centered illumination"
+    },
+    {
+        "name":  "Tense/Flicker Implied Light",
+        "prompt":  "implied flickering light, unstable illumination",
+        "negative_prompt":  "steady lighting"
+    },
+    {
+        "name":  "Tense/Hard Shadow Angles",
+        "prompt":  "hard angled shadows, sharp geometry",
+        "negative_prompt":  "soft shadows"
+    },
+    {
+        "name":  "Tense/Underlit Suspicion",
+        "prompt":  "underlit tension lighting, rising shadows",
+        "negative_prompt":  "front-lit clarity"
+    }
+]

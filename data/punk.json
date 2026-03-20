@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Anarcho-Punk Manifesto",
+        "prompt": "anarcho-punk manifesto aesthetic, radical slogans, raw graphic design, political rebellion",
+        "negative_prompt": ""
+    },
+    {
+        "name": "DIY Punk Zine",
+        "prompt": "DIY punk zine style, photocopy textures, cut-and-paste collage, rough typography",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Futuristic Neon Punk",
+        "prompt": "futuristic neon punk style, glowing city lights, electric colors, high-contrast night scene",
+        "negative_prompt": "daylight, muted colors"
+    },
+    {
+        "name": "Futuristic Punk Signage",
+        "prompt": "futuristic punk signage, LED signs, holographic text, rebellious urban typography, neon glow",
+        "negative_prompt": "traditional print posters, daylight"
+    },
+    {
+        "name": "Glitch Neon Punk",
+        "prompt": "glitch neon punk aesthetic, digital distortion, flickering neon lights, cyber rebellion vibe",
+        "negative_prompt": "clean digital render, calm lighting"
+    },
+    {
+        "name": "LED Riot Punk",
+        "prompt": "LED riot punk aesthetic, aggressive light panels, flashing neon strips, chaotic urban energy",
+        "negative_prompt": "soft lighting, calm mood"
+    },
+    {
+        "name": "Neon Punk Advertisement",
+        "prompt": "punk neon advertisement style, glowing urban billboards, subversive slogans, bright electric colors",
+        "negative_prompt": "corporate branding, daylight"
+    },
+    {
+        "name": "Neon Punk Street",
+        "prompt": "neon punk street scene, glowing signs, rebellious street fashion, saturated neon colors",
+        "negative_prompt": "clean corporate city, daylight"
+    },
+    {
+        "name": "Orange-Pink Futurist Punk",
+        "prompt": "orange and pink futurist punk palette, warm neon glow, futuristic city night",
+        "negative_prompt": "cool blue tones, daylight"
+    },
+    {
+        "name": "Punk Album Cover",
+        "prompt": "punk album cover art, raw graphic layout, underground music culture",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Punk Concert Scene",
+        "prompt": "punk concert scene, underground live show, crowd energy, gritty atmosphere",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Punk Graffiti Wall",
+        "prompt": "punk graffiti wall, spray paint textures, rebellious street art",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Punk Protest Poster",
+        "prompt": "punk protest poster style, bold typography, social resistance imagery",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Punk Street Art Mural",
+        "prompt": "punk street art mural, large-scale graffiti artwork, expressive rebellion",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Punk Subculture Portrait",
+        "prompt": "punk subculture portrait, alternative fashion, defiant attitude",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Raw Punk Aesthetic",
+        "prompt": "raw punk aesthetic, rough textures, anti-polish style, underground rebellion",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Retro Neon Punk",
+        "prompt": "retro neon punk style, magenta and cyan glow, 80s inspired neon lighting, urban night",
+        "negative_prompt": "modern minimalist design, daylight"
+    },
+    {
+        "name": "Street Punk Culture",
+        "prompt": "street punk culture, urban rebellion, alternative lifestyle, gritty realism",
+        "negative_prompt": ""
+    }
+]

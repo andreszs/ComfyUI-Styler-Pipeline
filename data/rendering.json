@@ -1,0 +1,172 @@
+[
+    {
+        "name": "3D Render",
+        "prompt": "3D rendered, clean geometry, CGI aesthetic",
+        "negative_prompt": "2D flat, hand-drawn, photographic"
+    },
+    {
+        "name": "Anime Style",
+        "prompt": "anime style rendering, cel-shaded colors, clean linework",
+        "negative_prompt": "photorealistic, western cartoon"
+    },
+    {
+        "name": "Cel Shaded",
+        "prompt": "cel-shaded rendering, distinct color zones, comic-like shading",
+        "negative_prompt": "smooth gradients, realistic lighting"
+    },
+    {
+        "name": "Charcoal Sketch",
+        "prompt": "charcoal sketch, loose expressive strokes, textured marks",
+        "negative_prompt": "clean lines, polished finish"
+    },
+    {
+        "name": "Clay Render",
+        "prompt": "clay render, matte sculptural forms, uniform material",
+        "negative_prompt": "textured surfaces, photorealistic materials"
+    },
+    {
+        "name": "Concept Sketch",
+        "prompt": "concept sketch, exploratory linework, draft quality",
+        "negative_prompt": "final render, polished illustration"
+    },
+    {
+        "name": "Digital Painting",
+        "prompt": "digital painting, painterly brushwork, layered texture",
+        "negative_prompt": "photographic, vector clean"
+    },
+    {
+        "name": "Glass Sculpture",
+        "prompt": "glass sculpture render, translucent forms, refracted light",
+        "negative_prompt": "opaque materials, flat surfaces"
+    },
+    {
+        "name": "Graphite Drawing",
+        "prompt": "graphite pencil drawing, precise shading, tonal rendering",
+        "negative_prompt": "color, painterly texture"
+    },
+    {
+        "name": "Hyperrealistic",
+        "prompt": "hyperrealistic rendering, photographic precision, extreme detail",
+        "negative_prompt": "stylized, painterly, artistic interpretation"
+    },
+    {
+        "name": "Illustration",
+        "prompt": "illustrated style, artistic interpretation, narrative clarity",
+        "negative_prompt": "photorealistic, abstract"
+    },
+    {
+        "name": "Ink Drawing",
+        "prompt": "ink drawing, bold line variation, hatching texture",
+        "negative_prompt": "soft gradients, photographic"
+    },
+    {
+        "name": "Isometric",
+        "prompt": "isometric rendering, parallel projection, technical clarity",
+        "negative_prompt": "perspective distortion, naturalistic view"
+    },
+    {
+        "name": "Line Art",
+        "prompt": "clean line art, precise contours, minimal shading",
+        "negative_prompt": "tonal rendering, photorealistic"
+    },
+    {
+        "name": "Low Poly",
+        "prompt": "low poly rendering, faceted geometry, simplified forms",
+        "negative_prompt": "high detail, smooth surfaces"
+    },
+    {
+        "name": "Manga Style",
+        "prompt": "manga style rendering, screentone shading, dynamic inking",
+        "negative_prompt": "color, photorealistic, western style"
+    },
+    {
+        "name": "Masterpiece",
+        "prompt": "masterpiece quality, exceptional composition, refined execution",
+        "negative_prompt": "amateur, low quality, poorly composed"
+    },
+    {
+        "name": "Matte Painting",
+        "prompt": "matte painting, cinematic environment, painterly realism",
+        "negative_prompt": "photographic, illustrative style"
+    },
+    {
+        "name": "Oil Painting",
+        "prompt": "oil painting, rich impasto texture, traditional medium",
+        "negative_prompt": "digital, photographic, flat"
+    },
+    {
+        "name": "Painterly",
+        "prompt": "painterly rendering, visible brushstrokes, artistic texture",
+        "negative_prompt": "photorealistic, clean vector"
+    },
+    {
+        "name": "Pastel Drawing",
+        "prompt": "pastel drawing, soft chalky texture, blended tones",
+        "negative_prompt": "sharp lines, photographic"
+    },
+    {
+        "name": "Pen and Ink",
+        "prompt": "pen and ink, crosshatching detail, precise linework",
+        "negative_prompt": "soft gradients, color"
+    },
+    {
+        "name": "Photorealistic",
+        "prompt": "photorealistic rendering, photographic fidelity, natural lighting",
+        "negative_prompt": "stylized, painterly, illustrated"
+    },
+    {
+        "name": "Pixel Art",
+        "prompt": "pixel art, retro grid aesthetic, limited palette",
+        "negative_prompt": "smooth, high resolution, realistic"
+    },
+    {
+        "name": "Rough Sketch",
+        "prompt": "rough sketch, loose gestural marks, exploratory quality",
+        "negative_prompt": "polished, final render"
+    },
+    {
+        "name": "Semi-Realistic",
+        "prompt": "semi-realistic rendering, stylized realism, artistic interpretation",
+        "negative_prompt": "fully photorealistic, heavily stylized"
+    },
+    {
+        "name": "Silhouette",
+        "prompt": "silhouette rendering, solid shapes, edge definition",
+        "negative_prompt": "tonal detail, interior rendering"
+    },
+    {
+        "name": "Stipple Drawing",
+        "prompt": "stipple technique, dot-based shading, pointillist texture",
+        "negative_prompt": "line work, smooth gradients"
+    },
+    {
+        "name": "Stylized",
+        "prompt": "stylized rendering, artistic exaggeration, design simplification",
+        "negative_prompt": "photorealistic, naturalistic"
+    },
+    {
+        "name": "Technical Drawing",
+        "prompt": "technical drawing, blueprint precision, engineering clarity",
+        "negative_prompt": "artistic, expressive, photographic"
+    },
+    {
+        "name": "Vector Art",
+        "prompt": "vector art, clean geometric shapes, flat color zones",
+        "negative_prompt": "textured, photographic, painterly"
+    },
+    {
+        "name": "Voxel Art",
+        "prompt": "voxel art, cubic building blocks, 3D pixel aesthetic",
+        "negative_prompt": "smooth surfaces, photorealistic"
+    },
+    {
+        "name": "Watercolor",
+        "prompt": "watercolor painting, transparent washes, fluid blending",
+        "negative_prompt": "opaque, digital, photographic"
+    },
+    {
+        "name": "Wireframe",
+        "prompt": "wireframe rendering, structural edges, transparent geometry",
+        "negative_prompt": "solid surfaces, photorealistic"
+    }
+]

@@ -1,0 +1,662 @@
+[
+    {
+        "name": "Asian/chinese courtyard siheyuan",
+        "prompt": "traditional chinese courtyard house, central garden, red pillars, curved roof tiles, symmetrical layout, wooden doors",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Asian/chinese tea house",
+        "prompt": "chinese tea house interior, wooden furniture, tea sets, hanging scrolls, paper lanterns",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Asian/hong kong rooftop",
+        "prompt": "hong kong rooftop, clotheslines, water tanks, crowded buildings backdrop, urban density",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Asian/izakaya interior",
+        "prompt": "japanese izakaya interior, wooden booth seating, paper lanterns, sake bottles, red curtains",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Asian/japanese convenience store",
+        "prompt": "japanese convenience store interior, LED lights, product aisles, magazine racks, onigiri display, modern konbini",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Asian/japanese living room traditional",
+        "prompt": "traditional japanese living room, tatami floors, low wooden table, floor cushions, sliding fusuma doors, uncluttered layout",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Asian/japanese neon alley",
+        "prompt": "japanese neon alley, narrow street, stacked kanji signs, storefront signage, dense urban corridor",
+        "negative_prompt": "western signage"
+    },
+    {
+        "name": "Asian/japanese school hallway",
+        "prompt": "japanese school hallway, rows of lockers, wooden floors, large windows, shoe cubbies, clean institutional",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Asian/japanese school rooftop",
+        "prompt": "japanese school rooftop, chain-link fence, city skyline view, ventilation units, concrete floor, urban backdrop",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Asian/japanese street market",
+        "prompt": "japanese street market, vendor stalls, paper lanterns, bustling crowd, food steam",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Asian/karaoke room japan",
+        "prompt": "japanese karaoke room, leather couches, TV screen, microphones, compact soundproof booth",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Asian/korean bbq restaurant",
+        "prompt": "korean bbq restaurant interior, table grills, metal ventilation hoods, side dishes, modern interior, social dining",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Asian/korean hanok interior",
+        "prompt": "traditional korean hanok interior, heated floors, sliding paper doors, low furniture, wooden beams, uncluttered interior",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Asian/korean pc bang",
+        "prompt": "korean pc gaming cafe, rows of gaming computers, snack bar",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Asian/onsen hot spring",
+        "prompt": "japanese onsen hot spring, steaming natural pools, wooden buckets, stone edges, mountain backdrop, traditional bathing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Asian/sakura garden spring",
+        "prompt": "sakura garden spring, pink cherry blossoms, falling petals, stone lanterns",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Asian/school club room japan",
+        "prompt": "japanese school club room, cluttered tables, storage shelves, blackboard, windows",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bedroom/attic",
+        "prompt": "bedroom attic, slanted roof, dormer windows, wooden beams, cozy skylight, charming tucked-away space",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bedroom/beachside coastal",
+        "prompt": "bedroom beachside coastal, white linens, blue accents, natural textures, ocean view window",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bedroom/children",
+        "prompt": "children bedroom, colorful walls, toy chest, bunk beds, playful decorations",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bedroom/cottage rustic",
+        "prompt": "bedroom cottage rustic, wooden beams, floral bedding, vintage furniture, countryside charm",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bedroom/cozy small",
+        "prompt": "bedroom cozy small, compact bed, wall-mounted shelves, blankets, cushion pile, soft bedding, cozy textiles, bedside table, small rug",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bedroom/futuristic",
+        "prompt": "futuristic bedroom, clean sci-fi interior, ambient LED accents, high-tech decor, wall panels",
+        "negative_prompt": "rustic furniture, natural materials"
+    },
+    {
+        "name": "Bedroom/gamer setup",
+        "prompt": "bedroom gamer setup, RGB lights, gaming PC, multiple monitors, gaming chair, tech-heavy modern den",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bedroom/high-tech",
+        "prompt": "high-tech bedroom, LED strip accents, tech gadgets, dark walls, futuristic minimal decor",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bedroom/industrial loft",
+        "prompt": "bedroom industrial loft, exposed brick walls, metal bed frame, concrete floors, Edison bulbs, urban aesthetic",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bedroom/japanese traditional",
+        "prompt": "bedroom japanese traditional, futon bedding, tatami mats, sliding shoji screens, low furniture, uncluttered interior",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bedroom/master luxury",
+        "prompt": "master bedroom luxury, king bed, elegant furniture, tufted headboard, chandelier, sophisticated decor",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bedroom/nursery baby room",
+        "prompt": "nursery baby room, crib, rocking chair, mobile hanging, baby-safe space",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bedroom/teen",
+        "prompt": "teen bedroom, posters on walls, gaming setup, desk area, personality decorations, casual messy lived-in",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bedroom/under stairs",
+        "prompt": "bedroom under stairs, slanted ceiling, compact space, creative use of space",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Commercial/bakery",
+        "prompt": "bakery interior, display cases, fresh bread loaves, pastries",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Commercial/bookstore",
+        "prompt": "bookstore interior, floor-to-ceiling shelves, stacked books, reading chairs",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Commercial/cafe",
+        "prompt": "cafe interior, small tables, coffee cups, pastry display, casual seating",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Commercial/farmer's market outdoors",
+        "prompt": "farmer's market outdoors, fresh produce stalls, wooden crates, colorful vegetables",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Commercial/fast food restaurant",
+        "prompt": "fast food restaurant interior, plastic booth seating, menu boards",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Commercial/gas station",
+        "prompt": "gas station, fuel pumps, neon signs, convenience store, parking lot",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Commercial/mall",
+        "prompt": "shopping mall interior, wide corridors, store fronts, escalators, skylights",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Commercial/restaurant",
+        "prompt": "restaurant interior, dining tables, table linens, wall art",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Entertainment/amusement park",
+        "prompt": "amusement park, colorful attractions",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Entertainment/arcade",
+        "prompt": "retro arcade, rows of game cabinets, pixel art",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Entertainment/bar",
+        "prompt": "bar interior, wooden counter, bottle shelves, bar stools",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Entertainment/nightclub",
+        "prompt": "nightclub interior, dance floor, DJ booth",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Entertainment/stage",
+        "prompt": "stage environment, performance space",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Entertainment/theater",
+        "prompt": "theater interior, stage, red velvet seats, curtains, balcony",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Historical/amphitheater",
+        "prompt": "ancient amphitheater, tiered stone seating, central stage, weathered columns, monumental scale",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Historical/arabic courtyard garden",
+        "prompt": "arabic courtyard garden, geometric tile patterns, ornate arches, central fountain, hanging plants",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Historical/castle",
+        "prompt": "medieval castle, stone walls, tall towers, battlements, fortified architecture, grand halls",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Historical/church",
+        "prompt": "church interior, high vaulted ceilings, stained glass windows, wooden pews, altar",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Historical/clock tower",
+        "prompt": "clock tower, giant clock face, brick facade, bell chamber, historic landmark, vertical architecture",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Historical/dilapidated castle",
+        "prompt": "dilapidated medieval castle, crumbling stone walls, abandoned ruins, weathered architecture",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Historical/medieval village",
+        "prompt": "medieval village, cobblestone streets, thatched roofs, timber-frame houses, market square",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Historical/neon sacred temple",
+        "prompt": "sacred temple with neon illumination, symmetrical space, patterns, futuristic architecture",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Historical/temple",
+        "prompt": "ancient temple, stone pillars, carved reliefs, altar, monumental scale",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/apartment",
+        "prompt": "apartment interior, furniture, personal belongings, windows, residential space",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/aquarium",
+        "prompt": "public aquarium, large glass tanks, swimming fish",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/bunker",
+        "prompt": "underground bunker, reinforced concrete walls, metal doors, confined space, utilitarian design",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/classroom",
+        "prompt": "classroom interior, student desks, whiteboard, chalk dust, educational posters",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/dining room",
+        "prompt": "dining room interior, dining table, chairs, place settings, chandelier",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/dungeon",
+        "prompt": "dungeon, damp stone walls, iron chains, medieval confinement",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/factory",
+        "prompt": "industrial factory, heavy machinery, assembly lines, metal catwalks, pipes, utilitarian design",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/greenhouse",
+        "prompt": "greenhouse interior, glass panels, potted plants, grow tables",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/gym",
+        "prompt": "gym interior, weight racks, treadmills, mirrors, rubber mats",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/hospital",
+        "prompt": "hospital interior, sterile corridors, medical equipment, white walls",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/hotel room",
+        "prompt": "hotel room interior, made bed, nightstands, TV, luggage rack, clean minimal design",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/laboratory",
+        "prompt": "scientific laboratory, equipment and instruments, sterile look",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/library",
+        "prompt": "library interior, towering bookshelves, reading desks, wooden floors",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/luxury bathroom spa",
+        "prompt": "luxury bathroom spa, marble surfaces, rainfall shower",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/modern kitchen interior",
+        "prompt": "modern kitchen interior, stainless appliances, granite counters, island cooking space",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/neon bathroom spa",
+        "prompt": "neon bathroom spa, reflections on wet surfaces, LED accents, futuristic relaxation space",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/neon corridor",
+        "prompt": "sci-fi corridor, lines along walls, deep perspective, futuristic hallway",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/neon laboratory",
+        "prompt": "futuristic laboratory, clean surfaces, LED panels, sci-fi research facility",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/neon noir interior",
+        "prompt": "neon-lit interior, urban space",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/office",
+        "prompt": "office interior, computer workstations, filing cabinets, copy machines",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/prison",
+        "prompt": "prison interior, barred cells, concrete walls, metal gates",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/school",
+        "prompt": "school building, hallways, lockers, classroom doors, bulletin boards",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/toilet stall",
+        "prompt": "public restroom, narrow enclosed space, tiled walls",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/warehouse",
+        "prompt": "warehouse interior, large storage space, industrial feel",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/winter cabin interior",
+        "prompt": "winter cabin interior, window view snowy pines, fireplace",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nature/ancient woodland",
+        "prompt": "ancient woodland, towering oak trees, moss-covered ground",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nature/bamboo forest",
+        "prompt": "bamboo forest, tall green stalks, rustling leaves",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nature/canyon",
+        "prompt": "vast canyon, layered rock formations, epic scale",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nature/cascading mountain waterfall",
+        "prompt": "cascading mountain waterfall, rushing water, spray mist, rocky cliffs",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nature/lavender field provence",
+        "prompt": "lavender field provence, endless purple rows, stone farmhouse",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nature/limestone cavern depths",
+        "prompt": "limestone cavern depths, stalactite formations, underground pools, cool dampness",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nature/mountain lake reflection",
+        "prompt": "mountain lake reflection, mirror-like water, snow peaks mirrored",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nature/saharan desert vista",
+        "prompt": "saharan desert vista, rippling golden dunes, heat shimmer, endless horizon",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nature/tropical beach paradise",
+        "prompt": "tropical beach paradise, white sand, turquoise water, swaying palms",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nature/tropical rainforest",
+        "prompt": "tropical rainforest, emerald canopy, hanging vines",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nature/tropical wetland swamp",
+        "prompt": "tropical wetland swamp, tangled roots, shallow water, dense vegetation",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nature/underwater coral reef",
+        "prompt": "underwater coral reef, colorful coral formations, tropical fish",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nature/volcanic tropical island",
+        "prompt": "volcanic tropical island, smoking peak, lush jungle slopes, ocean surrounding",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nature/wildflower meadow vista",
+        "prompt": "wildflower meadow vista, colorful blooms, rolling grassland",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nature/winding forest river",
+        "prompt": "winding forest river, flowing stream, moss-covered rocks",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/alley",
+        "prompt": "urban alley, narrow passage",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/alpine mountain pass sunrise",
+        "prompt": "alpine mountain pass at sunrise, winding road, jagged peaks, golden dawn light, high-altitude panorama",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/arctic research outpost",
+        "prompt": "arctic research outpost exterior, modular scientific buildings, snow drifts, icy horizon, harsh polar conditions",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/autumn forest trail",
+        "prompt": "autumn forest trail, fallen red and orange leaves, winding dirt path, tall trees, crisp seasonal atmosphere",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/barn",
+        "prompt": "rustic barn, weathered wood beams, hay bales, farming tools, rural setting",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/busy street corner",
+        "prompt": "busy street corner, traffic lights, pedestrian crossings, urban crowd flow",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/cherry blossom riverside promenade",
+        "prompt": "cherry blossom riverside promenade, flowering sakura trees, pedestrian walkway, calm river reflections, spring daylight",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/children playground park",
+        "prompt": "children playground park, colorful slides swings, sandbox area, trees shade",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/city park afternoon",
+        "prompt": "city park, tree-lined paths, park benches, people relaxing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/coastal cliff overlook",
+        "prompt": "coastal cliff overlook, dramatic ocean drop, rugged rock formations, sea spray, expansive horizon",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/countryside wheat field sunset",
+        "prompt": "countryside wheat field at sunset, golden crops, long shadows, warm evening sky, rural tranquility",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/courtyard",
+        "prompt": "architectural courtyard, enclosed open space, symmetrical design, stone pavement, potted plants",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/desert highway mirage",
+        "prompt": "desert highway mirage, endless asphalt road, heat haze shimmer, arid landscape, distant mountains",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/downtown cityscape",
+        "prompt": "downtown cityscape, towering skyscrapers, busy streets",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/farm",
+        "prompt": "rural farm, open fields, red barn, crops, fencing, livestock, pastoral setting",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/foggy moorland dawn",
+        "prompt": "foggy moorland at dawn, rolling heather fields, low mist, muted sunrise tones, isolated landscape",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/formal rose garden",
+        "prompt": "formal rose garden, symmetrical flower beds, stone pathways, blooming roses",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/fountain garden",
+        "prompt": "fountain garden plaza, tiered water fountain, manicured hedges, stone benches",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/graveyard",
+        "prompt": "graveyard, weathered tombstones, overgrown grass, iron gates",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/harbor",
+        "prompt": "harbor area, ships and docks, maritime setting",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/industrial shipyard cranes",
+        "prompt": "industrial shipyard with towering cranes, stacked cargo, steel docks, maritime industry, overcast sky",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/lighthouse rocky coast",
+        "prompt": "lighthouse on rocky coast, crashing waves, cliffside beacon tower, wind-swept shoreline, dramatic seascape",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/modern skyline rooftop terrace",
+        "prompt": "modern skyline rooftop terrace, high-rise city view, glass railings, lounge seating, urban twilight",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/old town cobblestone square",
+        "prompt": "old town cobblestone square, historic facades, central plaza, street cafes, european landmark atmosphere",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/rain-soaked neon avenue",
+        "prompt": "rain-soaked neon avenue, reflective wet pavement, glowing signs, evening traffic, cinematic urban mood",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/snowy mountain village street",
+        "prompt": "snowy mountain village street, alpine chalets, fresh snowfall, warm window lights, winter atmosphere",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/stormy beach boardwalk",
+        "prompt": "stormy beach boardwalk, dark clouds, rough surf, wooden planks, windswept coastal weather",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/temple hill overlook",
+        "prompt": "temple hill overlook, stone steps, elevated city panorama, landmark shrine architecture, atmospheric vista",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/tropical island pier",
+        "prompt": "tropical island pier, turquoise water, wooden dock, palm-lined shore, bright coastal daylight",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/urban riverwalk night",
+        "prompt": "urban riverwalk at night, lit embankment paths, city reflections in water, nightlife atmosphere",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/venetian canal evening",
+        "prompt": "venetian canal, gondolas, bridge arches",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/village",
+        "prompt": "rural village, small houses, dirt roads, gardens, simple architecture",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Outdoor/wind farm plains",
+        "prompt": "wind farm on open plains, rows of wind turbines, expansive sky, renewable energy landscape",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sky/northern lights tundra",
+        "prompt": "northern lights tundra, vibrant aurora borealis, snow-covered expanse, star-filled sky",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sky/starry night sky",
+        "prompt": "starry sky, milky way visible, countless stars, deep cosmic darkness",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Transport/airplane interior",
+        "prompt": "airplane interior, narrow cabin, aviation seating",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Transport/airport",
+        "prompt": "airport terminal, modern transit space, wide interiors",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Transport/train station",
+        "prompt": "train station, platforms and tracks, transit hub",
+        "negative_prompt": ""
+    }
+]

@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "comfyui-styler-pipeline"
+version = "0.1.0"
+description = "Explicit styler-pipeline nodes for ComfyUI workflows."
+readme = "README.md"
+requires-python = ">=3.10"
+
+authors = [
+    { name = "andreszs" }
+]
+
+keywords = [
+    "comfyui",
+    "stable-diffusion",
+    "sdxl",
+    "pipeline",
+    "control",
+    "conditioning",
+    "lora"
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+[project.urls]
+Repository = "https://github.com/andreszs/comfyui-styler-pipeline"
+Documentation = "https://github.com/andreszs/comfyui-styler-pipeline"
+Issues = "https://github.com/andreszs/comfyui-styler-pipeline/issues"
+
+

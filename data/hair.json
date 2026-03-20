@@ -1,0 +1,227 @@
+[
+    {
+        "name": "Asymmetrical bangs",
+        "prompt": "asymmetrical bangs, sharp angled fringe",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Auburn hair",
+        "prompt": "shoulder-length layered hair, auburn hair, warm chestnut undertone",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bob cut",
+        "prompt": "bob cut hairstyle, straight chin-length silhouette",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Braided hair",
+        "prompt": "braided hair, clean woven texture",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Buzz cut",
+        "prompt": "buzz cut hairstyle, clean scalp fade",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Color combo black and cyan",
+        "prompt": "two-tone hair color, black base with cyan panels, high contrast accents",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Color combo black and magenta",
+        "prompt": "two-tone hair color, black base with magenta panels, high contrast accents",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Color combo copper and teal",
+        "prompt": "two-tone hair color, copper and teal blend, vibrant complementary contrast",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Color combo silver and cyan",
+        "prompt": "two-tone hair color, silver and cyan accents, cool luminous contrast",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Color combo silver and magenta",
+        "prompt": "two-tone hair color, silver and magenta accents, vivid neon contrast",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Color combo silver and pink",
+        "prompt": "two-tone hair color, silver and pink accents, soft bright contrast",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Color combo silver and red",
+        "prompt": "two-tone hair color, silver and red accents, sharp dramatic contrast",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Copper red hair",
+        "prompt": "medium layered hair, copper red hair, vibrant warm glow",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Curly hair",
+        "prompt": "curly hair, defined spring curls",
+        "negative_prompt": ""
+    },
+    {
+        "name": "French braid",
+        "prompt": "french braid hairstyle, tight scalp braid pattern",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Hair covering one eye",
+        "prompt": "side-swept hair covering one eye, dramatic fringe placement",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Half-up half-down",
+        "prompt": "half-up half-down hairstyle, balanced tied and loose sections",
+        "negative_prompt": ""
+    },
+    {
+        "name": "High ponytail",
+        "prompt": "high ponytail hairstyle, lifted roots, top volume",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Hime cut",
+        "prompt": "hime cut hairstyle, straight long hair with side locks",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Jet black hair glossy",
+        "prompt": "layered hair, jet black glossy hair, mirror-like shine",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Long straight hair",
+        "prompt": "long straight hair, sleek smooth strands",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Long wavy hair",
+        "prompt": "long wavy hair, soft flowing waves",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Loose strands framing face",
+        "prompt": "loose strands framing the face, soft face-contouring wisps",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Low ponytail",
+        "prompt": "low ponytail hairstyle, neat gathered strands",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Messy bun",
+        "prompt": "messy bun hairstyle, loose textured updo",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Neon cyan highlights",
+        "prompt": "dark layered hair with neon cyan highlights, cyberpunk glow accents",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Neon magenta highlights",
+        "prompt": "dark layered hair with neon magenta highlights, cyberpunk glow accents",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Ombre hair dark roots to light tips",
+        "prompt": "long layered ombre hair, dark roots fading to light tips",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Pastel blue hair",
+        "prompt": "long layered hair, pastel blue hair, cool powder tone",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Pastel pink hair",
+        "prompt": "long layered hair, pastel pink hair, soft candy tone",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Pixie cut",
+        "prompt": "pixie cut hairstyle, short textured layers",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Platinum blonde hair",
+        "prompt": "soft layered hair, platinum blonde hair, cool pale tone",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Rainbow tips subtle",
+        "prompt": "long layered hair, subtle rainbow-dyed tips, restrained saturation",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Shoulder-length hair",
+        "prompt": "shoulder-length hair, soft natural layering",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Side braid",
+        "prompt": "side braid hairstyle, braid resting over one shoulder",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Silver white hair",
+        "prompt": "long layered hair, silver white hair, luminous cool highlights",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Spiky anime hair",
+        "prompt": "spiky anime hair, sharp pointed locks, high silhouette energy",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Streaked highlights subtle",
+        "prompt": "natural base hair with subtle streaked highlights, fine contrast strands",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Top knot",
+        "prompt": "top knot hairstyle, compact tied bun",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Twin tails",
+        "prompt": "twin tails hairstyle, balanced tied sections",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Two-tone hair black and red",
+        "prompt": "two-tone hair, black and red split color pattern",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Undercut",
+        "prompt": "undercut hairstyle, shaved side panels",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Voluminous hair",
+        "prompt": "voluminous hair, lifted roots, full-bodied shape",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Wet hair look",
+        "prompt": "wet hair look, damp clumped strands, reflective sheen",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Wind-swept hair",
+        "prompt": "wind-swept hair, directional motion and flyaway strands",
+        "negative_prompt": ""
+    }
+]

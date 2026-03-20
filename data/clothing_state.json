@@ -1,0 +1,242 @@
+[
+    {
+        "name": "belted",
+        "prompt": "belted clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "buttoned up",
+        "prompt": "buttoned up clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "clothes down",
+        "prompt": "clothes pulled down",
+        "negative_prompt": ""
+    },
+    {
+        "name": "clothing aside",
+        "prompt": "clothing set aside",
+        "negative_prompt": ""
+    },
+    {
+        "name": "cropped",
+        "prompt": "cropped clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "dirty",
+        "prompt": "dirty clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "distressed",
+        "prompt": "distressed fabric",
+        "negative_prompt": ""
+    },
+    {
+        "name": "draped",
+        "prompt": "draped clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "faded",
+        "prompt": "faded fabric",
+        "negative_prompt": ""
+    },
+    {
+        "name": "folded collar",
+        "prompt": "folded collar",
+        "negative_prompt": ""
+    },
+    {
+        "name": "folded cuffs",
+        "prompt": "folded cuffs",
+        "negative_prompt": ""
+    },
+    {
+        "name": "freshly laundered",
+        "prompt": "freshly laundered clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "fringed",
+        "prompt": "fringed details",
+        "negative_prompt": ""
+    },
+    {
+        "name": "full length",
+        "prompt": "full length clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "high-waisted",
+        "prompt": "high-waisted fit",
+        "negative_prompt": ""
+    },
+    {
+        "name": "hood down",
+        "prompt": "hood down",
+        "negative_prompt": ""
+    },
+    {
+        "name": "hood up",
+        "prompt": "hood up",
+        "negative_prompt": ""
+    },
+    {
+        "name": "knotted",
+        "prompt": "knotted fabric",
+        "negative_prompt": ""
+    },
+    {
+        "name": "layered clothing",
+        "prompt": "layered clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "long sleeves",
+        "prompt": "long sleeves",
+        "negative_prompt": ""
+    },
+    {
+        "name": "loose fit",
+        "prompt": "loose fit",
+        "negative_prompt": ""
+    },
+    {
+        "name": "low-waisted",
+        "prompt": "low-waisted fit",
+        "negative_prompt": ""
+    },
+    {
+        "name": "neatly pressed",
+        "prompt": "neatly pressed clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "no straps",
+        "prompt": "strapless clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "one shoulder exposed",
+        "prompt": "one shoulder exposed",
+        "negative_prompt": ""
+    },
+    {
+        "name": "open clothes",
+        "prompt": "open clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "pleated",
+        "prompt": "pleated fabric",
+        "negative_prompt": ""
+    },
+    {
+        "name": "popped collar",
+        "prompt": "popped collar",
+        "negative_prompt": ""
+    },
+    {
+        "name": "revealing clothes",
+        "prompt": "revealing clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "rolled up sleeves",
+        "prompt": "rolled up sleeves",
+        "negative_prompt": ""
+    },
+    {
+        "name": "ruffled",
+        "prompt": "ruffled fabric",
+        "negative_prompt": ""
+    },
+    {
+        "name": "see-through",
+        "prompt": "see-through fabric",
+        "negative_prompt": ""
+    },
+    {
+        "name": "short sleeves",
+        "prompt": "short sleeves",
+        "negative_prompt": ""
+    },
+    {
+        "name": "sleeveless",
+        "prompt": "sleeveless",
+        "negative_prompt": ""
+    },
+    {
+        "name": "starched",
+        "prompt": "starched fabric",
+        "negative_prompt": ""
+    },
+    {
+        "name": "straps visible",
+        "prompt": "visible straps",
+        "negative_prompt": ""
+    },
+    {
+        "name": "tight fit",
+        "prompt": "tight fit",
+        "negative_prompt": ""
+    },
+    {
+        "name": "tucked in",
+        "prompt": "tucked in clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "unbuttoned",
+        "prompt": "unbuttoned clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "undressing",
+        "prompt": "undressing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "unfastened",
+        "prompt": "unfastened clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "untied",
+        "prompt": "untied fabric",
+        "negative_prompt": ""
+    },
+    {
+        "name": "untucked",
+        "prompt": "untucked clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "untying",
+        "prompt": "untying clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "unzipped",
+        "prompt": "unzipped clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "unzipping",
+        "prompt": "unzipping clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "wrinkled",
+        "prompt": "wrinkled fabric",
+        "negative_prompt": ""
+    },
+    {
+        "name": "zipped up",
+        "prompt": "zipped up clothing",
+        "negative_prompt": ""
+    }
+]

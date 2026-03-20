@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-label="Conditioning areas comparison">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0b1220"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="430" fill="url(#bg2)"/>
+  <text x="600" y="44" fill="#f1f5f9" font-size="30" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">Conditioning Pipeline Areas: Global vs Regional Control</text>
+
+  <rect x="45" y="80" width="520" height="305" rx="18" fill="#1f2937" stroke="#475569" stroke-width="2"/>
+  <text x="305" y="118" fill="#f8fafc" font-size="24" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">Global Conditioning Only</text>
+  <text x="85" y="165" fill="#cbd5e1" font-size="20" font-family="Segoe UI, Arial, sans-serif">- One style/prompt balance everywhere</text>
+  <text x="85" y="203" fill="#cbd5e1" font-size="20" font-family="Segoe UI, Arial, sans-serif">- Hard to separate multiple subjects</text>
+  <text x="85" y="241" fill="#cbd5e1" font-size="20" font-family="Segoe UI, Arial, sans-serif">- LoRA influence tends to blend globally</text>
+  <text x="85" y="279" fill="#cbd5e1" font-size="20" font-family="Segoe UI, Arial, sans-serif">- Limited spatial prompt precision</text>
+
+  <rect x="635" y="80" width="520" height="305" rx="18" fill="#102a43" stroke="#38bdf8" stroke-width="3"/>
+  <text x="895" y="118" fill="#f8fafc" font-size="24" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">Set Area + Combine Pipeline</text>
+  <text x="675" y="165" fill="#dbeafe" font-size="20" font-family="Segoe UI, Arial, sans-serif">- Separate conditioning per area/subject</text>
+  <text x="675" y="203" fill="#dbeafe" font-size="20" font-family="Segoe UI, Arial, sans-serif">- Cleaner multi-LoRA composition</text>
+  <text x="675" y="241" fill="#dbeafe" font-size="20" font-family="Segoe UI, Arial, sans-serif">- Keeps global context while steering locally</text>
+  <text x="675" y="279" fill="#dbeafe" font-size="20" font-family="Segoe UI, Arial, sans-serif">- Better control in crowded scene prompts</text>
+</svg>

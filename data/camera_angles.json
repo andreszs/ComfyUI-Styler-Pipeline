@@ -1,0 +1,187 @@
+[
+    {
+        "name": "aerial shot",
+        "prompt": "aerial shot",
+        "negative_prompt": ""
+    },
+    {
+        "name": "bird's-eye view",
+        "prompt": "bird's-eye view",
+        "negative_prompt": ""
+    },
+    {
+        "name": "close-up shot",
+        "prompt": "close-up shot",
+        "negative_prompt": ""
+    },
+    {
+        "name": "crane shot",
+        "prompt": "crane shot",
+        "negative_prompt": ""
+    },
+    {
+        "name": "cutaway shot",
+        "prompt": "cutaway shot",
+        "negative_prompt": ""
+    },
+    {
+        "name": "dolly shot",
+        "prompt": "dolly shot",
+        "negative_prompt": ""
+    },
+    {
+        "name": "dutch angle",
+        "prompt": "dutch angle",
+        "negative_prompt": ""
+    },
+    {
+        "name": "establishing shot",
+        "prompt": "establishing shot",
+        "negative_prompt": ""
+    },
+    {
+        "name": "fisheye",
+        "prompt": "fisheye",
+        "negative_prompt": ""
+    },
+    {
+        "name": "from above",
+        "prompt": "from above",
+        "negative_prompt": ""
+    },
+    {
+        "name": "from behind",
+        "prompt": "from behind",
+        "negative_prompt": ""
+    },
+    {
+        "name": "from below",
+        "prompt": "from below",
+        "negative_prompt": ""
+    },
+    {
+        "name": "from below upskirt",
+        "prompt": "from below upskirt",
+        "negative_prompt": ""
+    },
+    {
+        "name": "handheld shot",
+        "prompt": "handheld shot",
+        "negative_prompt": ""
+    },
+    {
+        "name": "high angle shot",
+        "prompt": "high angle shot",
+        "negative_prompt": ""
+    },
+    {
+        "name": "insert shot",
+        "prompt": "insert shot",
+        "negative_prompt": ""
+    },
+    {
+        "name": "long shot",
+        "prompt": "long shot",
+        "negative_prompt": ""
+    },
+    {
+        "name": "low angle shot",
+        "prompt": "low angle shot",
+        "negative_prompt": ""
+    },
+    {
+        "name": "medium shot",
+        "prompt": "medium shot",
+        "negative_prompt": ""
+    },
+    {
+        "name": "overhead shot",
+        "prompt": "overhead shot",
+        "negative_prompt": ""
+    },
+    {
+        "name": "pan shot",
+        "prompt": "pan shot",
+        "negative_prompt": ""
+    },
+    {
+        "name": "panorama",
+        "prompt": "panorama",
+        "negative_prompt": ""
+    },
+    {
+        "name": "perspective",
+        "prompt": "perspective",
+        "negative_prompt": ""
+    },
+    {
+        "name": "point of view shot",
+        "prompt": "point of view shot",
+        "negative_prompt": ""
+    },
+    {
+        "name": "pov",
+        "prompt": "pov",
+        "negative_prompt": ""
+    },
+    {
+        "name": "reaction shot",
+        "prompt": "reaction shot",
+        "negative_prompt": ""
+    },
+    {
+        "name": "reverse shot",
+        "prompt": "reverse shot",
+        "negative_prompt": ""
+    },
+    {
+        "name": "sideways",
+        "prompt": "sideways",
+        "negative_prompt": ""
+    },
+    {
+        "name": "static shot",
+        "prompt": "static shot",
+        "negative_prompt": ""
+    },
+    {
+        "name": "tilt shot",
+        "prompt": "tilt shot",
+        "negative_prompt": ""
+    },
+    {
+        "name": "tracking shot",
+        "prompt": "tracking shot",
+        "negative_prompt": ""
+    },
+    {
+        "name": "two shot",
+        "prompt": "two shot",
+        "negative_prompt": ""
+    },
+    {
+        "name": "upside-down",
+        "prompt": "upside-down",
+        "negative_prompt": ""
+    },
+    {
+        "name": "vanishing point",
+        "prompt": "vanishing point",
+        "negative_prompt": ""
+    },
+    {
+        "name": "whip pan",
+        "prompt": "whip pan",
+        "negative_prompt": ""
+    },
+    {
+        "name": "wide shot",
+        "prompt": "wide shot",
+        "negative_prompt": ""
+    },
+    {
+        "name": "zoom shot",
+        "prompt": "zoom shot",
+        "negative_prompt": ""
+    }
+]

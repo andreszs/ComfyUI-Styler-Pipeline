@@ -1,0 +1,872 @@
+[
+  {
+    "name": "Activewear/athletic shorts",
+    "prompt": "wearing athletic shorts, sporty active wear",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Activewear/bikini",
+    "prompt": "wearing bikini swimsuit, two-piece swimwear",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Activewear/gym tank top",
+    "prompt": "wearing gym tank top, athletic sleeveless shirt",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Activewear/joggers",
+    "prompt": "wearing joggers, athletic sweatpants, tapered legs",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Activewear/one-piece swimsuit",
+    "prompt": "wearing one-piece swimsuit, full coverage swimwear",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Activewear/sports bra",
+    "prompt": "wearing sports bra, athletic support top",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Activewear/track jacket",
+    "prompt": "wearing track jacket, athletic zip-up jacket",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Activewear/track pants",
+    "prompt": "wearing track pants, athletic side-stripe pants",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Activewear/wetsuit",
+    "prompt": "wearing wetsuit, neoprene diving suit",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Activewear/yoga pants",
+    "prompt": "wearing yoga pants, stretchy athletic leggings",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Bottoms/cargo pants",
+    "prompt": "wearing cargo pants, utility pants with side pockets",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Bottoms/culottes",
+    "prompt": "wearing culottes, wide-leg cropped pants",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Bottoms/high-waisted pants",
+    "prompt": "wearing high-waisted pants, waist above natural line",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Bottoms/hot pants",
+    "prompt": "wearing hot pants, very short shorts",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Bottoms/jeans",
+    "prompt": "wearing jeans, denim pants",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Bottoms/leggings",
+    "prompt": "wearing leggings, skin-tight stretch pants",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Bottoms/maxi skirt",
+    "prompt": "wearing maxi skirt, ankle-length flowing skirt",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Bottoms/mini skirt",
+    "prompt": "wearing mini skirt, very short skirt above knee",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Bottoms/palazzo pants",
+    "prompt": "wearing palazzo pants, extremely wide-leg flowy pants",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Bottoms/pencil skirt",
+    "prompt": "wearing pencil skirt, fitted straight skirt",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Bottoms/pleated skirt",
+    "prompt": "wearing pleated skirt, folded fabric skirt",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Bottoms/shorts",
+    "prompt": "wearing shorts, casual short pants",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Bottoms/skinny jeans",
+    "prompt": "wearing skinny jeans, tight-fitting denim pants",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Bottoms/wide-leg pants",
+    "prompt": "wearing wide-leg pants, loose flowing trousers",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Costumes/Bear Costume",
+    "prompt": "person wearing a bear costume, plush mascot-style suit, rounded bear hood, costume paws",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Costumes/Bunny Costume",
+    "prompt": "person wearing a bunny costume, plush suit, long bunny ears hood, fluffy tail accessory, costume paws",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Costumes/Cat Costume",
+    "prompt": "person wearing a cat costume, cat-eared hood, plush suit or onesie, costume tail, paw gloves",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Costumes/Dog Costume",
+    "prompt": "person wearing a dog costume, plush mascot-style suit, floppy ears hood, costume paws",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Costumes/Fox Costume",
+    "prompt": "person wearing a fox costume, plush costume suit, fox-eared hood, costume tail accessory, costume paws",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Costumes/Frog Costume",
+    "prompt": "person wearing a frog costume, green plush onesie, frog hood with round eyes, costume mittens",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Costumes/Panda Costume",
+    "prompt": "person wearing a panda costume, black and white plush suit, panda hood, costume paws",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Costumes/Tiger Costume",
+    "prompt": "person wearing a tiger costume, striped plush onesie suit, tiger hood, costume tail, costume paws",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Dresses/a-line dress",
+    "prompt": "wearing a-line dress, fitted top flared skirt",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Dresses/ball gown",
+    "prompt": "wearing ball gown, full-skirted formal evening dress",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Dresses/bodycon dress",
+    "prompt": "wearing bodycon dress, tight body-hugging dress",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Dresses/cocktail dress",
+    "prompt": "wearing cocktail dress, semi-formal party dress",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Dresses/evening gown",
+    "prompt": "wearing evening gown, elegant formal long dress",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Dresses/maxi dress",
+    "prompt": "wearing maxi dress, ankle-length flowing dress",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Dresses/midi dress",
+    "prompt": "wearing midi dress, mid-calf length dress",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Dresses/mini dress",
+    "prompt": "wearing mini dress, very short dress above knee",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Dresses/shift dress",
+    "prompt": "wearing shift dress, loose straight-cut dress",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Dresses/slip dress",
+    "prompt": "wearing slip dress, satin camisole-style dress",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Dresses/sundress",
+    "prompt": "wearing sundress, casual summer dress",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Dresses/wrap dress",
+    "prompt": "wearing wrap dress, front-wrapped tie-closure dress",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Formal/ball gown",
+    "prompt": "wearing ball gown, elaborate formal dress",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Formal/business suit",
+    "prompt": "wearing business suit, professional matching jacket pants",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Formal/evening gown",
+    "prompt": "wearing evening gown, elegant formal dress",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Formal/prom dress",
+    "prompt": "wearing prom dress, formal dance dress",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Formal/three-piece suit",
+    "prompt": "wearing three-piece suit, jacket vest pants ensemble",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Formal/tuxedo",
+    "prompt": "wearing tuxedo, formal black tie suit",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Formal/wedding dress",
+    "prompt": "wearing wedding dress, white bridal gown",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Historical/cowboy",
+    "prompt": "wearing cowboy outfit, western hat, denim and leather ranch attire",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Historical/egyptian robes",
+    "prompt": "wearing egyptian robes, ancient egyptian linen garments",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Historical/greek chiton",
+    "prompt": "wearing greek chiton, draped ancient greek tunic",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Historical/ninja outfit",
+    "prompt": "wearing ninja outfit, stealth shinobi clothing, dark fitted garb",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Historical/roman toga",
+    "prompt": "wearing roman toga, draped ancient roman garment",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Historical/samurai armor",
+    "prompt": "wearing samurai armor, layered japanese lamellar armor, samurai attire",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Historical/viking raider",
+    "prompt": "wearing viking raider outfit, fur-trimmed leather armor, norse warrior attire",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Historical/viking tunic",
+    "prompt": "wearing viking tunic, wool norse tunic with belt and wraps",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Medieval/blacksmith apron",
+    "prompt": "wearing blacksmith apron, heavy leather apron over work clothes",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Medieval/crusader",
+    "prompt": "wearing crusader outfit, medieval surcoat over armor, crusader attire",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Medieval/knight armor",
+    "prompt": "wearing knight armor, medieval steel plate armor, knight attire",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Medieval/monk robe",
+    "prompt": "wearing monk robe, simple hooded monastic garment",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Medieval/noble attire",
+    "prompt": "wearing noble attire, rich medieval fabrics, ornate aristocratic clothing",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Medieval/peasant",
+    "prompt": "wearing peasant clothing, coarse linen tunic, rustic medieval attire",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Medieval/priest",
+    "prompt": "wearing medieval priest robes, clerical garments, priest attire",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Medieval/royal robes",
+    "prompt": "wearing royal robes, regal medieval garments, embroidered ceremonial clothing",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Medieval/squire",
+    "prompt": "wearing squire outfit, medieval tunic and belt, young attendant attire",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Medieval/templar",
+    "prompt": "wearing templar outfit, knightly tabard and armor, templar attire",
+    "negative_prompt": ""
+  },
+  {
+    "name": "One-Piece/bodysuit",
+    "prompt": "wearing bodysuit, form-fitting one-piece garment",
+    "negative_prompt": ""
+  },
+  {
+    "name": "One-Piece/catsuit",
+    "prompt": "wearing catsuit, tight full-body suit",
+    "negative_prompt": ""
+  },
+  {
+    "name": "One-Piece/jumpsuit",
+    "prompt": "wearing jumpsuit, one-piece pants outfit",
+    "negative_prompt": ""
+  },
+  {
+    "name": "One-Piece/leotard",
+    "prompt": "wearing leotard, tight athletic one-piece",
+    "negative_prompt": ""
+  },
+  {
+    "name": "One-Piece/romper",
+    "prompt": "wearing romper, one-piece shorts outfit",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Outerwear/anorak",
+    "prompt": "wearing anorak, hooded windproof jacket",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Outerwear/blazer",
+    "prompt": "wearing blazer, tailored formal jacket",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Outerwear/bomber jacket",
+    "prompt": "wearing bomber jacket, waist-length zippered jacket",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Outerwear/cape",
+    "prompt": "wearing cape, sleeveless draped outerwear",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Outerwear/cardigan",
+    "prompt": "wearing cardigan, button-front sweater",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Outerwear/cloak",
+    "prompt": "wearing cloak, long flowing outer garment",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Outerwear/denim jacket",
+    "prompt": "wearing denim jacket, jean jacket",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Outerwear/down jacket",
+    "prompt": "wearing down jacket, puffy insulated coat",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Outerwear/leather jacket",
+    "prompt": "wearing leather jacket, jacket made of leather",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Outerwear/overcoat",
+    "prompt": "wearing overcoat, long heavy outer coat",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Outerwear/parka",
+    "prompt": "wearing parka, hooded winter coat",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Outerwear/poncho",
+    "prompt": "wearing poncho, sleeveless blanket-like garment",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Outerwear/trench coat",
+    "prompt": "wearing trench coat, belted double-breasted raincoat",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Outerwear/varsity jacket",
+    "prompt": "wearing varsity jacket, letterman jacket",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Outerwear/windbreaker",
+    "prompt": "wearing windbreaker, lightweight wind-resistant jacket",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Performance/ballerina",
+    "prompt": "wearing ballerina costume, ballet tutu, dance bodice and tights",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Performance/clown",
+    "prompt": "wearing clown costume, colorful circus outfit with oversized accents",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Performance/illusionist",
+    "prompt": "wearing illusionist outfit, dramatic stage performer attire",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Performance/jester",
+    "prompt": "wearing jester costume, medieval fool attire with bells and motley pattern",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Performance/joker",
+    "prompt": "wearing joker outfit, theatrical clown-inspired suit, trickster stage attire",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Performance/magician tux",
+    "prompt": "wearing magician tux, stage tuxedo with bow tie and performance flair",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Performance/ringmaster",
+    "prompt": "wearing ringmaster outfit, circus tailcoat, top hat, performance attire",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Profession/astronaut suit",
+    "prompt": "wearing astronaut suit, pressurized space suit with life-support details",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Profession/bartender",
+    "prompt": "wearing bartender outfit, service vest or apron, bar uniform",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Profession/construction worker",
+    "prompt": "wearing construction worker outfit, hard hat, work boots, utility gear",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Profession/detective trenchcoat",
+    "prompt": "wearing detective trenchcoat, classic investigator overcoat and tie",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Profession/doctor coat",
+    "prompt": "wearing doctor coat, white physician coat over professional attire",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Profession/field researcher",
+    "prompt": "wearing field researcher outfit, utility vest, durable expedition clothing",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Profession/firefighter uniform",
+    "prompt": "wearing firefighter uniform, turnout coat and protective gear",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Profession/flight attendant",
+    "prompt": "wearing flight attendant uniform, airline service attire",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Profession/hazmat suit",
+    "prompt": "wearing hazmat suit, full-body protective chemical suit",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Profession/judge robe",
+    "prompt": "wearing judge robe, formal black judicial robe",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Profession/mechanic coveralls",
+    "prompt": "wearing mechanic coveralls, grease-stained work overalls, shop uniform",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Profession/pilot uniform",
+    "prompt": "wearing pilot uniform, airline captain jacket, epaulets, tie",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Profession/safety vest",
+    "prompt": "wearing safety vest, high-visibility reflective workwear",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Profession/surgeon scrubs",
+    "prompt": "wearing surgeon scrubs, medical scrub top and pants, surgical attire",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Profession/SWAT gear",
+    "prompt": "wearing SWAT gear, tactical vest, helmet, law enforcement tactical uniform",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Profession/waiter",
+    "prompt": "wearing waiter uniform, service shirt, vest, apron",
+    "negative_prompt": ""
+  },
+  {
+    "name": "SciFi/android uniform",
+    "prompt": "wearing android uniform, sleek synthetic future-service attire",
+    "negative_prompt": ""
+  },
+  {
+    "name": "SciFi/cyberpunk streetwear",
+    "prompt": "wearing cyberpunk streetwear, futuristic urban layers, neon techwear accents",
+    "negative_prompt": ""
+  },
+  {
+    "name": "SciFi/exosuit",
+    "prompt": "wearing exosuit, mechanical powered frame, futuristic protective suit",
+    "negative_prompt": ""
+  },
+  {
+    "name": "SciFi/neon tech bodysuit",
+    "prompt": "wearing neon tech bodysuit, futuristic synthetic one-piece with glowing panel accents",
+    "negative_prompt": ""
+  },
+  {
+    "name": "SciFi/space marine armor",
+    "prompt": "wearing space marine armor, futuristic powered combat plating",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Sleepwear/bathrobe",
+    "prompt": "wearing bathrobe, loose tied robe",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Sleepwear/nightgown",
+    "prompt": "wearing nightgown, loose sleep dress",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Sleepwear/pajamas",
+    "prompt": "wearing pajamas, sleepwear set",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Sleepwear/silk robe",
+    "prompt": "wearing silk robe, luxurious tied robe",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Sleepwear/sleep shirt",
+    "prompt": "wearing sleep shirt, oversized bedtime tee, relaxed nightwear",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Specialty/armor",
+    "prompt": "wearing armor, protective metal plating",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Specialty/chainmail",
+    "prompt": "wearing chainmail, linked metal ring armor",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Specialty/cosplay costume",
+    "prompt": "wearing cosplay costume, character outfit",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Specialty/fantasy outfit",
+    "prompt": "wearing fantasy outfit, imaginative costume",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Specialty/gothic lolita dress",
+    "prompt": "wearing gothic lolita dress, victorian-inspired dark frilly dress",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Specialty/steampunk outfit",
+    "prompt": "wearing steampunk outfit, victorian-era mechanical aesthetic clothing",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Tops/blouse",
+    "prompt": "wearing blouse, dressy button-up shirt",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Tops/button-up shirt",
+    "prompt": "wearing button-up shirt, collared buttoned shirt",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Tops/crop top",
+    "prompt": "wearing crop top, short shirt exposing midriff",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Tops/halter top",
+    "prompt": "wearing halter top, backless top tied at neck",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Tops/henley shirt",
+    "prompt": "wearing henley shirt, collarless buttoned placket shirt",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Tops/hoodie",
+    "prompt": "wearing hoodie, hooded sweatshirt",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Tops/off-shoulder top",
+    "prompt": "wearing off-shoulder top, shoulders exposed shirt",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Tops/polo shirt",
+    "prompt": "wearing polo shirt, collared short-sleeve shirt",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Tops/sweater",
+    "prompt": "wearing sweater, knitted pullover",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Tops/sweatshirt",
+    "prompt": "wearing sweatshirt, casual pullover",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Tops/t-shirt",
+    "prompt": "wearing t-shirt, casual short-sleeve shirt",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Tops/tank top",
+    "prompt": "wearing tank top, sleeveless shirt",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Tops/tube top",
+    "prompt": "wearing tube top, strapless bandeau top",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Tops/turtleneck",
+    "prompt": "wearing turtleneck, high rolled collar sweater",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Tops/v-neck shirt",
+    "prompt": "wearing v-neck shirt, v-shaped neckline shirt",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Traditional/ao dai",
+    "prompt": "wearing ao dai, vietnamese traditional dress tunic",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Traditional/cheongsam",
+    "prompt": "wearing cheongsam, chinese fitted dress",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Traditional/dirndl",
+    "prompt": "wearing dirndl, german traditional dress with apron",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Traditional/hakama",
+    "prompt": "wearing hakama, japanese wide-leg pleated pants",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Traditional/hanbok",
+    "prompt": "wearing hanbok, korean traditional dress",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Traditional/hanfu",
+    "prompt": "wearing hanfu, chinese historical robe",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Traditional/kimono",
+    "prompt": "wearing kimono, japanese traditional robe",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Traditional/lederhosen",
+    "prompt": "wearing lederhosen, german leather shorts with suspenders",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Traditional/qipao",
+    "prompt": "wearing qipao, chinese fitted dress",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Traditional/sari",
+    "prompt": "wearing sari, indian draped cloth dress",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Traditional/yukata",
+    "prompt": "wearing yukata, japanese casual summer kimono",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Underwear/boxer shorts",
+    "prompt": "wearing boxer shorts, loose underwear shorts",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Underwear/bra",
+    "prompt": "wearing bra, chest support undergarment",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Underwear/briefs",
+    "prompt": "wearing briefs, close-fitting underwear",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Underwear/bustier",
+    "prompt": "wearing bustier, fitted strapless top",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Underwear/corset",
+    "prompt": "wearing corset, tight-laced waist garment",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Underwear/lingerie",
+    "prompt": "wearing lingerie, decorative intimate apparel",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Underwear/panties",
+    "prompt": "wearing panties, women's underwear",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Uniform/chef coat",
+    "prompt": "wearing chef coat, white double-breasted kitchen uniform",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Uniform/lab coat",
+    "prompt": "wearing lab coat, white medical laboratory coat",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Uniform/maid outfit",
+    "prompt": "wearing maid outfit, black dress with white apron",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Uniform/mail carrier",
+    "prompt": "wearing mail carrier uniform, postal service attire",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Uniform/military uniform",
+    "prompt": "wearing military uniform, formal armed forces dress",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Uniform/nurse uniform",
+    "prompt": "wearing nurse uniform, medical scrubs or dress",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Uniform/paramedic",
+    "prompt": "wearing paramedic uniform, emergency medical response gear",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Uniform/police uniform",
+    "prompt": "wearing police uniform, law enforcement dress",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Uniform/sailor uniform",
+    "prompt": "wearing sailor uniform, nautical-style school uniform",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Uniform/school uniform",
+    "prompt": "wearing school uniform, educational institution dress code",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Uniform/security guard",
+    "prompt": "wearing security guard uniform, badge and duty attire",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Uniform/taxi driver",
+    "prompt": "wearing taxi driver uniform, professional driver attire",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Uniform/train conductor",
+    "prompt": "wearing train conductor uniform, railway service jacket and cap",
+    "negative_prompt": ""
+  }
+]

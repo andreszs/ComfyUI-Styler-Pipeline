@@ -1,0 +1,67 @@
+[
+    {
+        "name": "BeforeDawn",
+        "prompt": "pre-dawn atmosphere, dim cool light, soft bluish tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "BlueHour",
+        "prompt": "blue hour lighting, cool ambient glow, deep blue tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Dawn",
+        "prompt": "dawn atmosphere, gentle warm light, soft pastel tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Day",
+        "prompt": "daytime lighting, bright natural light, balanced tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Dusk",
+        "prompt": "dusk atmosphere, fading warm light, soft muted colors",
+        "negative_prompt": ""
+    },
+    {
+        "name": "GoldenHour",
+        "prompt": "golden hour atmosphere, warm directional light, soft golden tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Midday",
+        "prompt": "midday lighting, bright overhead light, strong neutral tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Midnight",
+        "prompt": "midnight atmosphere, very low light, cool desaturated tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Morning",
+        "prompt": "morning atmosphere, soft natural light, fresh warm tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Night",
+        "prompt": "night atmosphere, low ambient light, soft cool tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sunrise",
+        "prompt": "sunrise atmosphere, warm rising light, gentle golden tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sunset",
+        "prompt": "sunset atmosphere, warm fading light, rich orange tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Twilight",
+        "prompt": "twilight lighting, soft dim light, cool purple-blue tones",
+        "negative_prompt": ""
+    }
+]

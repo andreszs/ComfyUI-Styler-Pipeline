@@ -1,0 +1,312 @@
+[
+  {
+    "name": "Amused",
+    "prompt": "amused expression, soft smile, eyes slightly squinted, playful calm",
+    "negative_prompt": "angry expression, crying"
+  },
+  {
+    "name": "Angry",
+    "prompt": "angry expression, furrowed brows, tense facial muscles",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Annoyed",
+    "prompt": "annoyed expression, subtle frown, irritated look",
+    "negative_prompt": "smiling, wide open eyes, exaggerated expression"
+  },
+  {
+    "name": "Awkward Smile",
+    "prompt": "awkward smile, tense mouth corners, uneasy eyes, forced friendliness",
+    "negative_prompt": "confident grin, relaxed smile"
+  },
+  {
+    "name": "Bored",
+    "prompt": "bored expression, half-lidded eyes, disinterested face",
+    "negative_prompt": "smiling, raised eyebrows, energetic expression"
+  },
+  {
+    "name": "Confident",
+    "prompt": "confident expression, steady gaze, composed facial features",
+    "negative_prompt": "surprised expression, exaggerated emotion"
+  },
+  {
+    "name": "Confused",
+    "prompt": "confused expression, knitted brows, slightly parted lips, uncertain gaze",
+    "negative_prompt": "confident expression, wide grin, exaggerated surprise"
+  },
+  {
+    "name": "Contempt",
+    "prompt": "contempt expression, one corner smirk, narrowed eyes, dismissive look",
+    "negative_prompt": "warm smile, friendly gaze"
+  },
+  {
+    "name": "Crying",
+    "prompt": "crying expression, watery eyes, trembling lips, visible tears, distressed face",
+    "negative_prompt": "smiling, calm expression"
+  },
+  {
+    "name": "Curious",
+    "prompt": "curious expression, attentive eyes, slightly raised eyebrows",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Dazed",
+    "prompt": "dazed expression, unfocused eyes, slack mouth, stunned look",
+    "negative_prompt": "sharp focus, confident expression"
+  },
+  {
+    "name": "Deadpan",
+    "prompt": "deadpan expression, flat affect, minimal facial emotion",
+    "negative_prompt": "smiling, surprised expression, raised eyebrows"
+  },
+  {
+    "name": "Determined",
+    "prompt": "determined expression, focused eyes, firm jaw, resolute look",
+    "negative_prompt": "sleepy, timid, exaggerated surprise, laughing"
+  },
+  {
+    "name": "Disappointed",
+    "prompt": "disappointed expression, downcast eyes, subtle frown",
+    "negative_prompt": "smiling, exaggerated emotion"
+  },
+  {
+    "name": "Disgusted",
+    "prompt": "disgusted expression, nose wrinkled, curled lip, narrowed eyes",
+    "negative_prompt": "smiling, playful expression, soft gentle gaze"
+  },
+  {
+    "name": "Embarrassed",
+    "prompt": "embarrassed expression, blush, shy gaze",
+    "negative_prompt": "confident expression, exaggerated emotion"
+  },
+  {
+    "name": "Embarrassed Smile",
+    "prompt": "embarrassed smile, blush, shy expression, gentle grin",
+    "negative_prompt": "bold grin, exaggerated confidence"
+  },
+  {
+    "name": "Euphoric",
+    "prompt": "euphoric expression, wide smile, bright eyes, energized joy",
+    "negative_prompt": "flat affect, bored expression"
+  },
+  {
+    "name": "Excited",
+    "prompt": "excited expression, bright eyes, energetic facial expression",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Fearful",
+    "prompt": "fearful expression, tense brows, wide alert eyes, tight mouth, startled tension",
+    "negative_prompt": "relaxed smile, smug look"
+  },
+  {
+    "name": "Flat Affect",
+    "prompt": "flat affect expression, emotionally neutral face, subdued features",
+    "negative_prompt": "smiling, exaggerated emotion, raised eyebrows"
+  },
+  {
+    "name": "Flirty",
+    "prompt": "flirty expression, soft smile, half-lidded eyes, playful gaze",
+    "negative_prompt": "angry expression, disgusted"
+  },
+  {
+    "name": "Focused Intense",
+    "prompt": "intense focus expression, narrowed eyes, firm mouth, concentrated stare",
+    "negative_prompt": "sleepy, laughing"
+  },
+  {
+    "name": "Guilty",
+    "prompt": "guilty expression, downcast eyes, tight lips, uneasy face",
+    "negative_prompt": "confident expression, smug"
+  },
+  {
+    "name": "Half Smile",
+    "prompt": "half smile expression, asymmetrical mouth, subtle emotion",
+    "negative_prompt": "wide grin, exaggerated smile"
+  },
+  {
+    "name": "Happy",
+    "prompt": "happy expression, gentle smile, relaxed facial features",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Jealous",
+    "prompt": "jealous expression, narrowed eyes, tense jaw, restrained irritation",
+    "negative_prompt": "happy expression, relieved"
+  },
+  {
+    "name": "Laughing",
+    "prompt": "laughing expression, open mouth smile, eyes squinted, joyful face",
+    "negative_prompt": "deadpan, stoic"
+  },
+  {
+    "name": "Melancholic",
+    "prompt": "melancholic expression, distant gaze, softened eyes, quiet sadness",
+    "negative_prompt": "excited expression, wide grin"
+  },
+  {
+    "name": "Nervous",
+    "prompt": "nervous expression, tense brows, uneasy eyes, tight mouth",
+    "negative_prompt": "relaxed smile, confident expression, smug look"
+  },
+  {
+    "name": "Neutral",
+    "prompt": "neutral expression, relaxed face, balanced features",
+    "negative_prompt": "surprised expression, raised eyebrows, exaggerated emotion"
+  },
+  {
+    "name": "Panicked",
+    "prompt": "panicked expression, wide eyes, tense brows, parted lips, urgent fear",
+    "negative_prompt": "calm expression, confident"
+  },
+  {
+    "name": "Pensive",
+    "prompt": "pensive expression, thoughtful gaze, calm facial muscles",
+    "negative_prompt": "smiling, raised eyebrows, exaggerated expression"
+  },
+  {
+    "name": "Pleading",
+    "prompt": "pleading expression, raised inner brows, wide watery eyes, soft tense mouth",
+    "negative_prompt": "smug, teasing"
+  },
+  {
+    "name": "Pursed Lips",
+    "prompt": "pursed lips expression, subtle tension, contemplative look",
+    "negative_prompt": "open mouth smile, exaggerated emotion"
+  },
+  {
+    "name": "Raised Eyebrow",
+    "prompt": "raised eyebrow expression, asymmetric brows, inquisitive look",
+    "negative_prompt": "wide open eyes, exaggerated surprise"
+  },
+  {
+    "name": "Relieved",
+    "prompt": "relieved expression, softened eyes, gentle exhale look, relaxed mouth",
+    "negative_prompt": "tense brows, anxious gaze, angry expression"
+  },
+  {
+    "name": "Sad",
+    "prompt": "sad expression, lowered gaze, soft frown",
+    "negative_prompt": "smiling, energetic expression"
+  },
+  {
+    "name": "Sarcastic",
+    "prompt": "sarcastic expression, slight smirk, raised eyebrow, unimpressed eyes",
+    "negative_prompt": "earnest smile, excited"
+  },
+  {
+    "name": "Serious",
+    "prompt": "serious expression, firm mouth, focused eyes",
+    "negative_prompt": "smiling, surprised expression, raised eyebrows"
+  },
+  {
+    "name": "Shocked",
+    "prompt": "shocked expression, eyes wide, mouth slightly open, frozen surprise",
+    "negative_prompt": "smiling, relaxed expression"
+  },
+  {
+    "name": "Shy",
+    "prompt": "shy expression, averted gaze, blush",
+    "negative_prompt": "confident expression, exaggerated emotion"
+  },
+  {
+    "name": "Side Glance",
+    "prompt": "side glance expression, eyes looking sideways, subtle tension",
+    "negative_prompt": "direct stare, wide open eyes"
+  },
+  {
+    "name": "Sleepy",
+    "prompt": "sleepy expression, drooping eyelids, relaxed face",
+    "negative_prompt": "wide open eyes, energetic expression"
+  },
+  {
+    "name": "Smirk",
+    "prompt": "smirk expression, asymmetric grin, self-assured look",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Smug",
+    "prompt": "smug expression, slight smirk, self-satisfied look",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Soft Smile",
+    "prompt": "soft smile, relaxed eyes, gentle expression, calm warmth",
+    "negative_prompt": "wide grin, exaggerated smile"
+  },
+  {
+    "name": "Skeptical",
+    "prompt": "skeptical expression, raised eyebrow, narrowed eyes, slight frown, doubtful look",
+    "negative_prompt": "wide grin, wide open eyes, exaggerated surprise, cheerful smile"
+  },
+  {
+    "name": "Stern",
+    "prompt": "stern expression, tight mouth, narrowed eyes, strict gaze",
+    "negative_prompt": "playful smile, teasing"
+  },
+  {
+    "name": "Stoic",
+    "prompt": "stoic expression, calm firm face, restrained emotion",
+    "negative_prompt": "smiling, exaggerated emotion"
+  },
+  {
+    "name": "Suspicious",
+    "prompt": "suspicious expression, narrowed eyes, tense brows, guarded look",
+    "negative_prompt": "trusting smile, relaxed gaze"
+  },
+  {
+    "name": "Surprised",
+    "prompt": "surprised expression, wide eyes, raised eyebrows",
+    "negative_prompt": ""
+  },
+  {
+    "name": "Surprised Laugh",
+    "prompt": "surprised laugh, wide eyes, open mouth smile, excited shock",
+    "negative_prompt": "deadpan, flat affect"
+  },
+  {
+    "name": "Teasing",
+    "prompt": "teasing expression, playful gaze, subtle mischievous smile",
+    "negative_prompt": "blank stare, rigid expression"
+  },
+  {
+    "name": "Tender",
+    "prompt": "tender expression, softened eyes, slight smile, gentle calm",
+    "negative_prompt": "angry expression, disgusted"
+  },
+  {
+    "name": "Tired",
+    "prompt": "tired expression, heavy eyelids, subtle eye bags",
+    "negative_prompt": "energetic expression, wide open eyes"
+  },
+  {
+    "name": "Tsundere",
+    "prompt": "tsundere expression, annoyed blush, conflicted emotions",
+    "negative_prompt": "gentle smile, relaxed confidence"
+  },
+  {
+    "name": "Wistful Smile",
+    "prompt": "wistful smile, soft eyes, slight grin, bittersweet calm",
+    "negative_prompt": "laughing, euphoric"
+  },
+  {
+    "name": "Worried",
+    "prompt": "worried expression, tense brows, anxious gaze",
+    "negative_prompt": "smiling, exaggerated emotion"
+  },
+  {
+    "name": "Wry Smile",
+    "prompt": "wry smile, uneven grin, tired eyes, ironic calm",
+    "negative_prompt": "big cheerful smile, excited"
+  },
+  {
+    "name": "Yandere Calm",
+    "prompt": "calm yandere expression, intense gaze, unsettling composure",
+    "negative_prompt": "smiling, playful expression"
+  },
+  {
+    "name": "Yandere Smile",
+    "prompt": "yandere smile, gentle grin, intense gaze, unsettling calm",
+    "negative_prompt": "friendly warm smile, playful expression"
+  }
+]

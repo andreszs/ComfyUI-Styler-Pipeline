@@ -1,0 +1,97 @@
+[
+    {
+        "name": "Anamorphic Bokeh",
+        "prompt": "anamorphic bokeh, oval light orbs, horizontal optical flares",
+        "negative_prompt": "circular bokeh, natural focus"
+    },
+    {
+        "name": "Balanced Bokeh",
+        "prompt": "balanced bokeh, soft background blur, gentle separation",
+        "negative_prompt": "deep focus, flat sharpness"
+    },
+    {
+        "name": "Creamy Bokeh",
+        "prompt": "creamy bokeh, smooth circular highlights, strong blur",
+        "negative_prompt": "busy background, harsh focus"
+    },
+    {
+        "name": "Deep Focus",
+        "prompt": "deep focus, sharp foreground to background, full clarity",
+        "negative_prompt": "shallow focus, bokeh"
+    },
+    {
+        "name": "Defocus Smooth",
+        "prompt": "smooth defocus, gentle overall softness, dreamy quality",
+        "negative_prompt": "sharp details, crisp focus"
+    },
+    {
+        "name": "Extreme Bokeh",
+        "prompt": "extreme bokeh, very strong blur, large light orbs",
+        "negative_prompt": "deep focus, background detail"
+    },
+    {
+        "name": "Focus Stacking",
+        "prompt": "focus stacking, extended sharpness across planes, macro clarity",
+        "negative_prompt": "focus falloff, blur"
+    },
+    {
+        "name": "Hyperfocal",
+        "prompt": "hyperfocal depth, maximum sharpness range, wide focus",
+        "negative_prompt": "subject isolation, background blur"
+    },
+    {
+        "name": "Macro Ultra Shallow",
+        "prompt": "macro ultra shallow, razor-thin focus plane, isolated details",
+        "negative_prompt": "wide focus range"
+    },
+    {
+        "name": "Moderate Depth",
+        "prompt": "moderate depth, clear subject with readable background",
+        "negative_prompt": "extreme blur, flat focus"
+    },
+    {
+        "name": "Portrait Shallow",
+        "prompt": "portrait shallow depth, strong subject separation, soft background",
+        "negative_prompt": "deep focus"
+    },
+    {
+        "name": "Rack Focus",
+        "prompt": "rack focus transition, shifting focus planes, cinematic pull",
+        "negative_prompt": "static focus, uniform sharpness"
+    },
+    {
+        "name": "Selective Focus",
+        "prompt": "selective focus, controlled depth, foreground-background falloff, film-style transitions",
+        "negative_prompt": "uniform sharpness"
+    },
+    {
+        "name": "Soft Focus",
+        "prompt": "soft focus, gentle sharpness roll-off, subtle diffusion",
+        "negative_prompt": "harsh sharpness, overdefined edges"
+    },
+    {
+        "name": "Split Diopter",
+        "prompt": "split diopter, dual focus planes, foreground-background sharp",
+        "negative_prompt": "single focus plane, natural falloff"
+    },
+    {
+        "name": "Swirly Bokeh",
+        "prompt": "swirly bokeh, spiral out-of-focus patterns, vintage optical character",
+        "negative_prompt": "smooth bokeh, modern optics"
+    },
+    {
+        "name": "Tilt Shift",
+        "prompt": "tilt-shift depth, miniature effect, selective focus band",
+        "negative_prompt": "natural perspective"
+    },
+    {
+        "name": "Ultra Sharp",
+        "prompt": "ultra sharp focus, crisp details, high micro-contrast",
+        "negative_prompt": "blur, diffusion"
+    },
+    {
+        "name": "Very Shallow",
+        "prompt": "very shallow depth, razor-thin plane, dramatic background blur",
+        "negative_prompt": "deep focus, environmental clarity"
+    }
+]

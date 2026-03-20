@@ -1,0 +1,117 @@
+[
+    {
+        "name": "Chibi",
+        "prompt": "chibi anime style, exaggerated cute proportions, simple flat colors",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Classic Shojo",
+        "prompt": "shojo anime style, delicate lineart, soft emotional highlights",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Classic Shonen",
+        "prompt": "shonen anime style, bold shading, dynamic expressive lines",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Cyberpunk Anime",
+        "prompt": "cyberpunk anime style, neon accents, high-contrast futuristic tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Ecchi Style",
+        "prompt": "ecchi anime style, glossy highlights, vibrant playful tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Fantasy Anime",
+        "prompt": "fantasy anime style, vibrant magical tones, ornate fantasy detailing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Ghibli-esque",
+        "prompt": "ghibli-inspired anime style, soft warm palettes, expressive gentle shading",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Gothic Anime",
+        "prompt": "gothic anime style, dark ornate tones, dramatic stylized shadows",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Horror Anime",
+        "prompt": "horror anime style, sharp dramatic lighting, eerie shadowed tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Mecha Anime",
+        "prompt": "mecha anime style, mechanical design elements, sharp angular shading",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Modern Digital Anime",
+        "prompt": "modern digital anime style, clean lineart, smooth digital gradients",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Mystery Anime",
+        "prompt": "mystery anime style, muted palettes, atmospheric suspense shading",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Real Robot Anime",
+        "prompt": "real robot anime style, grounded mecha proportions, technical panel lines, militarized mechanical detail",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Retro 90s Anime",
+        "prompt": "retro 90s anime style, cel-shaded coloring, grainy vintage tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Romantic Comedy",
+        "prompt": "romantic comedy anime style, bright cheerful tones, expressive emotions",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Seinen",
+        "prompt": "seinen anime style, mature detailed lineart, subdued dramatic tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Slice-of-Life",
+        "prompt": "slice-of-life anime style, soft color palette, gentle natural lighting",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Space Opera Anime",
+        "prompt": "space opera anime style, cosmic tones, dramatic sci-fi lighting",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Steampunk Anime",
+        "prompt": "steampunk anime style, brass accents, vintage mechanical motifs",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Super Robot Anime",
+        "prompt": "super robot anime style, bold heroic mecha silhouette, dramatic hard-surface forms, stylized mechanical accents",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Supernatural Anime",
+        "prompt": "supernatural anime style, ethereal glowing accents, mystical shading",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Time Travel Anime",
+        "prompt": "time travel anime style, surreal temporal effects, luminous highlights",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Watercolor Anime",
+        "prompt": "watercolor anime aesthetic, soft bleeding colors, painterly textures",
+        "negative_prompt": ""
+    }
+]

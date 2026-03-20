@@ -1,0 +1,152 @@
+[
+    {
+        "name": "Anime Pop",
+        "prompt": "vibrant anime color grading, clean saturation, bright expressive colors",
+        "negative_prompt": "muted tones, film grain"
+    },
+    {
+        "name": "BleachBypass",
+        "prompt": "bleach bypass film grading, high contrast, desaturated metallic tones",
+        "negative_prompt": "warm saturation"
+    },
+    {
+        "name": "BlueHour",
+        "prompt": "blue hour color grading, cool shadows, cyan highlights",
+        "negative_prompt": "warm tones"
+    },
+    {
+        "name": "Cinematic",
+        "prompt": "cinematic color grading, deep contrast, rich tones, controlled highlights",
+        "negative_prompt": "flat color, low contrast"
+    },
+    {
+        "name": "ClassicChrome",
+        "prompt": "Fujifilm Classic Chrome palette, muted colors, soft contrast",
+        "negative_prompt": "oversaturated colors"
+    },
+    {
+        "name": "CoolTone",
+        "prompt": "cool-toned grading, blue shadows, neutral highlights",
+        "negative_prompt": "warm amber tones"
+    },
+    {
+        "name": "Dreamy Glow",
+        "prompt": "dreamy cinematic glow, soft highlights, subtle bloom, gentle contrast",
+        "negative_prompt": "harsh lighting, hard contrast"
+    },
+    {
+        "name": "Filmic",
+        "prompt": "filmic color grading, organic tones, soft highlights, rich shadows",
+        "negative_prompt": "digital sharpness"
+    },
+    {
+        "name": "GoldenHour",
+        "prompt": "golden hour color grading, warm highlights, soft orange glow",
+        "negative_prompt": "cool tones"
+    },
+    {
+        "name": "HDR",
+        "prompt": "HDR-style color grading, enhanced local contrast, detailed shadows, pronounced highlights",
+        "negative_prompt": "flat lighting, washed tones"
+    },
+    {
+        "name": "HighContrast",
+        "prompt": "high-contrast color grading, crisp blacks, strong highlights",
+        "negative_prompt": "low contrast, flat tones"
+    },
+    {
+        "name": "KodakEktar",
+        "prompt": "Kodak Ektar color grading, vivid colors, clean strong contrast",
+        "negative_prompt": "muted colors"
+    },
+    {
+        "name": "KodakPortra",
+        "prompt": "Kodak Portra color grading, soft warm skin tones, gentle contrast",
+        "negative_prompt": "harsh contrast, cold skin tones"
+    },
+    {
+        "name": "LDR",
+        "prompt": "low dynamic range look, soft contrast, compressed highlights and shadows",
+        "negative_prompt": "HDR, extreme contrast"
+    },
+    {
+        "name": "LowContrast",
+        "prompt": "low-contrast grading, soft tonal transitions, lifted shadows",
+        "negative_prompt": "deep blacks, harsh highlights"
+    },
+    {
+        "name": "Monochrome",
+        "prompt": "monochrome film grading, black and white tones, rich luminance separation",
+        "negative_prompt": "color, saturation"
+    },
+    {
+        "name": "Muted",
+        "prompt": "muted cinematic colors, reduced saturation, subdued palette",
+        "negative_prompt": "vivid saturation"
+    },
+    {
+        "name": "Neo Noir",
+        "prompt": "neo noir grading, deep shadows, cold highlights, desaturated palette",
+        "negative_prompt": "bright cheerful colors"
+    },
+    {
+        "name": "Neon",
+        "prompt": "neon color grading, vivid magenta and cyan highlights, glowing accents",
+        "negative_prompt": "natural tones"
+    },
+    {
+        "name": "Neutral",
+        "prompt": "neutral color grading, balanced tones, natural color reproduction",
+        "negative_prompt": "stylized grading"
+    },
+    {
+        "name": "Pastel",
+        "prompt": "pastel color grading, soft low-saturation tones, gentle highlights",
+        "negative_prompt": "harsh contrast"
+    },
+    {
+        "name": "RetroFilm",
+        "prompt": "retro film color grading, warm shadows, teal highlights, subtle grain",
+        "negative_prompt": "modern clean digital look"
+    },
+    {
+        "name": "Sepia",
+        "prompt": "sepia film grading, warm brown monochrome tones, vintage mood",
+        "negative_prompt": "cool tones, modern color"
+    },
+    {
+        "name": "Smoky",
+        "prompt": "smoky cinematic grading, gray shadows, atmospheric muted tones",
+        "negative_prompt": "clean neutral palette"
+    },
+    {
+        "name": "Soft",
+        "prompt": "soft color grading, gentle contrast, smooth transitions",
+        "negative_prompt": "harsh lighting, sharp contrast"
+    },
+    {
+        "name": "SplitToning",
+        "prompt": "split toning, cool shadows with warm highlights",
+        "negative_prompt": "neutral grayscale"
+    },
+    {
+        "name": "TealAndOrange",
+        "prompt": "teal and orange cinematic grading, cool shadows, warm skin highlights",
+        "negative_prompt": "flat neutral tones"
+    },
+    {
+        "name": "Ultraviolet",
+        "prompt": "ultraviolet surreal palette, glowing purples and deep blues",
+        "negative_prompt": "natural color reproduction"
+    },
+    {
+        "name": "VintageColor",
+        "prompt": "vintage color grading, warm washed tones, subtle film grain",
+        "negative_prompt": "modern crisp colors"
+    },
+    {
+        "name": "WarmTone",
+        "prompt": "warm color grading, golden highlights, gentle warmth",
+        "negative_prompt": "cool blue tones"
+    }
+]

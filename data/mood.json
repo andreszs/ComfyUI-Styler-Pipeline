@@ -1,0 +1,337 @@
+[
+    {
+        "name": "Anxious",
+        "prompt": "anxious atmosphere, visual unease, restless tension",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bleak",
+        "prompt": "bleak atmosphere, barren emptiness, desolate mood",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Calm",
+        "prompt": "calm atmosphere, balanced mood, peaceful stillness",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Chaotic",
+        "prompt": "chaotic atmosphere, visual turbulence, kinetic energy",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Cheerful",
+        "prompt": "cheerful atmosphere, positive energy, bright spirit",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Claustrophobic",
+        "prompt": "claustrophobic atmosphere, compressed space, suffocating pressure",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Contemplative",
+        "prompt": "contemplative atmosphere, inward focus, quiet reflection",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Creepy",
+        "prompt": "creepy atmosphere, unsettling presence, eerie discomfort",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Desolate",
+        "prompt": "desolate atmosphere, abandoned emptiness, profound isolation",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Dreamy",
+        "prompt": "dreamy atmosphere, hazy softness, ethereal quality",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Ecstatic",
+        "prompt": "ecstatic atmosphere, overwhelming joy, intense elation",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Eerie",
+        "prompt": "eerie atmosphere, strange tension, uncanny feeling",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Enchanted",
+        "prompt": "enchanted atmosphere, magical presence, spellbound wonder",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Energetic",
+        "prompt": "energetic atmosphere, dynamic motion, vibrant rhythm",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Epic",
+        "prompt": "epic atmosphere, grand scale, heroic intensity",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Ethereal",
+        "prompt": "ethereal atmosphere, otherworldly delicacy, floating serenity",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Euphoric",
+        "prompt": "euphoric atmosphere, boundless happiness, transcendent joy",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Exhilarating",
+        "prompt": "exhilarating atmosphere, thrilling intensity, rushing excitement",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Fantastical",
+        "prompt": "fantastical atmosphere, imaginative wonder, impossible beauty",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Foreboding",
+        "prompt": "foreboding atmosphere, approaching dread, ominous weight",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Frantic",
+        "prompt": "frantic atmosphere, desperate urgency, wild momentum",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Frenetic",
+        "prompt": "frenetic atmosphere, manic energy, unstoppable motion",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Gloomy",
+        "prompt": "gloomy atmosphere, heavy sadness, oppressive melancholy",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Grand",
+        "prompt": "grand atmosphere, magnificent scale, imposing presence",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Heroic",
+        "prompt": "heroic atmosphere, noble valor, courageous spirit",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Hopeful",
+        "prompt": "hopeful atmosphere, rising optimism, gentle promise",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Intimate",
+        "prompt": "intimate atmosphere, emotional closeness, personal connection",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Introspective",
+        "prompt": "introspective atmosphere, inward journey, emotional depth",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Isolated",
+        "prompt": "isolated atmosphere, profound solitude, distant separation",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Joyful",
+        "prompt": "joyful atmosphere, radiant happiness, pure delight",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Lonely",
+        "prompt": "lonely atmosphere, aching solitude, emotional distance",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Magical",
+        "prompt": "magical atmosphere, supernatural wonder, enchanted presence",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Majestic",
+        "prompt": "majestic atmosphere, regal splendor, commanding presence",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Meditative",
+        "prompt": "meditative atmosphere, centered stillness, mindful peace",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Melancholic",
+        "prompt": "melancholic atmosphere, gentle sorrow, bittersweet beauty",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Mischievous",
+        "prompt": "mischievous atmosphere, playful mischief, cheeky energy",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Mysterious",
+        "prompt": "mysterious atmosphere, hidden depths, enigmatic presence",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Mystical",
+        "prompt": "mystical atmosphere, spiritual mystery, sacred wonder",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nostalgic",
+        "prompt": "nostalgic atmosphere, wistful memory, bittersweet longing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Ominous",
+        "prompt": "ominous atmosphere, threatening presence, dark foreboding",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Oppressive",
+        "prompt": "oppressive atmosphere, crushing weight, suffocating pressure",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Optimistic",
+        "prompt": "optimistic atmosphere, bright outlook, confident hope",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Passionate",
+        "prompt": "passionate atmosphere, intense emotion, fervent energy",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Peaceful",
+        "prompt": "peaceful atmosphere, visual harmony, tranquil stillness",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Pensive",
+        "prompt": "pensive atmosphere, thoughtful consideration, quiet contemplation",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Playful",
+        "prompt": "playful atmosphere, lighthearted joy, cheerful spontaneity",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Quirky",
+        "prompt": "quirky atmosphere, eccentric charm, unconventional character",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Reflective",
+        "prompt": "reflective atmosphere, thoughtful stillness, introspective calm",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Romantic",
+        "prompt": "romantic atmosphere, emotional warmth, tender intimacy",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sensual",
+        "prompt": "sensual atmosphere, tactile richness, intimate allure",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Serene",
+        "prompt": "serene atmosphere, perfect stillness, undisturbed peace",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sinister",
+        "prompt": "sinister atmosphere, malevolent presence, dark intention",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Somber",
+        "prompt": "somber atmosphere, solemn gravity, subdued seriousness",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Suffocating",
+        "prompt": "suffocating atmosphere, airless density, overwhelming confinement",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Surreal",
+        "prompt": "surreal atmosphere, dreamlike impossibility, reality distortion",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Tender",
+        "prompt": "tender atmosphere, gentle affection, delicate care",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Tense",
+        "prompt": "tense atmosphere, coiled pressure, psychological strain",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Thoughtful",
+        "prompt": "thoughtful atmosphere, careful consideration, mindful attention",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Tranquil",
+        "prompt": "tranquil atmosphere, undisturbed calm, serene balance",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Triumphant",
+        "prompt": "triumphant atmosphere, victorious glory, celebratory power",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Turbulent",
+        "prompt": "turbulent atmosphere, stormy chaos, violent motion",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Unsettling",
+        "prompt": "unsettling atmosphere, disturbing unease, psychological discomfort",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Uplifting",
+        "prompt": "uplifting atmosphere, rising spirits, inspirational elevation",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Vibrant",
+        "prompt": "vibrant atmosphere, pulsing vitality, energetic life",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Whimsical",
+        "prompt": "whimsical atmosphere, fanciful playfulness, carefree imagination",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Wild",
+        "prompt": "wild atmosphere, untamed energy, primal freedom",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Zen",
+        "prompt": "zen atmosphere, perfect balance, enlightened stillness",
+        "negative_prompt": ""
+    }
+]

@@ -1,0 +1,252 @@
+[
+    {
+        "name": "Alien Monolith Site",
+        "prompt": "alien monolith site, nonhuman structure, geometric relics, silent windswept terrain",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Alien Ruins",
+        "prompt": "alien ruins, ancient extraterrestrial architecture, eroded structures, mysterious scale",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Asteroid Mine",
+        "prompt": "asteroid mine, extraction rigs, ore conveyors, rocky vacuum worksite",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Asteroid Surface",
+        "prompt": "asteroid surface, rocky regolith, low gravity terrain, near-vacuum environment",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Cargo Bay",
+        "prompt": "starship cargo bay, spaceship freight hold, spacecraft logistics deck, container stacks",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Command Bridge",
+        "prompt": "starship command bridge, spaceship control deck, spacecraft navigation consoles, tactical displays",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Crew Quarters",
+        "prompt": "starship crew quarters, spaceship habitation module, spacecraft living area, compact personal berths",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Cryogenic Bay",
+        "prompt": "cryogenic bay, stasis pods, life support interfaces, cold sterile chamber",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Cybernetic Clinic",
+        "prompt": "cybernetic clinic, prosthetic workstations, diagnostic scanners, clean medical tech interior",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Derelict Starship",
+        "prompt": "derelict starship, abandoned spaceship, drifting spacecraft wreck, damaged hull corridors",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Desert Research Site",
+        "prompt": "desert research site, remote science outpost, sun-bleached equipment, windblown dust",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Drone Control Hub",
+        "prompt": "drone control hub, remote piloting stations, telemetry displays, autonomous systems bay",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Engineering Deck",
+        "prompt": "starship engineering deck, spaceship machinery level, spacecraft systems maintenance floor, industrial practical lighting",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Exoplanet Jungle Outpost",
+        "prompt": "exoplanet jungle outpost, dense alien vegetation, modular research shelters, humid field base",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Fusion Reactor Core",
+        "prompt": "fusion reactor core, high-energy containment chamber, industrial practical lighting, subtle heat haze",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Habitat Ring",
+        "prompt": "orbital habitat ring, rotating station habitat, large-scale colony interior, residential sectors",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Hull Walk",
+        "prompt": "starship hull walk, spaceship exterior maintenance path, spacecraft outer plating, exposed orbital backdrop",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Ice World Outpost",
+        "prompt": "ice world outpost, frozen research shelters, wind-scoured structures, cold desaturated atmosphere",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Industrial Shipyard",
+        "prompt": "industrial shipyard, starship drydock, spaceship assembly gantries, spacecraft construction frames",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Launch Control Room",
+        "prompt": "launch control room, mission telemetry walls, countdown systems, coordinated operations center",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Lunar Excavation Site",
+        "prompt": "lunar excavation site, moon mining zone, regolith trenches, heavy extraction equipment",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Maintenance Tunnels",
+        "prompt": "starship maintenance tunnels, spaceship service conduits, spacecraft utility crawlspaces, cable trunks",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Martian Colony",
+        "prompt": "martian colony, pressurized domes, dust-protected transit paths, red planet settlement",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Medbay",
+        "prompt": "starship medbay, spaceship medical bay, spacecraft infirmary, clinical treatment pods, sterile ambience",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Moon Base",
+        "prompt": "moon base, lunar habitat complex, vacuum-rated structures, cold lunar light, high contrast shadows",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nanofabrication Lab",
+        "prompt": "nanofabrication lab, precision cleanroom systems, molecular assembly tools, controlled environment",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Navigation Cockpit",
+        "prompt": "spaceship cockpit, starship pilot cabin, spacecraft navigation controls, flight instrumentation",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Observation Deck",
+        "prompt": "starship observation deck, space station panoramic lounge, large viewport architecture, quiet orbital vista",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Orbital Defense Platform",
+        "prompt": "orbital defense platform, fortified station structure, tracking arrays, tactical hard-surface design",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Orbital Elevator Terminus",
+        "prompt": "orbital elevator terminus, tether dock architecture, transfer gates, high-altitude docking infrastructure",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Planetary Landing Pad",
+        "prompt": "planetary landing pad, starship touchdown zone, spaceship service apron, spacecraft support vehicles",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Quantum Research Lab",
+        "prompt": "quantum research lab, experimental instrumentation, isolated test chamber, advanced scientific facility",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Robot Assembly Line",
+        "prompt": "robot assembly line, automated fabrication cells, articulated manipulators, factory-scale precision",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Ruined Space Station",
+        "prompt": "ruined space station, abandoned orbital station, breached bulkheads, failing systems, drifting debris",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Salvage Yard Orbit",
+        "prompt": "orbital salvage yard, decommissioned spacecraft graveyard, dismantled starship hulls, repair scaffolds",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Space Station Atrium",
+        "prompt": "space station atrium, orbital civic interior, central circulation hub, layered walkways",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Space Station Corridor",
+        "prompt": "space station corridor, orbital passageway, modular bulkheads, practical panel lighting, clean reflective surfaces",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Space Station Docking Bay",
+        "prompt": "space station docking bay, orbital berthing chamber, ship alignment rails, cargo transfer zones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Space Station Interior",
+        "prompt": "space station interior, orbital facility architecture, practical panel lighting, clean reflective surfaces, sterile ambience",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Spaceport Concourse",
+        "prompt": "spaceport concourse, interstellar transit terminal, passenger gates, departure signage, bustling sci-fi travel hub",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Starship Airlock",
+        "prompt": "starship airlock, spaceship pressure lock chamber, spacecraft suit prep zone, sealed hatch systems",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Starship Armory",
+        "prompt": "starship armory, spaceship security storage, spacecraft tactical equipment lockers, reinforced interior",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Starship Brig",
+        "prompt": "starship brig, spaceship detention block, spacecraft security containment, hardened cell architecture",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Starship Hangar Bay",
+        "prompt": "starship hangar bay, spaceship launch hangar, spacecraft maintenance platforms, shuttle staging zone",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Terraforming Control Center",
+        "prompt": "terraforming control center, planetary systems monitoring, atmospheric processors, large-scale environmental interface",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Underwater Research Facility",
+        "prompt": "underwater research facility, pressure-rated corridors, filtered subsurface light, subtle caustics, underwater haze",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Vacuum Transit Tube",
+        "prompt": "vacuum transit tube, pressurized train corridor, magnetic transport infrastructure, streamlined industrial design",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Volcanic Mining Facility",
+        "prompt": "volcanic mining facility, heat-resistant extraction rigs, ash-laden industry, harsh geothermal terrain",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Zero-G Greenhouse",
+        "prompt": "zero-g greenhouse, orbital agriculture module, suspended hydroponics, controlled growth environment",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Zero-G Maintenance Bay",
+        "prompt": "zero-g maintenance bay, orbital repair chamber, tether points, floating tools and parts",
+        "negative_prompt": ""
+    }
+]

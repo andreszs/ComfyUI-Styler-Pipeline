@@ -1,0 +1,352 @@
+[
+    {
+        "name": "Accessories/Body Chain",
+        "prompt": "body chain lingerie accessory, delicate metallic detail",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Accessories/Garter Belt",
+        "prompt": "garter belt lingerie styling, attached stocking straps",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Accessories/Leg Garter",
+        "prompt": "single leg garter accessory, sensual thigh accent",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Accessories/Lingerie Gloves",
+        "prompt": "lingerie opera gloves, elegant intimate styling",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Accessories/Satin Choker",
+        "prompt": "satin choker accessory, refined boudoir detail",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Accessories/Stocking Suspenders",
+        "prompt": "stocking suspenders and clips, classic lingerie hardware",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bras/Balconette Bra",
+        "prompt": "balconette bra design, lifted structured neckline",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bras/Bandeau Bra",
+        "prompt": "bandeau bra silhouette, smooth strapless band",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bras/Bralette",
+        "prompt": "soft bralette style, unstructured intimate top",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bras/Demi-Cup Bra",
+        "prompt": "demi-cup bra styling, partial cup coverage",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bras/Full-Coverage Bra",
+        "prompt": "full-coverage bra design, supportive contained fit",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bras/Longline Bra",
+        "prompt": "longline bra design, extended underbust panel",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bras/Plunge Bra",
+        "prompt": "plunge bra neckline, deep center front",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bras/Push-Up Bra",
+        "prompt": "push-up bra shaping, boosted cleavage support",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bras/Strapless Bra",
+        "prompt": "strapless bra fit, clean shoulder line",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bras/Triangle Bra",
+        "prompt": "triangle bra style, minimal cup geometry",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bras/Underwire Bra",
+        "prompt": "underwire bra structure, defined lift and shaping",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Bras/Wireless Bra",
+        "prompt": "wireless bra comfort fit, soft natural support",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Coverage/Compression Fit",
+        "prompt": "compression-fit intimates, firm sculpting support",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Coverage/High-Cut Leg",
+        "prompt": "high-cut leg opening, elongated leg line",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Coverage/High-Rise Waist",
+        "prompt": "high-rise waist fit, retro sculpted profile",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Coverage/Sculpted Fit",
+        "prompt": "sculpted fit intimates, contoured silhouette",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Coverage/Seamless Fit",
+        "prompt": "seamless fit lingerie, smooth invisible finish",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Hosiery/Fishnet Stockings",
+        "prompt": "fishnet stockings, bold textured legwear",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Hosiery/Lace-Top Thigh Highs",
+        "prompt": "lace-top thigh-high stockings, romantic hosiery detail",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Hosiery/Opaque Tights",
+        "prompt": "opaque tights legwear, smooth dense coverage",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Hosiery/Patterned Tights",
+        "prompt": "patterned tights, decorative leg motif",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Hosiery/Seamed Stockings",
+        "prompt": "back-seamed stockings, vintage pin-up style",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Hosiery/Sheer Stockings",
+        "prompt": "sheer stockings, translucent leg finish",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Hosiery/Thigh-High Stockings",
+        "prompt": "thigh-high stockings, classic intimate legwear",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Material/Cotton Blend",
+        "prompt": "cotton-blend lingerie fabric, breathable soft texture",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Material/Lace",
+        "prompt": "lace lingerie fabric, delicate floral pattern",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Material/Leather Look",
+        "prompt": "leather-look lingerie finish, edgy polished texture",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Material/Mesh",
+        "prompt": "mesh lingerie fabric, airy semi-sheer texture",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Material/Microfiber",
+        "prompt": "microfiber intimate fabric, smooth lightweight feel",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Material/Satin",
+        "prompt": "satin lingerie fabric, glossy draped sheen",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Material/Sheer Chiffon",
+        "prompt": "sheer chiffon lingerie fabric, ethereal translucent layer",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Material/Silk",
+        "prompt": "silk intimate fabric, luxurious fluid drape",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Material/Stretch Knit",
+        "prompt": "stretch-knit intimates, flexible close fit",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Material/Velvet",
+        "prompt": "velvet lingerie texture, plush rich finish",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Panties/Bikini Brief",
+        "prompt": "bikini brief style, classic balanced coverage",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Panties/Boyshort",
+        "prompt": "boyshort underwear style, sporty low-leg silhouette",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Panties/Brazilian Brief",
+        "prompt": "brazilian brief cut, flattering narrow rear coverage",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Panties/French-Cut Brief",
+        "prompt": "french-cut brief design, high-leg elegant line",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Panties/G-String",
+        "prompt": "g-string underwear style, minimal strap profile",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Panties/Seamless Brief",
+        "prompt": "seamless brief design, smooth no-line finish",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Panties/Tanga Brief",
+        "prompt": "tanga brief style, narrow side coverage",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Panties/Thong",
+        "prompt": "thong underwear style, minimal rear coverage",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sets/Balconette Set",
+        "prompt": "balconette bra and brief set, structured matching pieces",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sets/Bralette Set",
+        "prompt": "bralette and panty set, soft coordinated intimates",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sets/Corset Set",
+        "prompt": "corset lingerie set, cinched waist with matching bottoms",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sets/Lace Set",
+        "prompt": "lace lingerie set, matching floral lace pieces",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sets/Satin Set",
+        "prompt": "satin lingerie set, polished coordinated sheen",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sets/Strappy Set",
+        "prompt": "strappy lingerie set, multi-strap modern silhouette",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sets/Three-Piece Set",
+        "prompt": "three-piece lingerie set, bra, bottom, and accessory coordination",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Shapewear/Bodysuit Shaper",
+        "prompt": "bodysuit shapewear, all-over smoothing support",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Shapewear/High-Waist Shaper Shorts",
+        "prompt": "high-waist shaper shorts, waist and thigh sculpting",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Shapewear/Open-Bust Shaper",
+        "prompt": "open-bust shapewear base layer, torso smoothing under lingerie",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Shapewear/Shaping Cami",
+        "prompt": "shaping camisole, streamlined upper-body contour",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Shapewear/Thigh Shaper",
+        "prompt": "thigh shaping undergarment, sculpted leg transition",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Shapewear/Waist Cincher",
+        "prompt": "waist cincher styling, defined hourglass contour",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sleepwear/Babydoll",
+        "prompt": "babydoll sleepwear, airy intimate silhouette",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sleepwear/Camisole Set",
+        "prompt": "camisole and shorts sleep set, soft lounge intimates",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sleepwear/Chemise",
+        "prompt": "chemise nightwear, sleek intimate drape",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sleepwear/Lace Robe",
+        "prompt": "lace robe layering piece, delicate intimate trim",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sleepwear/Negligee",
+        "prompt": "negligee sleepwear style, romantic flowing layer",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sleepwear/Satin Slip",
+        "prompt": "satin slip nightwear, smooth minimalist silhouette",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sleepwear/Sheer Robe",
+        "prompt": "sheer robe layering piece, translucent boudoir styling",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sleepwear/Silk Robe",
+        "prompt": "silk robe drape, luxurious intimate outer layer",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sleepwear/Teddy",
+        "prompt": "teddy intimate one-piece, fitted romantic silhouette",
+        "negative_prompt": ""
+    }
+]

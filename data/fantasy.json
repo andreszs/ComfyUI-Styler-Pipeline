@@ -1,0 +1,252 @@
+[
+    {
+        "name": "Alchemist Workshop",
+        "prompt": "alchemist workshop, potion glassware, ingredient shelves, practical arcane tools",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Ancient Ruins",
+        "prompt": "ancient fantasy ruins, weathered stonework, vine-covered remnants, timeless atmosphere",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Arcane Academy",
+        "prompt": "arcane academy, magical school halls, wizard and mage training grounds",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Arcane Sanctum",
+        "prompt": "arcane sanctum, ritual geometry, concentrated magical energy, controlled mystical ambience",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Castle Courtyard",
+        "prompt": "castle courtyard, fortified walls, stone arches, medieval fantasy stronghold",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Castle Throne Room",
+        "prompt": "castle throne room, royal dais, banners and tapestries, ceremonial grandeur",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Celestial Temple",
+        "prompt": "celestial temple, starlit iconography, radiant sanctified architecture, serene divine ambience",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Chivalric Knights",
+        "prompt": "chivalric knightly order, heraldry, polished armor, oathbound medieval fantasy theme",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Crystal Cave",
+        "prompt": "crystal cave, mineral formations, reflective facets, subterranean magical geology",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Cursed Catacombs",
+        "prompt": "cursed catacombs, ancient burial corridors, oppressive stillness, restrained dark fantasy mood",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Dark Fantasy Realm",
+        "prompt": "dark fantasy realm, grim mythic atmosphere, heavy stone architecture, restrained ominous tone",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Desert Oasis Ruins",
+        "prompt": "desert oasis ruins, eroded columns, palm-shadowed water, sun-warmed ancient remains",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Dragon Roost",
+        "prompt": "dragon roost, elevated crags, scorched rock formations, hoard-adjacent fantasy setting",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Druidic Circle",
+        "prompt": "druidic stone circle, carved monoliths, ritual clearings, nature-bound magic",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Dungeon Corridors",
+        "prompt": "dungeon corridors, torchlit stone passageways, iron gates, underground medieval fantasy interior",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Dwarven Forge Hall",
+        "prompt": "dwarven forge hall, carved mountain workshop, anvils and furnaces, ember-lit craftsmanship",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Elemental Confluence",
+        "prompt": "elemental confluence, balanced fire water air earth motifs, primal magical convergence",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Enchanted Forest",
+        "prompt": "enchanted forest, soft mist, dappled light, subtle bioluminescence, old-growth magical woods",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Enchanted Garden",
+        "prompt": "enchanted garden, cultivated magical flora, ornate paths, luminous blossoms",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Epic Fantasy Vista",
+        "prompt": "epic high fantasy vista, sweeping landscapes, heroic scale, mythic worldbuilding",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Fae Realm",
+        "prompt": "fae realm, feywild atmosphere, whimsical natural magic, shimmering woodland paths",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Floating Sky Isles",
+        "prompt": "floating sky isles, suspended landmasses, cloud bridges, fantastical vertical world",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Forbidden Library",
+        "prompt": "forbidden library, chained tomes, towering shelves, secretive arcane scholarship",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Gilded Palace",
+        "prompt": "gilded fantasy palace, ornate halls, polished stone and gold accents, regal atmosphere",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Goblin Market",
+        "prompt": "goblin market, cluttered stalls, odd wares, bustling crooked fantasy bazaar",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Grand Tournament Grounds",
+        "prompt": "grand tournament grounds, jousting lists, banners, celebratory medieval festival setting",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Haunted Moor",
+        "prompt": "haunted moor, windswept grasses, low fog, restrained eerie fantasy atmosphere",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Icy Citadel",
+        "prompt": "icy citadel, frozen battlements, crystalline frost details, cold high-contrast ambience",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Mage's Study",
+        "prompt": "mage's study, wizard's study, spell notes, arcane instruments, focused scholarly workspace",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Magical Artifacts",
+        "prompt": "magical artifacts, relic display, runic craftsmanship, ancient enchanted objects",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Magical Battlefield",
+        "prompt": "magical battlefield aftermath, scorched sigils, shattered standards, lingering spell traces",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Medieval Village",
+        "prompt": "medieval fantasy village, timber houses, cobbled lanes, grounded rustic daily life",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Mercenary Stronghold",
+        "prompt": "mercenary stronghold, fortified campworks, training yards, practical martial fantasy setting",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Mystic Swamp",
+        "prompt": "mystic swamp, twisted roots, wetland fog, murky magical wetlands",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Mythical Beasts",
+        "prompt": "mythical beasts, legendary creature motifs, fantastical fauna presence",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Necromancer Sanctum",
+        "prompt": "necromancer sanctum, ritual chambers, cold eerie glow, heavy shadows, measured dark tone",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nomad Caravan Camp",
+        "prompt": "nomad caravan camp, travel tents, trade bundles, open-road fantasy culture",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Port City Harbor",
+        "prompt": "fantasy port city harbor, docks, merchant vessels, maritime market activity",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sacred Grove",
+        "prompt": "sacred grove, old trees, calm mist, reverent natural sanctuary",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sky Temple",
+        "prompt": "sky temple, cliffside or elevated sanctuary, airy architecture, windswept sacred space",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Spellforge Chamber",
+        "prompt": "spellforge chamber, enchanted smithing circle, rune anvils, controlled arcane heat",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sunken Kingdom",
+        "prompt": "sunken fantasy kingdom, underwater atlantis-like ruins, submerged palaces, filtered aquatic light",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Tavern Interior",
+        "prompt": "fantasy tavern interior, wooden beams, warm firelight, smoky ambience, lively common room",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Underworld Gate",
+        "prompt": "underworld gate, basalt arches, infernal threshold motifs, restrained ominous grandeur",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Volcanic Lair",
+        "prompt": "volcanic lair, lava-lit caverns, obsidian rock, heat-scarred fantasy stronghold",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Warlock Court",
+        "prompt": "warlock court, occult nobility hall, ritual insignia, tense arcane politics",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Witch Hut",
+        "prompt": "witch hut, herbal bundles, candlelit worktable, rustic occult cottage",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Wizard's Library",
+        "prompt": "wizard's library, magical tomes, arcane catalogs, towering book stacks",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Wizard's Tower",
+        "prompt": "wizard's tower, arcane observatory rooms, vertical stone spire, scholarly magic quarters",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Woodland Kingdom",
+        "prompt": "woodland kingdom, forest citadels, natural fortifications, courtly sylvan culture",
+        "negative_prompt": ""
+    }
+]

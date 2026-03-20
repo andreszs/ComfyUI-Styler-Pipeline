@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-label="Dynamic Styler comparison">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#151a1f"/>
+      <stop offset="100%" stop-color="#0f1115"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="430" fill="url(#bg)"/>
+  <text x="600" y="44" fill="#f1f5f9" font-size="30" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">Dynamic Styler Pipeline: Without vs With</text>
+
+  <rect x="45" y="80" width="520" height="305" rx="18" fill="#222831" stroke="#3b4250" stroke-width="2"/>
+  <text x="305" y="118" fill="#f8fafc" font-size="24" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">Without Dynamic Styler</text>
+  <text x="85" y="165" fill="#cbd5e1" font-size="20" font-family="Segoe UI, Arial, sans-serif">- Baseline prompt only</text>
+  <text x="85" y="203" fill="#cbd5e1" font-size="20" font-family="Segoe UI, Arial, sans-serif">- Style consistency varies between seeds</text>
+  <text x="85" y="241" fill="#cbd5e1" font-size="20" font-family="Segoe UI, Arial, sans-serif">- Harder to reuse the same style recipe</text>
+  <text x="85" y="279" fill="#cbd5e1" font-size="20" font-family="Segoe UI, Arial, sans-serif">- Can drift when stacked with other controls</text>
+
+  <rect x="635" y="80" width="520" height="305" rx="18" fill="#1f2937" stroke="#22c55e" stroke-width="3"/>
+  <text x="895" y="118" fill="#f8fafc" font-size="24" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">With Dynamic Styler Pipeline</text>
+  <text x="675" y="165" fill="#dcfce7" font-size="20" font-family="Segoe UI, Arial, sans-serif">- Style merges into existing conditioning</text>
+  <text x="675" y="203" fill="#dcfce7" font-size="20" font-family="Segoe UI, Arial, sans-serif">- Stable behavior with or without ControlNet</text>
+  <text x="675" y="241" fill="#dcfce7" font-size="20" font-family="Segoe UI, Arial, sans-serif">- Works with global and area-based pipelines</text>
+  <text x="675" y="279" fill="#dcfce7" font-size="20" font-family="Segoe UI, Arial, sans-serif">- Reproducible style state saved in workflow</text>
+</svg>

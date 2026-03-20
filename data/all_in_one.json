@@ -1,0 +1,512 @@
+[
+    {
+        "name": "Ancient/China",
+        "prompt": "ancient chinese setting, walled city alleys, curved rooflines, red lacquer wood, soft morning mist",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Ancient/India",
+        "prompt": "ancient indian setting, carved sandstone courtyards, stepwells and colonnades, saffron and teal textiles, humid monsoon light",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Ancient/Khmer",
+        "prompt": "ancient khmer setting, jungle temple ruins, weathered laterite blocks, moss-covered carvings, dense tropical humidity",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Ancient/Persia",
+        "prompt": "ancient persian setting, sunlit stone palaces, carved relief walls, patterned tiles, warm desert haze",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Ancient/Asian",
+        "prompt": "ancient asian world, temple architecture, paper lantern glow, ink brush aesthetics, bamboo and silk materials, meditative atmosphere, vermillion red and jade green",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Ancient/Egypt",
+        "prompt": "ancient egyptian world, golden desert light, hieroglyphic details, sandstone temples, regal symmetry, mystical atmosphere, saturated ochre palette",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Ancient/Greece",
+        "prompt": "ancient greek world, marble architecture, mediterranean sunlight, classical proportions, heroic scale, clear azure skies, refined elegance",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Ancient/Mesoamerican",
+        "prompt": "ancient mesoamerican world, jungle pyramid temples, dense tropical atmosphere, ceremonial stone carvings, humid filtered light, mystical ritual scale, jade green and blood red",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Ancient/Norse",
+        "prompt": "ancient norse world, wooden longhouses, misty fjord atmosphere, carved timber details, cold northern light, rugged viking aesthetic, slate grey and weathered wood",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Ancient/Rome",
+        "prompt": "ancient roman world, imperial grandeur, stone colonnades, warm afternoon light, military precision, civic monumentality, weathered terracotta",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Biopunk/Organic Lab",
+        "prompt": "biopunk organic lab, membrane walls, pulsing biotubes, wet surfaces, clinical green lighting",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Brutalism/Concrete Monument",
+        "prompt": "brutalist concrete monument, massive cast forms, raw textured surfaces, stark geometry, overcast diffused light",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Cyberpunk/Hologram Arcade",
+        "prompt": "cyberpunk hologram arcade, retro-futurist game hall, hologram booths, glowing floor lines, electric cyan and magenta",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Cyberpunk/Megacity Street",
+        "prompt": "cyberpunk megacity street, towering arcology walls, layered transit lanes, ad screens, perpetual rain haze",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Cyberpunk/Neon Bazaar",
+        "prompt": "cyberpunk neon bazaar, crowded stalls, holographic price boards, wet pavement reflections, saturated night color",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Cyberpunk/Underground Club",
+        "prompt": "cyberpunk underground club, subterranean interior, strobing light bars, dense fog, bass-heavy atmosphere",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Cyberpunk/Bright",
+        "prompt": "bright cyberpunk world, vibrant neon saturation, holographic advertising, lively nocturnal energy, colorful light pollution, high-tech optimism, magenta and electric blue",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Cyberpunk/Dark",
+        "prompt": "dark cyberpunk world, low-key neon lighting, dystopian urban decay, perpetual rain-soaked night, wet street reflections, dense vertical city, atmospheric haze, high contrast shadows",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Dieselpunk/War-Era City",
+        "prompt": "dieselpunk war-era city, smoky factories, armored vehicles, propaganda billboards, muted sepia steel tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Fantasy/Dark",
+        "prompt": "dark fantasy world, ominous atmosphere, corrupted gothic elements, dramatic chiaroscuro lighting, mythic dread, cursed beauty, desaturated with blood-red accents",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Fantasy/Epic",
+        "prompt": "epic high fantasy world, majestic sweeping landscapes, heroic scale, luminous magical lighting, mythical grandeur, vivid saturated colors, legendary atmosphere",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Fantasy/High Magic",
+        "prompt": "high magic fantasy world, abundant arcane energy, glowing spell effects, tower academies, enchanted forest aura, bioluminescent magical flora, woodland spirits, vibrant mystical spectrum",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Fantasy/Low Magic",
+        "prompt": "low magic fantasy world, rare subtle enchantments, mostly mundane reality, grounded medieval setting, natural lighting with hints of mystery, earthy tones with faint magical glimmers",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Fantasy/Medieval",
+        "prompt": "medieval fantasy world, castles and villages, mystical forest elements, natural daylight, balanced realism with magic, earthy tones, storybook warmth",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Gothic/Horror",
+        "prompt": "gothic horror world, oppressive architecture, decaying grandeur, flickering candlelight and torchlight, religious iconography, dread-filled atmosphere, deep crimson and shadow black",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Gothic/Victorian",
+        "prompt": "victorian gothic world, gaslit cobblestone streets, ornate iron details, foggy evening atmosphere, industrial decay, historical tension, sepia and charcoal tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Historical/Art Nouveau",
+        "prompt": "art nouveau historical setting, flowing ironwork, stained glass patterns, floral wall motifs, warm indoor daylight",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Historical/Baroque",
+        "prompt": "baroque historical setting, grand halls, dramatic ceiling frescoes, gilded ornament, theatrical contrast lighting",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Historical/Byzantine",
+        "prompt": "byzantine historical setting, domed basilica interiors, gold mosaic walls, candlelit shadows, deep cobalt and ochre",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Historical/Ottoman",
+        "prompt": "ottoman historical setting, tiled courtyards, arched arcades, brass lantern glow, muted turquoise and sandstone",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Historical/Renaissance",
+        "prompt": "renaissance world, classical architecture, painterly warm sunlight, refined humanist ideals, balanced composition, historical elegance, rich earth tones and gold leaf",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Historical/Victorian",
+        "prompt": "victorian era world, ornate industrial craftsmanship, gas lamp illumination, social hierarchy, detailed textile richness, period authenticity, burgundy and brass palette",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Horror/Occult",
+        "prompt": "occult horror world, ritualistic symbolism, candlelit darkness, arcane atmosphere, forbidden knowledge, ceremonial dread, blood red and midnight black",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Horror/Psychological",
+        "prompt": "psychological horror world, reality distortion, paranoid atmosphere, subtle wrongness, mental breakdown aesthetics, unsettling normalcy, desaturated with jarring color breaks",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Mecha/Armored Futurism",
+        "prompt": "armored futurist aesthetic, reinforced silhouette design, industrial materials, precision mechanical detailing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Mecha/Mecha Core",
+        "prompt": "mecha aesthetic, armored plating, hard-surface paneling, exposed mechanical joints",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Medieval/Castle Interior",
+        "prompt": "medieval castle interior, stone corridors, heavy timber beams, torchlit alcoves, cold drafty atmosphere",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Medieval/Marketplace",
+        "prompt": "medieval marketplace setting, crowded market square, timber stalls, hanging fabrics, dusty afternoon sun",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Medieval/Monastery",
+        "prompt": "medieval monastery setting, cloister walkways, worn stone floors, candlelit scriptoria, quiet dawn fog",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Medieval/Siege Camp",
+        "prompt": "medieval siege camp, muddy encampment, canvas pavilions, wooden palisades, smoky firelight",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Medieval/Fantasy",
+        "prompt": "medieval fantasy world, castle fortifications, mystical forest clearings, natural daylight, knights and magic, balanced historicity, warm earth tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Medieval/Historical",
+        "prompt": "historical medieval world, authentic period architecture, natural sunlight, feudal hierarchy, realistic materials, weathered textures, muted historical palette",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Military/Modern",
+        "prompt": "modern military world, tactical gear aesthetics, desert or urban combat zones, harsh daylight or night vision green, utilitarian equipment, operational tension, olive drab and tactical black",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Military/Sci-Fi",
+        "prompt": "sci-fi military world, power armor technology, orbital drop zones, advanced combat systems, futuristic warfare lighting, tactical holographics, gunmetal grey and plasma blue",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Modern/Corporate",
+        "prompt": "modern corporate world, glass office towers, sterile fluorescent lighting, minimalist professional aesthetics, business atmosphere, polished surfaces, grey and corporate blue",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Modern/Luxury",
+        "prompt": "modern luxury world, high-end materials, sophisticated ambient lighting, designer architecture, affluent lifestyle, premium finishes, polished editorial precision, champagne gold and marble white",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Modern/Minimal",
+        "prompt": "minimal modern world, clean geometric architecture, controlled natural light, essential forms only, negative space, refined simplicity, monochrome with accent color",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Mythology/Greek",
+        "prompt": "greek mythology world, mount olympus majesty, divine marble temples, heroic epic scale, mediterranean godly light, classical immortal beauty, ivory white and celestial gold",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Mythology/Hindu",
+        "prompt": "hindu mythology world, cosmic divine energy, ornate temple architecture, vibrant sacred colors, multi-armed deity scale, incense-filled atmosphere, saffron orange and divine blue",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Mythology/Norse",
+        "prompt": "norse mythology world, asgardian grandeur, runic mysticism, eternal winter atmosphere, viking divine aesthetic, bifrost rainbow lighting, ice blue and thunder gold",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nature/Canyon",
+        "prompt": "canyon setting, layered red cliffs, winding riverbed, hard noon shadows, dry air shimmer",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nature/Swamp",
+        "prompt": "swamp setting, shallow murky water, twisted trees, hanging moss, humid green haze",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nature/Tropical Beach",
+        "prompt": "tropical beach setting, white sand shoreline, turquoise water, swaying palms, bright midday sun",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nature/Volcano",
+        "prompt": "volcanic setting, black volcanic rock, glowing lava fissures, ash-filled sky, harsh orange light",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nature/Waterfall",
+        "prompt": "waterfall setting, towering falls, misty spray, wet dark rock, filtered forest light",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nature/Arctic",
+        "prompt": "arctic nature world, endless ice and snow, harsh polar light, extreme cold atmosphere, pristine frozen beauty, survival isolation, pure white and glacial blue",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nature/Desert",
+        "prompt": "desert nature world, vast arid expanse, intense sunlight, heat shimmer atmosphere, sand dune textures, harsh beautiful desolation, golden sand and burnt sienna",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Nature/Forest",
+        "prompt": "forest nature world, dense woodland canopy, filtered green sunlight, organic growth atmosphere, moss and bark textures, natural serenity, emerald green and earth brown",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Noir/Detective Office",
+        "prompt": "noir detective office, cramped room, venetian blind shadows, smoke haze, desk lamp contrast",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Noir/Motel Room",
+        "prompt": "noir motel room, roadside interior, buzzing neon sign spill, faded wallpaper, tense midnight quiet",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Noir/Smoke-Filled Bar",
+        "prompt": "noir smoke-filled bar, dim backroom, thick haze, warm tungsten lamp pools, worn booths",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Noir/Wet Pavement",
+        "prompt": "noir wet pavement scene, rain-soaked street, reflective asphalt, drifting mist",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Noir/Classic",
+        "prompt": "classic film noir world, hard dramatic shadows, cigarette smoke atmosphere, venetian blind lighting, moral ambiguity, black and white cinematography, high contrast",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Noir/Neo",
+        "prompt": "neo noir world, moody urban nightscape, strong contrast lighting, rain-slicked streets, contemporary loneliness, cinematic framing, desaturated with neon accents",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Post-Apocalyptic/Deserted Mall",
+        "prompt": "post-apocalyptic deserted mall, abandoned atrium, collapsed skylights, dust-filled air, encroaching weeds",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Post-Apocalyptic/Overgrown",
+        "prompt": "overgrown post-apocalyptic world, nature reclaiming ruins, filtered green sunlight, abandoned structures, wild vegetation, humid atmosphere, moss green and rust palette",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Post-Apocalyptic/Urban",
+        "prompt": "urban post-apocalyptic world, crumbling skyscrapers, environmental decay, diffused overcast light, survival settlements, concrete rubble, desaturated greys and rust",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Romance/Candlelit",
+        "prompt": "candlelit romance world, flickering warm candle glow, intimate close quarters, soft dancing shadows, sensual atmosphere, private moments, amber and honey tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Romance/Moonlight",
+        "prompt": "moonlit romance world, silvery lunar glow, nocturnal garden setting, ethereal night atmosphere, quiet intimacy, starlit beauty, cool silver and deep indigo",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Romance/Rain",
+        "prompt": "rainy romance world, gentle rainfall atmosphere, soft diffused overcast light, cozy shelter intimacy, tender melancholy, reflective wet surfaces, slate grey and warm amber",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Romance/Sunset",
+        "prompt": "sunset romance world, dramatic golden-orange sky, end-of-day magic, passionate atmosphere, romantic grandeur, fiery orange and deep magenta",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sci-Fi/Orbital Dock",
+        "prompt": "sci-fi orbital dock, docking ring gantries, airlock bridges, planet horizon backdrop, stark directional light",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sci-Fi/Research Lab",
+        "prompt": "sci-fi research lab, sterile corridors, transparent partitions, instrument panels, clean white lighting",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sci-Fi/Spaceport",
+        "prompt": "sci-fi spaceport, massive docking bays, landing pads, fuel vapor, cool industrial floodlights",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sci-Fi/Underwater Base",
+        "prompt": "sci-fi underwater base, pressurized corridors, curved windows, deep ocean blue, particulate light beams",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sci-Fi/Clean",
+        "prompt": "clean sci-fi world, minimal white architecture, smooth polished surfaces, controlled ambient lighting, advanced technology, utopian sterility, white and soft blue",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sci-Fi/Dystopian",
+        "prompt": "dystopian sci-fi world, oppressive megastructures, surveillance aesthetics, cold fluorescent lighting, totalitarian design, rain-slicked streets, fog and high-contrast gloom, desaturated reality",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sci-Fi/Industrial",
+        "prompt": "industrial sci-fi world, exposed functional machinery, harsh artificial lighting, utilitarian metal structures, factory district scale, gritty realism, steel and oil-stained palette",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sci-Fi/Retro",
+        "prompt": "retro sci-fi world, analog futurism, vintage technology aesthetics, 1950s-80s vision, pulp magazine style, nostalgic optimism, saturated primary colors",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sci-Fi/Spaceship Bridge",
+        "prompt": "spaceship bridge, starship command deck, control consoles, navigation displays, futuristic panels",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sci-Fi/Spaceship Exterior",
+        "prompt": "spaceship exterior world, retro space opera starship silhouette, streamlined hull design language, modular aerospace paneling",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Seasons/Autumn",
+        "prompt": "autumn seasonal setting, turning leaves, crisp air, low golden sunlight, earthy red and brown",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Seasons/Spring",
+        "prompt": "spring seasonal setting, fresh green growth, light rain, soft overcast sky, cool pastel tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Seasons/Summer",
+        "prompt": "summer seasonal setting, high sun, dry heat shimmer, vivid foliage, bright clear sky",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Seasons/Winter",
+        "prompt": "winter seasonal setting, frost-covered ground, bare trees, pale daylight, cold blue-gray palette",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Solarpunk/Green City",
+        "prompt": "solarpunk green city, rooftop gardens, solar canopies, pedestrian terraces, clean daylight vegetation",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Steampunk/Airship Deck",
+        "prompt": "steampunk airship deck, brass railings, exposed gears, riveted metal plates, cloudy high-altitude wind",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Steampunk/Elegant",
+        "prompt": "elegant steampunk world, polished brass craftsmanship, intricate clockwork, warm gas lighting, victorian refinement, sophisticated engineering, golden brass and mahogany",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Surreal/Abstract",
+        "prompt": "abstract surreal world, non-representational forms, impossible color combinations, conceptual lighting, symbolic abstraction, dream logic, vibrant discordant palette",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Surreal/Dreamlike",
+        "prompt": "dreamlike surreal world, floating elements, soft focus glow, symbolic imagery, distorted perspective, subconscious atmosphere, pastel unreal tones",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Urban/Industrial District",
+        "prompt": "industrial district urban setting, brick warehouses, exposed pipes, freight yards, overcast steel-gray light",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Urban/Night Market",
+        "prompt": "urban night market, packed food stalls, hanging signs, mixed neon and warm bulbs, lively crowd flow",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Urban/Old Town",
+        "prompt": "old town urban setting, narrow cobblestone lanes, weathered facades, small balconies, golden evening light",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Urban/Rooftop View",
+        "prompt": "rooftop urban view, dense skyline rooftops, water tanks and antennas, windy atmosphere, dusk city glow",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Urban/Train Station",
+        "prompt": "urban train station, vaulted platforms, iron trusses, arrival boards, cool morning rush",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Urban/Underground Tunnel",
+        "prompt": "urban underground tunnel, concrete service tunnels, damp walls, fluorescent strips, long vanishing lines",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Urban/Contemporary",
+        "prompt": "contemporary urban world, modern city architecture, realistic street lighting, diverse neighborhoods, authentic city life, everyday realism, natural urban palette",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Urban/Graffiti",
+        "prompt": "graffiti urban world, spray-painted walls, street art culture, vibrant color chaos, underground aesthetics, youthful rebellion, explosive color palette",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Urban/Neon Night",
+        "prompt": "neon night urban world, vibrant signage glow, bustling nightlife energy, wet pavement reflections, retro-futuristic downtown density, atmospheric haze, nocturnal city pulse",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Urban/Rainy Day",
+        "prompt": "rainy urban world, wet street reflections, overcast diffused light, umbrella atmosphere, contemplative mood, puddle-filled sidewalks, slate grey and muted color",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Utopian/Future",
+        "prompt": "utopian future world, perfect social harmony, advanced clean technology, balanced lighting, architectural perfection, optimistic tomorrow, pristine white and soft pastels",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Western/Classic",
+        "prompt": "classic western world, desert frontier towns, harsh midday sunlight, wooden saloons, rugged authenticity, weathered textures, dusty ochre and saddle brown",
+        "negative_prompt": ""
+    }
+]

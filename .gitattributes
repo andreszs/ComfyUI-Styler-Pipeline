@@ -1,0 +1,8 @@
+# Set default line ending behavior to Windows CRLF
+* text=auto eol=crlf
+
+# Ensure JSON files always use CRLF
+*.json text eol=crlf
+
+# Ensure Python files use CRLF
+*.py text eol=crlf

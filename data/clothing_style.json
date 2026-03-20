@@ -1,0 +1,217 @@
+[
+    {
+        "name": "Acid Wash",
+        "prompt": "acid wash fabric texture",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Animal Print",
+        "prompt": "animal print pattern fabric",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Argyle Pattern",
+        "prompt": "argyle pattern clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Asymmetrical Design",
+        "prompt": "asymmetrical clothing design",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Buttoned",
+        "prompt": "buttoned garment closure",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Cargo Style",
+        "prompt": "cargo style clothing, functional pockets",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Denim Fabric",
+        "prompt": "denim fabric clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Distressed",
+        "prompt": "distressed fabric texture, worn look",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Embroidered",
+        "prompt": "embroidered fabric details",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Faded",
+        "prompt": "faded fabric appearance",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Floral Print",
+        "prompt": "floral print pattern",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Frilled",
+        "prompt": "frilled clothing details",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Glossy Finish",
+        "prompt": "glossy fabric finish",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Gradient Fabric",
+        "prompt": "gradient color fabric",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Halter Neck",
+        "prompt": "halter neck clothing design",
+        "negative_prompt": ""
+    },
+    {
+        "name": "High Collar",
+        "prompt": "high collar clothing design",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Hooded",
+        "prompt": "hooded garment",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Iridescent",
+        "prompt": "iridescent fabric sheen",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Lace Fabric",
+        "prompt": "lace fabric clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Layered",
+        "prompt": "layered clothing style",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Leather Fabric",
+        "prompt": "leather fabric clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Leopard Print",
+        "prompt": "leopard print pattern fabric",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Matte Finish",
+        "prompt": "matte fabric finish",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Mesh Fabric",
+        "prompt": "mesh fabric clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Neon Accents",
+        "prompt": "neon color accents on clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Oversized Fit",
+        "prompt": "oversized clothing fit, loose silhouette",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Pleated",
+        "prompt": "pleated fabric structure",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Polka Dot Pattern",
+        "prompt": "polka dot pattern fabric",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Quilted",
+        "prompt": "quilted fabric texture",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Ribbed Fabric",
+        "prompt": "ribbed fabric texture",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Sheer Fabric",
+        "prompt": "sheer semi-transparent fabric",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Silk Fabric",
+        "prompt": "silk fabric clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Snake Print",
+        "prompt": "snake skin print pattern fabric",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Stone Washed",
+        "prompt": "stone washed fabric texture",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Striped Pattern",
+        "prompt": "striped pattern fabric",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Surplice",
+        "prompt": "surplice neckline design",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Tiered",
+        "prompt": "tiered fabric layers",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Tiger Print",
+        "prompt": "tiger stripe print pattern fabric",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Tucked",
+        "prompt": "tucked clothing fit",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Vest Style",
+        "prompt": "vest style garment",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Wrap Style",
+        "prompt": "wrap style clothing",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Zebra Print",
+        "prompt": "zebra stripe print pattern fabric",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Zippered",
+        "prompt": "zippered garment closure",
+        "negative_prompt": ""
+    }
+]

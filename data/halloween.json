@@ -1,0 +1,252 @@
+[
+    {
+        "name": "Bewitched Forest Animals",
+        "prompt": "enchanted forest animals, magical woodland, subtle curse aura, moonlit ambience, soft mystical glow",
+        "negative_prompt": "Petting zoo"
+    },
+    {
+        "name": "Cemetery Picnic",
+        "prompt": "foggy cemetery, eerie picnic setup, ghostly atmosphere, cold dusk light, drifting mist",
+        "negative_prompt": "Picnic in a park"
+    },
+    {
+        "name": "Classic Haunted House",
+        "prompt": "old haunted house, creaking wood structure, eerie silhouettes, dim lantern glow, heavy shadows",
+        "negative_prompt": "Cheerful and bright"
+    },
+    {
+        "name": "Creepy Carnival",
+        "prompt": "abandoned carnival, broken rides, unsettling decorations, stormy sky light, flickering neon remnants",
+        "negative_prompt": "Joyful circus"
+    },
+    {
+        "name": "Cursed Amulet",
+        "prompt": "dark amulet design, cursed energy, ancient engraving, ominous backlight, glowing runes",
+        "negative_prompt": "Lucky charm"
+    },
+    {
+        "name": "Cursed Castle",
+        "prompt": "gloomy cursed castle, decaying stone walls, oppressive aura, foggy moonlight, deep shadows",
+        "negative_prompt": "Fairy tale castle"
+    },
+    {
+        "name": "Cursed Dollhouse",
+        "prompt": "haunted dollhouse, eerie miniature rooms, unsettling figures, candlelit gloom, soft flickering shadows",
+        "negative_prompt": "Doll collection"
+    },
+    {
+        "name": "Cursed Mirror",
+        "prompt": "sinister mirror, disturbing reflections, supernatural distortion, low ambient light, ghostly shimmer",
+        "negative_prompt": "Makeup vanity"
+    },
+    {
+        "name": "Cursed Shipwreck",
+        "prompt": "sunken cursed ship, skeletal remains, haunted waters, cold oceanic lighting, drifting sea fog",
+        "negative_prompt": "Luxury cruise"
+    },
+    {
+        "name": "Demon's Inferno",
+        "prompt": "fiery demon lair, raging lava flows, infernal landscape, intense red glow, ember-lit shadows",
+        "negative_prompt": "Cool swimming pool"
+    },
+    {
+        "name": "Eerie Cemetery",
+        "prompt": "fog-covered cemetery, ancient tombstones, spectral atmosphere, moonlit haze, cold misty air",
+        "negative_prompt": "Sunny and peaceful"
+    },
+    {
+        "name": "Frankenstein's Lab",
+        "prompt": "old laboratory, crackling electrical devices, gothic science setup, arc-light flashes, murky shadows",
+        "negative_prompt": "High-tech research facility"
+    },
+    {
+        "name": "Ghostly Apparitions",
+        "prompt": "ghostly silhouettes, spectral motion, haunted mansion interior, pale ethereal glow, drifting translucent mist",
+        "negative_prompt": "Clear and ghost-free"
+    },
+    {
+        "name": "Ghoulish Feast",
+        "prompt": "ghouls dining, sinister banquet table, dark macabre setting, candlelit gloom, deep shadow ambience",
+        "negative_prompt": "Vegan potluck"
+    },
+    {
+        "name": "Grim Carnival",
+        "prompt": "sinister carnival rides, eerie attractions, haunted festival grounds, dim foggy lights, chilling atmosphere",
+        "negative_prompt": "Amusement park"
+    },
+    {
+        "name": "Grim Reaper",
+        "prompt": "ominous reaper figure, skeletal presence, shadowed cloak, moonbeam rim light, deep abyssal shadows",
+        "negative_prompt": "Friendly park ranger"
+    },
+    {
+        "name": "Haunted Asylum",
+        "prompt": "abandoned asylum, rusted equipment, eerie corridors, flickering lights, cold pale ambience",
+        "negative_prompt": "Hospital"
+    },
+    {
+        "name": "Haunted Forest",
+        "prompt": "dense dark forest, twisted trees, ghostly movement, bluish moonlight, crawling fog",
+        "negative_prompt": "Sunny meadow"
+    },
+    {
+        "name": "Haunted School",
+        "prompt": "abandoned school building, cracked hallways, eerie chalkboard markings, low blue lighting, dusty shadows",
+        "negative_prompt": "Elementary school"
+    },
+    {
+        "name": "Haunted Ship",
+        "prompt": "ghostly pirate ship, cursed ocean waves, decaying sails, moonlit sea mist, cold spectral glow",
+        "negative_prompt": "Luxury yacht"
+    },
+    {
+        "name": "Horror Film Director",
+        "prompt": "dark film set, horror director at work, atmospheric props, dramatic spotlight, shadow-heavy environment",
+        "negative_prompt": "Romantic comedy director"
+    },
+    {
+        "name": "Mad Scientist's Lab",
+        "prompt": "chaotic laboratory, strange devices, unstable experiments, electrical sparks, low-key backlighting",
+        "negative_prompt": "High school science class"
+    },
+    {
+        "name": "Mummy's Tomb",
+        "prompt": "ancient tomb chamber, sarcophagus carvings, sandy relics, torchlit stone, warm dusty ambience",
+        "negative_prompt": "Clean and tidy bedroom"
+    },
+    {
+        "name": "Mysterious Potions",
+        "prompt": "arcane potion bottles, glowing liquids, wizard's workspace, cauldron light, mystical colored reflections",
+        "negative_prompt": "Beverage aisle at the supermarket"
+    },
+    {
+        "name": "Pirate's Curse",
+        "prompt": "ancient treasure map, cursed symbols, pirate lore, warm lantern glow, parchment shadows",
+        "negative_prompt": "Treasure island vacation"
+    },
+    {
+        "name": "Possessed Doll",
+        "prompt": "evil doll, cracked porcelain face, haunting expression, dim attic lighting, creeping shadows",
+        "negative_prompt": "Cute plush toy"
+    },
+    {
+        "name": "Pumpkin Patch",
+        "prompt": "autumn pumpkin field, harvest setting, rustic textures, golden dusk light, soft atmospheric haze",
+        "negative_prompt": "Deserted wasteland"
+    },
+    {
+        "name": "Skeletal Warriors",
+        "prompt": "armored skeleton warriors, necromantic energy, battle stance, cold moonlight, dramatic underlighting",
+        "negative_prompt": "Fitness class"
+    },
+    {
+        "name": "Sorcerer's Apprentice",
+        "prompt": "young apprentice, magical conjuring, glowing spell effects, warm arcane light, swirling spark ambience",
+        "negative_prompt": "High school science experiment"
+    },
+    {
+        "name": "Spectral Opera House",
+        "prompt": "ghostly opera performers, grand haunted theater, ethereal stage, spotlight haze, pale phantom illumination",
+        "negative_prompt": "Sold-out theater"
+    },
+    {
+        "name": "Spooky Lighthouse",
+        "prompt": "storm-lashed lighthouse, crashing waves, eerie atmosphere, cold beacon glow, mist-heavy surroundings",
+        "negative_prompt": "Sunny beach resort"
+    },
+    {
+        "name": "Vampire's Feast",
+        "prompt": "vampire feeding, dark alley, sinister ambience, crimson accents, dim nocturnal light",
+        "negative_prompt": "Romantic dinner"
+    },
+    {
+        "name": "Vampire's Lair",
+        "prompt": "gothic vampire lair, ancient furniture, heavy drapery, candlelit interior, cold shadowed corners",
+        "negative_prompt": "Well-lit coffee shop"
+    },
+    {
+        "name": "Voodoo Doll",
+        "prompt": "voodoo doll, stitched fabric figure, ritual pins, firelit ritual glow, dark earthy tones",
+        "negative_prompt": "Stuffed toy"
+    },
+    {
+        "name": "Voodoo Priestess",
+        "prompt": "voodoo ritual scene, mystical symbols, powerful priestess, torchlight ambience, smoky spiritual glow",
+        "negative_prompt": "Local healer"
+    },
+    {
+        "name": "Werewolf Transformation",
+        "prompt": "dramatic werewolf shift, moonlit mutation, tearing fabric, cold night glow, sharp contrasting shadows",
+        "negative_prompt": "Ordinary human"
+    },
+    {
+        "name": "Wicked Jester",
+        "prompt": "sinister jester character, eerie grin, unsettling costume, low spotlight, elongated shadows",
+        "negative_prompt": "Friendly clown"
+    },
+    {
+        "name": "Wicked Queen's Castle",
+        "prompt": "dark royal castle, ominous throne hall, enchanted corruption, moonlit windows, dim regal ambience",
+        "negative_prompt": "Fairy princess castle"
+    },
+    {
+        "name": "Wicked Witches",
+        "prompt": "gathering of witches, plotting ritual, arcane atmosphere, firelit circle, swirling smoke",
+        "negative_prompt": "Tea party"
+    },
+    {
+        "name": "Witch Hunt",
+        "prompt": "historical witch hunt scene, torches raised, tense crowd, firelight glow, heavy night shadows",
+        "negative_prompt": "Law-abiding town"
+    },
+    {
+        "name": "Witch's Brew",
+        "prompt": "witch brewing potion, bubbling cauldron, mystical fumes, warm fire glow, drifting green mist",
+        "negative_prompt": "Baking cookies"
+    },
+    {
+        "name": "Witch's Broomstick",
+        "prompt": "witch flying on broom, night sky travel, magical trail, moonlit clouds, soft atmospheric glow",
+        "negative_prompt": "Airplane"
+    },
+    {
+        "name": "Witch's Cauldron",
+        "prompt": "witch stirring cauldron, bubbling mixture, arcane ingredients, firelit shadows, glowing fumes",
+        "negative_prompt": "Orderly laboratory"
+    },
+    {
+        "name": "Witch's Coven",
+        "prompt": "witch circle, moonlit ritual clearing, ancient magic, cold lunar glow, swirling mist",
+        "negative_prompt": "Book club meeting"
+    },
+    {
+        "name": "Witch's Familiar",
+        "prompt": "witch's familiar cat, magical aura, shadowed forest setting, moonlit fur highlights, soft mystical tones",
+        "negative_prompt": "Cute kitten"
+    },
+    {
+        "name": "Witch's Spellbook",
+        "prompt": "ancient spellbook, dark leather cover, glowing runes, candle shadows, arcane glow",
+        "negative_prompt": "Cookbook"
+    },
+    {
+        "name": "Zombie Apocalypse",
+        "prompt": "chaotic zombie outbreak, destroyed streets, undead swarm, smoky backlight, emergency-red ambience",
+        "negative_prompt": "Peaceful suburban neighborhood"
+    },
+    {
+        "name": "Zombie Apocalypse Survivors",
+        "prompt": "zombie survivors, improvised gear, tense atmosphere, gritty low light, dust-filled air",
+        "negative_prompt": "Family picnic"
+    },
+    {
+        "name": "Zombie Prom Night",
+        "prompt": "zombie-filled prom, tattered outfits, creepy ballroom, neon flicker lighting, eerie reflective floor",
+        "negative_prompt": "High school dance"
+    },
+    {
+        "name": "Zombie Wedding",
+        "prompt": "zombie bride and groom, decayed ceremony, unsettling aisle, pale overcast light, cold shadow ambience",
+        "negative_prompt": "Traditional wedding"
+    }
+]

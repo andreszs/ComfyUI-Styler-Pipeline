@@ -1,0 +1,107 @@
+[
+    {
+        "name": "Artistic/Brush Line",
+        "prompt": "expressive brush line art, dynamic strokes, organic ink flow",
+        "negative_prompt": "flat digital shading"
+    },
+    {
+        "name": "Artistic/Crosshatch Engraving",
+        "prompt": "crosshatch engraving line art, dense etched lines, classical illustration style",
+        "negative_prompt": "smooth gradients"
+    },
+    {
+        "name": "Artistic/Pen and Ink",
+        "prompt": "pen and ink illustration, clean black ink lines, traditional illustration style",
+        "negative_prompt": "soft painterly shading"
+    },
+    {
+        "name": "Artistic/Scratchy Sketch",
+        "prompt": "scratchy sketch line art, rough exploratory lines, loose hand-drawn feel",
+        "negative_prompt": "clean polished linework"
+    },
+    {
+        "name": "Blueprint/Architectural",
+        "prompt": "architectural blueprint line drawing, precise technical lines, schematic presentation",
+        "negative_prompt": "organic freehand lines"
+    },
+    {
+        "name": "Blueprint/Sci-Fi",
+        "prompt": "sci-fi blueprint line art, technical schematic style, futuristic design annotations",
+        "negative_prompt": "organic illustration"
+    },
+    {
+        "name": "Blueprint/Vehicle Design",
+        "prompt": "vehicle design blueprint line art, mechanical schematics, precise line structure",
+        "negative_prompt": "loose artistic sketch"
+    },
+    {
+        "name": "Decorative/Ornamental",
+        "prompt": "ornamental decorative line art, intricate flowing patterns, elegant detailing",
+        "negative_prompt": "technical drafting"
+    },
+    {
+        "name": "Decorative/Tattoo Style",
+        "prompt": "tattoo style line art, bold clean outlines, graphic contrast",
+        "negative_prompt": "soft sketch lines"
+    },
+    {
+        "name": "Manga/Chibi Sketch",
+        "prompt": "chibi manga sketch line art, simplified proportions, cute expressive lines",
+        "negative_prompt": "realistic anatomy"
+    },
+    {
+        "name": "Manga/Clean Ink",
+        "prompt": "clean manga ink line art, crisp confident outlines, professional comic finish",
+        "negative_prompt": "rough sketch lines"
+    },
+    {
+        "name": "Manga/Detailed Character",
+        "prompt": "detailed manga character line art, refined anatomy, expressive facial lines",
+        "negative_prompt": "simplified cartoon style"
+    },
+    {
+        "name": "Manga/Dynamic Action",
+        "prompt": "dynamic manga action line art, energetic motion lines, dramatic perspective",
+        "negative_prompt": "static posing"
+    },
+    {
+        "name": "Manga/Panel Style",
+        "prompt": "manga panel style line art, comic layout framing, storytelling composition",
+        "negative_prompt": "single illustration focus"
+    },
+    {
+        "name": "Manga/Rough Sketch",
+        "prompt": "rough manga sketch, loose construction lines, unfinished draft look",
+        "negative_prompt": "polished ink"
+    },
+    {
+        "name": "Manga/Shojo Delicate",
+        "prompt": "shojo manga line art, delicate thin lines, elegant expressive style",
+        "negative_prompt": "thick bold outlines"
+    },
+    {
+        "name": "Manga/Shonen Bold",
+        "prompt": "shonen manga line art, bold confident strokes, strong contrast outlines",
+        "negative_prompt": "soft thin lines"
+    },
+    {
+        "name": "Scientific/Botanical",
+        "prompt": "botanical scientific line illustration, precise contour lines, educational clarity",
+        "negative_prompt": "stylized fantasy elements"
+    },
+    {
+        "name": "Scientific/Medical",
+        "prompt": "medical illustration line art, anatomical accuracy, clean explanatory lines",
+        "negative_prompt": "artistic exaggeration"
+    },
+    {
+        "name": "Scientific/Zoological",
+        "prompt": "zoological line illustration, detailed anatomical outlines, reference-style drawing",
+        "negative_prompt": "cartoon proportions"
+    },
+    {
+        "name": "Technical/Wireframe",
+        "prompt": "technical wireframe line art, structural outlines, transparent form definition",
+        "negative_prompt": "solid shading"
+    }
+]
