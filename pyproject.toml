@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "comfyui-styler-pipeline"
-version = "1.0.0"
-description = "Explicit styler-pipeline nodes for ComfyUI workflows."
+version = "1.0.1"
+description = "Apply global or per-area style presets, with optional AI-assisted style suggestions and ControlNet/OpenPose-friendly conditioning."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { file = "LICENSE" }
