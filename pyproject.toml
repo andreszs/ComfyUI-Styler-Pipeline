@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "comfyui-styler-pipeline"
-version = "0.1.0"
+version = "1.0.0"
 description = "Explicit styler-pipeline nodes for ComfyUI workflows."
 readme = "README.md"
 requires-python = ">=3.10"
