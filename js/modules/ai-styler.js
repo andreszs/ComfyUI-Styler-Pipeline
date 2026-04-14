@@ -266,7 +266,7 @@ const GROQ_STYLER_BUDGET_PRIORITY = ["llama-3.1-8b-instant", "groq/compound-mini
 const OPENROUTER_MODEL_OPTIONS = [];
 const OPENROUTER_MODEL_SET = new Set();
 const OPENROUTER_FILTER_OTHER_ID = "__openrouter_filter_other__";
-const OPENROUTER_DEFAULT_DISPLAY_COUNT = 100;
+const OPENROUTER_DEFAULT_DISPLAY_COUNT = 50;
 
 /* -- Placeholder rotation state -- */
 let cachedPlaceholders = null;
