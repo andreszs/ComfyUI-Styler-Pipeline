@@ -1925,6 +1925,7 @@
 .dsp-styler-modal .dsp-ai-presets-groq-key-wrap.is-hidden,
 .dsp-styler-modal .dsp-ai-presets-gemini-key-wrap.is-hidden,
 .dsp-styler-modal .dsp-ai-presets-hf-wrap.is-hidden,
+.dsp-styler-modal .dsp-ai-presets-openrouter-key-wrap.is-hidden,
 .dsp-styler-modal .dsp-ai-presets-get-ollama.is-hidden {
     display: none !important;
 }
@@ -1933,7 +1934,8 @@
 .dsp-styler-modal .dsp-ai-presets-anthropic-key-wrap:not(.is-hidden),
 .dsp-styler-modal .dsp-ai-presets-groq-key-wrap:not(.is-hidden),
 .dsp-styler-modal .dsp-ai-presets-gemini-key-wrap:not(.is-hidden),
-.dsp-styler-modal .dsp-ai-presets-hf-wrap:not(.is-hidden) {
+.dsp-styler-modal .dsp-ai-presets-hf-wrap:not(.is-hidden),
+.dsp-styler-modal .dsp-ai-presets-openrouter-key-wrap:not(.is-hidden) {
     display: flex;
 }
 
