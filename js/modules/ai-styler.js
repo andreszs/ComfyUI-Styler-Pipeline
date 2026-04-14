@@ -6249,9 +6249,11 @@ function initAiPresets(container, manager) {
 
         if (selectedProvider === "openrouter" && selectedValue === OPENROUTER_FILTER_OTHER_ID) {
             const previousModel = String(state.selectedModel || "").trim();
-            const filterInput = window.prompt(
-                "Filter models by ID (leave empty to show all):",
-                state.openrouterModelFilter || ""
+            const filterInput = await showPrompt(
+                "Filter OpenRouter Models",
+                "Enter a filter string to search model IDs (leave empty to show all):",
+                state.openrouterModelFilter || "",
+                { type: "default" }
             );
             if (filterInput === null) {
                 // Cancelled – restore previous selection without rebuilding the list

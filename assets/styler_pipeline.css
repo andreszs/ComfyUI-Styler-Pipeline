@@ -748,7 +748,8 @@
 .dsp-styler-modal .dsp-ai-presets-anthropic-key-wrap,
 .dsp-styler-modal .dsp-ai-presets-groq-key-wrap,
 .dsp-styler-modal .dsp-ai-presets-gemini-key-wrap,
-.dsp-styler-modal .dsp-ai-presets-hf-wrap {
+.dsp-styler-modal .dsp-ai-presets-hf-wrap,
+.dsp-styler-modal .dsp-ai-presets-openrouter-key-wrap {
     display: none;
     flex-direction: column;
     gap: 4px;
@@ -761,7 +762,8 @@
 .dsp-styler-modal .dsp-ai-presets-anthropic-key-row,
 .dsp-styler-modal .dsp-ai-presets-groq-key-row,
 .dsp-styler-modal .dsp-ai-presets-gemini-key-row,
-.dsp-styler-modal .dsp-ai-presets-hf-token-row {
+.dsp-styler-modal .dsp-ai-presets-hf-token-row,
+.dsp-styler-modal .dsp-ai-presets-openrouter-key-row {
     display: flex;
     gap: 8px;
     align-items: center;
