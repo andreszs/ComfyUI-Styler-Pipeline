@@ -667,7 +667,6 @@ export function parseCandidateSelectionReply({
         const normalized = normalizeStyleName(rawName);
         const canonical = allowedLookup.get(normalized);
         if (!canonical) {
-            console.log(`[AI Presets Parser]   - "${rawName}" (normalized: "${normalized}") not found in allowed styles for "${category}"`);
             return;
         }
         if (seen.has(canonical)) return;
@@ -696,7 +695,6 @@ export function parseCandidateSelectionReply({
     const { candidates: scoredCandidates, fallbackCount } = applyCandidateFallbackScores(limitedResolved);
     candidateSelection[category] = scoredCandidates;
 
-    console.log(`[AI Presets Parser] Query result for "${category}": ${limitedResolved.length} valid candidate(s)`);
     return {
         ok: true,
         candidateSelection,
@@ -740,7 +738,6 @@ export function parseRefineCategoryReply({
             fallbackScoresApplied: 0,
         };
     } else {
-        console.log(`[AI Presets Refine Parser] Parsed payload for category "${categoryKey}":`, payload);
         if (payload.category && normalizeCategoryKey(payload.category, categoryAliases) !== categoryKey) {
             console.warn(`[AI Presets Refine Parser] Category mismatch: expected "${categoryKey}", got "${payload.category}"`);
             return {
@@ -769,7 +766,6 @@ export function parseRefineCategoryReply({
     const limit = Number.isFinite(maxCandidates) && maxCandidates > 0
         ? Math.floor(maxCandidates)
         : MAX_MODEL_CANDIDATES_PER_CATEGORY;
-    console.log(`[AI Presets Refine Parser] Processing ${candidateItems.length} candidates for category "${categoryKey}"`);
 
     const resolved = [];
     const seen = new Set();
@@ -787,14 +783,10 @@ export function parseRefineCategoryReply({
                 name: canonical,
                 score: item && typeof item === "object" ? item.score : null,
             });
-            console.log(`[AI Presets Refine Parser]   ✓ "${rawName}" → "${canonical}"`);
         } else if (!canonical) {
-            console.log(`[AI Presets Refine Parser]   ✗ "${rawName}" (normalized: "${normalized}") not found in allowed styles`);
         }
         if (resolved.length >= limit) break;
     }
-
-    console.log(`[AI Presets Refine Parser] Resolved ${resolved.length} valid candidates for category "${categoryKey}"`);
 
     if (resolved.length === 0) {
         return {
@@ -1474,15 +1466,6 @@ export async function huggingFaceChat({
 
     const url = HUGGINGFACE_CHAT_COMPLETIONS_URL;
 
-    // Debug logging (never logs the token value)
-    console.debug("[HF Request]", {
-        url,
-        method: "POST",
-        model: modelId,
-        tokenPresent: token.length > 0,
-        messageCount: chatMessages.length,
-    });
-
     const response = await fetchWithTimeout(
         url,
         {
@@ -1523,11 +1506,6 @@ export async function huggingFaceChat({
             : (data?.error?.message || data?.error || data?.message || "");
         const detail = sanitizeHuggingFaceErrorMessage(errorBody);
 
-        console.debug("[HF Response Error]", {
-            status: response.status,
-            detail: String(detail).slice(0, 200),
-        });
-
         if (response.status === 404) {
             const hint = detail
                 ? `Model "${modelId}" not found on HF Router — ${detail}`
@@ -1539,7 +1517,6 @@ export async function huggingFaceChat({
 
     const replyText = data?.choices?.[0]?.message?.content;
     if (typeof replyText !== "string" || !replyText.trim()) {
-        console.debug("[HF Response] No reply content in:", JSON.stringify(data).slice(0, 200));
         throw new Error("No reply content received from Hugging Face");
     }
     return replyText.trim();

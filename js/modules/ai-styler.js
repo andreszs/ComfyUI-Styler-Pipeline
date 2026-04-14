@@ -2152,7 +2152,6 @@ function initAiPresets(container, manager) {
                         });
                     }
                     pendingRateLimitWaitReset = false;
-                    console.debug(`[AI Presets][LLM] Sending request at ${nextSendAt} (provider=${provider})`);
                     return requestLLMWithRetry({
                         provider,
                         model,
@@ -2186,10 +2185,6 @@ function initAiPresets(container, manager) {
             const waitMs = extendGlobalRateLimitGate(waitSeconds);
             const effectiveWaitSeconds = waitMs / 1000;
             const nextAllowedAt = new Date(Date.now() + waitMs).toISOString();
-
-            console.debug(
-                `[AI Presets][RateLimit] 429 received | provider=${provider} | bodyRetryAfterMs=${bodyRetryAfterMs ?? "none"} | waitSeconds=${effectiveWaitSeconds.toFixed(3)} | nextAllowedAt=${nextAllowedAt}`
-            );
 
             if (typeof onRateLimited === "function") {
                 await onRateLimited({
@@ -3211,7 +3206,6 @@ function initAiPresets(container, manager) {
 
     function logKeepSelectedNoStyles(category, reason = "no_styles", source = "query") {
         if (!category) return;
-        console.log(`[AI Presets][UX] no styles -> keep selected | source=${source} categoryId=${category} reason=${reason}`);
     }
 
 
@@ -3429,7 +3423,6 @@ function initAiPresets(container, manager) {
                     }
 
                     finalStatusMessage = t("ai_styler.statusbar.suggestions_from", { count: parsed.candidates.length, category: displayCategory });
-                    console.log(`[AI Presets] Refined ${categoryKey}: ${parsed.candidates.map((item) => item.name).join(", ")}`);
                 }
             }
         } catch (err) {
@@ -6803,7 +6796,6 @@ function initAiPresets(container, manager) {
 
     generateBtn.addEventListener("click", async () => {
         if (cancelActiveRefineProcess()) {
-            console.log("[AI Presets] User cancelled refine via Query button");
             return;
         }
 
@@ -6812,7 +6804,9 @@ function initAiPresets(container, manager) {
             invalidateLocalSequentialChipRendering();
             stopSidebarChipTypingForCurrentRun();
             state.abortController.abort();
-            console.log("[AI Presets] User cancelled request via Query button");
+            if (state.activeCategoryAbortController && !state.activeCategoryAbortController.signal.aborted) {
+                state.activeCategoryAbortController.abort();
+            }
             return;
         }
         
@@ -6897,7 +6891,6 @@ function initAiPresets(container, manager) {
                 );
 
                 if (!confirmed) {
-                    console.log("[AI Presets] User canceled generation due to busy ComfyUI");
                     state.isGenerating = false;
                     updateGenerateButton();
                     return;
