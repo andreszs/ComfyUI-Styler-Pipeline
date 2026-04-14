@@ -4989,10 +4989,10 @@ function initAiPresets(container, manager) {
     }
 
     function getProviderPricingState(providerOptionId) {
-        if (providerOptionId === "openai" || providerOptionId === "anthropic" || providerOptionId === "openrouter") {
+        if (providerOptionId === "openai" || providerOptionId === "anthropic") {
             return { label: t("ai_styler.pricing.no_free_tier"), isFreeTier: false };
         }
-        if (providerOptionId === "gemini" || providerOptionId === "groq" || providerOptionId === "huggingface" || providerOptionId === "ollama_local" || providerOptionId === "ollama_cloud") {
+        if (providerOptionId === "gemini" || providerOptionId === "groq" || providerOptionId === "huggingface" || providerOptionId === "ollama_local" || providerOptionId === "ollama_cloud" || providerOptionId === "openrouter") {
             return { label: t("ai_styler.pricing.free_tier"), isFreeTier: true };
         }
         return null;
