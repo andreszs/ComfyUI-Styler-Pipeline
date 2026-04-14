@@ -47,6 +47,7 @@ export const ANTHROPIC_MESSAGES_URL = "https://api.anthropic.com/v1/messages";
 export const GROQ_CHAT_URL = "https://api.groq.com/openai/v1/chat/completions";
 export const GEMINI_GENERATE_CONTENT_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models";
 export const HUGGINGFACE_CHAT_COMPLETIONS_URL = "https://router.huggingface.co/v1/chat/completions";
+export const OPENROUTER_CHAT_URL = "https://openrouter.ai/api/v1/chat/completions";
 export const COMFYUI_QUEUE_URL = "/queue";
 
 export const THROTTLE_BASE_MS = 900;
@@ -168,7 +169,7 @@ export function getRetryAfterMs(err) {
 }
 
 export function getHttpErrorLabel(err, provider = "ollama") {
-    if ((provider === "openai" || provider === "anthropic" || provider === "groq" || provider === "gemini" || provider === "huggingface") && err instanceof HttpError) {
+    if ((provider === "openai" || provider === "anthropic" || provider === "groq" || provider === "gemini" || provider === "huggingface" || provider === "openrouter") && err instanceof HttpError) {
         if (err.status === 401 || err.status === 403) {
             return provider === "huggingface"
                 ? "Invalid token or missing access."
@@ -201,12 +202,12 @@ function parseGroqRateLimitWaitMs(errorMessage) {
 
 export function isConnectivityError(err) {
     const raw = (err && err.message) ? err.message : String(err || "");
-    return /HTTP\s\d+|failed to fetch|network|cors|timeout|aborted|No reply content received from (?:Ollama|OpenAI|Anthropic|Groq|Gemini|Hugging Face)/i.test(raw);
+    return /HTTP\s\d+|failed to fetch|network|cors|timeout|aborted|No reply content received from (?:Ollama|OpenAI|Anthropic|Groq|Gemini|Hugging Face|OpenRouter)/i.test(raw);
 }
 
 export function normalizeConnectivityError(err, provider = "ollama") {
     const raw = (err && err.message) ? err.message : String(err || "Unknown error");
-    const isCloud = provider === "openai" || provider === "anthropic" || provider === "groq" || provider === "gemini" || provider === "huggingface";
+    const isCloud = provider === "openai" || provider === "anthropic" || provider === "groq" || provider === "gemini" || provider === "huggingface" || provider === "openrouter";
     const cloudProviderName = provider === "anthropic"
         ? "Anthropic"
         : provider === "groq"
@@ -215,6 +216,8 @@ export function normalizeConnectivityError(err, provider = "ollama") {
                 ? "Gemini"
                 : provider === "huggingface"
                     ? "Hugging Face"
+                : provider === "openrouter"
+                    ? "OpenRouter"
                 : "OpenAI";
 
     // Surface HTTP status + detail for cloud providers instead of collapsing to generic message
@@ -1562,6 +1565,122 @@ export async function huggingFaceTestApiKey({
     });
 }
 
+function sanitizeOpenRouterErrorMessage(value) {
+    return String(value || "")
+        .replace(/\s+/g, " ")
+        .trim()
+        .slice(0, 220);
+}
+
+function splitOpenRouterSystemAndMessages(messages = []) {
+    const systemParts = [];
+    const outMessages = [];
+
+    (messages || []).forEach((message) => {
+        const roleRaw = String(message?.role || "user").trim().toLowerCase();
+        const content = String(message?.content || "").trim();
+        if (!content) return;
+
+        if (roleRaw === "system") {
+            systemParts.push(content);
+            return;
+        }
+
+        const role = roleRaw === "assistant" ? "assistant" : "user";
+        outMessages.push({ role, content });
+    });
+
+    const result = [];
+    if (systemParts.length > 0) {
+        result.push({ role: "system", content: systemParts.join("\n\n").trim() });
+    }
+    result.push(...outMessages);
+    return result;
+}
+
+export async function openrouterChat({
+    apiKey,
+    model,
+    messages,
+    timeoutMs = CATEGORY_REQUEST_TIMEOUT_MS,
+    signal,
+} = {}) {
+    const token = String(apiKey || "").trim();
+    if (!token) {
+        throw new Error("OpenRouter API key is required");
+    }
+
+    const chatMessages = splitOpenRouterSystemAndMessages(messages);
+    if (chatMessages.length === 0) {
+        throw new Error("No prompt content provided for OpenRouter request");
+    }
+
+    const response = await fetchWithTimeout(
+        OPENROUTER_CHAT_URL,
+        {
+            method: "POST",
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json",
+                "HTTP-Referer": "https://github.com/andreszs/comfyui-styler-pipeline",
+                "X-Title": "ComfyUI Styler Pipeline",
+            },
+            body: JSON.stringify({
+                model,
+                messages: chatMessages,
+                temperature: 0.2,
+                max_tokens: 1200,
+            }),
+            throwOnHttpError: false,
+        },
+        { timeoutMs, signal },
+    );
+
+    let data = null;
+    try {
+        data = await response.json();
+    } catch {
+        data = null;
+    }
+
+    if (!response.ok) {
+        const detail = sanitizeOpenRouterErrorMessage(
+            data?.error?.message || data?.message || ""
+        );
+        throw new HttpError(response.status, response.headers, detail);
+    }
+
+    const replyText = data?.choices?.[0]?.message?.content;
+    if (typeof replyText !== "string" || !replyText.trim()) {
+        throw new Error("No reply content received from OpenRouter");
+    }
+    return replyText.trim();
+}
+
+export async function openrouterTestApiKey({
+    apiKey,
+    model = "openai/gpt-4o-mini",
+    timeoutMs = 10000,
+    signal,
+} = {}) {
+    await openrouterChat({
+        apiKey,
+        model,
+        messages: [
+            {
+                role: "system",
+                content: "Return ONLY valid JSON.",
+            },
+            {
+                role: "user",
+                content: '{"ok":true}',
+            },
+        ],
+        timeoutMs,
+        signal,
+    });
+}
+
 /**
  * Fetch the list of locally-available Ollama model names.
  * @returns {Promise<string[]>}
@@ -1632,6 +1751,9 @@ export async function requestLLM({
     }
     if (provider === "huggingface") {
         return huggingFaceChat({ apiKey, model, messages, timeoutMs, signal });
+    }
+    if (provider === "openrouter") {
+        return openrouterChat({ apiKey, model, messages, timeoutMs, signal });
     }
     throw new Error(`Unknown provider: ${provider}`);
 }

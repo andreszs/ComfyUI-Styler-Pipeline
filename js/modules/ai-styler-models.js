@@ -1,12 +1,13 @@
 const MODEL_CACHE_KEY_PREFIX = "dsp_llm_models_cache:";
 const MODEL_DISCOVERY_TIMEOUT_MS = 15000;
-const MODEL_REFRESH_REQUIRED_KEY_PROVIDER_IDS = new Set(["openai", "anthropic", "groq", "gemini"]);
+const MODEL_REFRESH_REQUIRED_KEY_PROVIDER_IDS = new Set(["openai", "anthropic", "groq", "gemini", "openrouter"]);
 
 export const OPENAI_MODEL_DEFAULT = "gpt-5.2";
 export const ANTHROPIC_MODEL_DEFAULT = "claude-3-7-sonnet-latest";
 export const GEMINI_MODEL_DEFAULT = "gemini-2.5-flash";
 export const HUGGINGFACE_MODEL_DEFAULT = "Qwen/Qwen2.5-7B-Instruct";
 export const GROQ_MODEL_DEFAULT = "llama-3.3-70b-versatile";
+export const OPENROUTER_MODEL_DEFAULT = "";
 
 const OPENAI_STYLER_EXCLUDED_TOKENS = [
     "dall-e",
@@ -160,6 +161,7 @@ function getProviderOptionDisplayName(providerId) {
     if (providerId === "groq") return "Groq";
     if (providerId === "gemini") return "Gemini";
     if (providerId === "huggingface") return "Hugging Face";
+    if (providerId === "openrouter") return "OpenRouter";
     if (providerId === "ollama_cloud") return "Ollama (Cloud)";
     if (providerId === "ollama_local") return "Ollama (Local)";
     return "Provider";
@@ -830,7 +832,7 @@ function persistProviderModelCacheEntry({ state, dynamicModelSetsByProvider, set
 }
 
 function loadProviderModelCachesFromStorage({ state, dynamicModelSetsByProvider, getPersistedJSON }) {
-    const refreshableProviderIds = ["ollama_local", "ollama_cloud", "openai", "anthropic", "groq", "gemini", "huggingface"];
+    const refreshableProviderIds = ["ollama_local", "ollama_cloud", "openai", "anthropic", "groq", "gemini", "huggingface", "openrouter"];
     refreshableProviderIds.forEach((providerId) => {
         const entry = loadProviderModelCacheEntry(providerId, { getPersistedJSON });
         if (!entry) return;
@@ -1042,6 +1044,18 @@ async function discoverModelsForProvider(providerId, {
                 ? payload.models
                 : [];
         return buildHuggingFaceStylerModelList(models);
+    }
+
+    if (providerId === "openrouter") {
+        const apiKey = getProviderApiKeySnapshot("openrouter");
+        const payload = await fetchModelDiscoveryJson("https://openrouter.ai/api/v1/models", {
+            Authorization: `Bearer ${apiKey}`,
+        }, fetchImpl, requestTimeoutMs);
+        const models = Array.isArray(payload?.data) ? payload.data : [];
+        return models.slice(0, 10).map((entry) => {
+            const id = String(entry?.id || "").trim();
+            return { id, label: id };
+        }).filter((entry) => entry.id);
     }
 
     throw new Error("Provider does not support model discovery.");

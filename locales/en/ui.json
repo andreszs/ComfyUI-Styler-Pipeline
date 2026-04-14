@@ -156,6 +156,8 @@
   "ai_styler.provider.groq_cloud": "Groq (Cloud)",
   "ai_styler.provider.gemini_cloud": "Gemini (Cloud)",
   "ai_styler.provider.huggingface_cloud": "Hugging Face (Cloud)",
+  "ai_styler.provider.openrouter": "OpenRouter",
+  "ai_styler.provider.openrouter_api": "OpenRouter (API)",
   "ai_styler.provider.fallback": "Provider",
 
   "ai_styler.model.label": "Model",
@@ -175,6 +177,7 @@
   "ai_styler.model_list.no_groq_models": "No Groq models available",
   "ai_styler.model_list.no_gemini_models": "No Gemini models available",
   "ai_styler.model_list.no_huggingface_models": "No Hugging Face models available",
+  "ai_styler.model_list.no_openrouter_models": "No OpenRouter models available",
   "ai_styler.model_list.no_models": "No models available",
 
   "ai_styler.btn.get_ollama.title": "Download Ollama",
@@ -215,6 +218,8 @@
   "ai_styler.gemini.key.placeholder": "Paste your Google AI Studio API key",
   "ai_styler.huggingface.token.label": "Hugging Face Token",
   "ai_styler.huggingface.token.placeholder": "Paste your Hugging Face token (hf_...)",
+  "ai_styler.openrouter.key.label": "OpenRouter API Key",
+  "ai_styler.openrouter.key.placeholder": "Paste your OpenRouter API key (sk-or-...)",
   "ai_styler.huggingface.custom_model.label": "Custom ({model})",
 
   "ai_styler.timeout.label": "Timeout",
@@ -344,6 +349,9 @@
   "ai_styler.toast.hf_test.title": "Hugging Face Test",
   "ai_styler.toast.hf_test.wrong_model": "Select a Hugging Face (Cloud) model first.",
   "ai_styler.toast.hf_token_required.body": "Paste your Hugging Face token first.",
+  "ai_styler.toast.openrouter_test.title": "OpenRouter Test",
+  "ai_styler.toast.openrouter_test.wrong_model": "Select an OpenRouter (API) model first.",
+  "ai_styler.toast.openrouter_key_required.body": "Paste your OpenRouter API key first.",
   "ai_styler.toast.test_success.body": "Connection successful.",
   "ai_styler.toast.openai_model_updated.title": "OpenAI model updated",
   "ai_styler.toast.openai_model_updated.body": "The saved OpenAI model \"{old}\" is not supported for Styler. Switched to \"{new}\".",

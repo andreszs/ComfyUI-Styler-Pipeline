@@ -45,6 +45,7 @@ import {
     groqTestApiKey,
     geminiTestApiKey,
     huggingFaceTestApiKey,
+    openrouterTestApiKey,
     checkComfyUIBusy,
 } from "./api.js";
 import {
@@ -53,6 +54,7 @@ import {
     GROQ_MODEL_DEFAULT,
     GEMINI_MODEL_DEFAULT,
     HUGGINGFACE_MODEL_DEFAULT,
+    OPENROUTER_MODEL_DEFAULT,
 } from "./ai-styler-models.js";
 
 const LOCAL_OMIT_ENABLE_DELAY_MS = 5000;
@@ -79,6 +81,7 @@ const PROVIDER_API_KEY_URLS = {
     gemini: "https://ai.google.dev/gemini-api/docs",
     groq: "https://console.groq.com/docs/quickstart",
     huggingface: "https://huggingface.co/docs/hub/en/api",
+    openrouter: "https://openrouter.ai/keys",
 };
 const OLLAMA_DOWNLOAD_URL = "https://ollama.com/download";
 const AI_PRESETS_PLACEHOLDERS_URL = "/pipeline_control/assets/placeholders.json";
@@ -260,6 +263,9 @@ const GROQ_STYLER_RECOMMENDED_PRIORITY = [
 ];
 const GROQ_STYLER_BUDGET_PRIORITY = ["llama-3.1-8b-instant", "groq/compound-mini", "groq/compound"];
 
+const OPENROUTER_MODEL_OPTIONS = [];
+const OPENROUTER_MODEL_SET = new Set();
+
 /* -- Placeholder rotation state -- */
 let cachedPlaceholders = null;
 let cachedPromptCandidates = null;
@@ -403,6 +409,10 @@ function isGroqModelName(modelName) {
     return GROQ_MODEL_SET.has(String(modelName || "").trim());
 }
 
+function isOpenRouterModelName(modelName) {
+    return OPENROUTER_MODEL_SET.has(String(modelName || "").trim());
+}
+
 function getModelProvider(modelName) {
     if (isHuggingFaceCustomModelOption(modelName)) return "huggingface";
     if (isOpenAIModelName(modelName)) return "openai";
@@ -410,6 +420,7 @@ function getModelProvider(modelName) {
     if (isGroqModelName(modelName)) return "groq";
     if (isGeminiModelName(modelName)) return "gemini";
     if (isHuggingFaceModelName(modelName)) return "huggingface";
+    if (isOpenRouterModelName(modelName)) return "openrouter";
     return "ollama";
 }
 
@@ -422,7 +433,7 @@ function getProviderOptionIdForModel(modelName) {
 }
 
 function getApiProviderForProviderOption(providerId) {
-    if (providerId === "openai" || providerId === "anthropic" || providerId === "groq" || providerId === "gemini" || providerId === "huggingface") {
+    if (providerId === "openai" || providerId === "anthropic" || providerId === "groq" || providerId === "gemini" || providerId === "huggingface" || providerId === "openrouter") {
         return providerId;
     }
     return "ollama";
@@ -442,6 +453,7 @@ function getDefaultModelForProviderOption(providerId, availableModels = []) {
     else if (resolvedProviderId === "groq") preferredModelId = GROQ_MODEL_DEFAULT;
     else if (resolvedProviderId === "gemini") preferredModelId = GEMINI_MODEL_DEFAULT;
     else if (resolvedProviderId === "huggingface") preferredModelId = HUGGINGFACE_MODEL_DEFAULT;
+    else if (resolvedProviderId === "openrouter") preferredModelId = OPENROUTER_MODEL_DEFAULT;
 
     if (preferredModelId && availableModelIds.includes(preferredModelId)) {
         return preferredModelId;
@@ -625,6 +637,15 @@ function buildAiPresetsHtml() {
                                         <div class="dsp-ai-presets-hf-token-row">
                                             <input type="password" id="dsp-ai-presets-hf-token" class="dsp-ai-presets-input csp-form-control csp-form-control--grow" autocomplete="off" spellcheck="false" placeholder="${t("ai_styler.huggingface.token.placeholder")}" />
                                             <button class="dsp-btn csp-small-btn dsp-ai-presets-hf-test" type="button">${t("ai_styler.btn.test.label")}</button>
+                                        </div>
+                                    </div>
+                                    <div class="dsp-ai-presets-openrouter-key-wrap is-hidden">
+                                        <div class="dsp-ai-presets-key-label-row">
+                                            <label class="dsp-ai-presets-label" for="dsp-ai-presets-openrouter-key">${t("ai_styler.openrouter.key.label")}</label>
+                                        </div>
+                                        <div class="dsp-ai-presets-openrouter-key-row">
+                                            <input type="password" id="dsp-ai-presets-openrouter-key" class="dsp-ai-presets-input csp-form-control csp-form-control--grow" autocomplete="off" spellcheck="false" placeholder="${t("ai_styler.openrouter.key.placeholder")}" />
+                                            <button class="dsp-btn csp-small-btn dsp-ai-presets-openrouter-test" type="button">${t("ai_styler.btn.test.label")}</button>
                                         </div>
                                     </div>
                                 </div>
@@ -1050,6 +1071,10 @@ function initAiPresets(container, manager) {
     const hfTokenRow = container.querySelector(".dsp-ai-presets-hf-token-row");
     const hfTokenInput = container.querySelector("#dsp-ai-presets-hf-token");
     const hfTestBtn = container.querySelector(".dsp-ai-presets-hf-test");
+    const openrouterKeyWrap = container.querySelector(".dsp-ai-presets-openrouter-key-wrap");
+    const openrouterKeyRow = container.querySelector(".dsp-ai-presets-openrouter-key-row");
+    const openrouterKeyInput = container.querySelector("#dsp-ai-presets-openrouter-key");
+    const openrouterTestBtn = container.querySelector(".dsp-ai-presets-openrouter-test");
     // Use the ID selector so we always get the prompt field, not any provider key
     // field (which also carries the .dsp-ai-presets-input class and can appear first
     // in DOM order, causing querySelector(".dsp-ai-presets-input") to return it).
@@ -1069,7 +1094,7 @@ function initAiPresets(container, manager) {
     const suggestionsContent = container.querySelector(".dsp-ai-presets-suggestions-content");
     const statusBar = container.querySelector(".dsp-ai-presets-status-bar");
 
-    if (!categoryList || !providerSelect || !modelSelect || !timeoutInput || !modelRefreshBtn || !getOllamaBtn || !providerHelperWrap || !getApiKeyBtn || !saveTokenBtn || !tokenSaveTarget || !tokenSaveForm || !tokenSaveUsernameInput || !tokenSavePasswordInput || !modelStatus || !providerBadge || !providerPricingBadge || !openaiKeyWrap || !openaiKeyRow || !openaiKeyInput || !openaiTestBtn || !anthropicKeyWrap || !anthropicKeyRow || !anthropicKeyInput || !anthropicTestBtn || !groqKeyWrap || !groqKeyRow || !groqKeyInput || !groqTestBtn || !geminiKeyWrap || !geminiKeyRow || !geminiKeyInput || !geminiTestBtn || !hfWrap || !hfTokenRow || !hfTokenInput || !hfTestBtn || !promptInput || !inlineErrorLabel || !inlineWarningLabel || !generateBtn || !applyBtn || !cancelBtn || !selectedCountBadge || !clearAllBtn || !suggestionsHeader || !suggestionsContent || !statusBar) {
+    if (!categoryList || !providerSelect || !modelSelect || !timeoutInput || !modelRefreshBtn || !getOllamaBtn || !providerHelperWrap || !getApiKeyBtn || !saveTokenBtn || !tokenSaveTarget || !tokenSaveForm || !tokenSaveUsernameInput || !tokenSavePasswordInput || !modelStatus || !providerBadge || !providerPricingBadge || !openaiKeyWrap || !openaiKeyRow || !openaiKeyInput || !openaiTestBtn || !anthropicKeyWrap || !anthropicKeyRow || !anthropicKeyInput || !anthropicTestBtn || !groqKeyWrap || !groqKeyRow || !groqKeyInput || !groqTestBtn || !geminiKeyWrap || !geminiKeyRow || !geminiKeyInput || !geminiTestBtn || !hfWrap || !hfTokenRow || !hfTokenInput || !hfTestBtn || !openrouterKeyWrap || !openrouterKeyRow || !openrouterKeyInput || !openrouterTestBtn || !promptInput || !inlineErrorLabel || !inlineWarningLabel || !generateBtn || !applyBtn || !cancelBtn || !selectedCountBadge || !clearAllBtn || !suggestionsHeader || !suggestionsContent || !statusBar) {
         console.error("[AI Presets] Missing required elements");
         return;
     }
@@ -1130,6 +1155,7 @@ function initAiPresets(container, manager) {
         groqApiKey: "",
         geminiApiKey: "",
         huggingFaceToken: "",
+        openrouterApiKey: "",
         huggingFaceCustomModelId: String(getPersistedSetting(PERSIST_KEY_HF_CUSTOM_MODEL, "") || "").trim(),
         lastHuggingFaceNonCustomModel: isHuggingFaceCustomModelOption(initialLastHuggingFaceNonCustomModel)
             ? ""
@@ -2439,6 +2465,14 @@ function initAiPresets(container, manager) {
         return liveToken;
     }
 
+    function getCurrentOpenRouterApiKeySnapshot() {
+        const liveKey = (openrouterKeyInput?.value || "").trim();
+        if (state.openrouterApiKey !== liveKey) {
+            state.openrouterApiKey = liveKey;
+        }
+        return liveKey;
+    }
+
     function getCurrentHuggingFaceCustomModelSnapshot() {
         const liveModelId = String(state.huggingFaceCustomModelId || "").trim();
         if (state.huggingFaceCustomModelId !== liveModelId) {
@@ -2466,11 +2500,12 @@ function initAiPresets(container, manager) {
         if (provider === "groq") return getCurrentGroqApiKeySnapshot();
         if (provider === "gemini") return getCurrentGeminiApiKeySnapshot();
         if (provider === "huggingface") return getCurrentHuggingFaceTokenSnapshot();
+        if (provider === "openrouter") return getCurrentOpenRouterApiKeySnapshot();
         return "";
     }
 
     function isCloudApiProvider(provider) {
-        return provider === "openai" || provider === "anthropic" || provider === "groq" || provider === "gemini" || provider === "huggingface";
+        return provider === "openai" || provider === "anthropic" || provider === "groq" || provider === "gemini" || provider === "huggingface" || provider === "openrouter";
     }
 
     function isOllamaProviderOption(providerOptionId) {
@@ -2500,6 +2535,9 @@ function initAiPresets(container, manager) {
         }
         if (provider === "huggingface") {
             return { wrap: hfWrap, row: hfTokenRow, auxButton: hfTestBtn };
+        }
+        if (provider === "openrouter") {
+            return { wrap: openrouterKeyWrap, row: openrouterKeyRow, auxButton: openrouterTestBtn };
         }
         return null;
     }
@@ -2536,8 +2574,8 @@ function initAiPresets(container, manager) {
         saveTokenBtn.title = saveTokenLabel;
         saveTokenBtn.setAttribute("aria-label", saveTokenLabel);
 
-        [openaiKeyRow, anthropicKeyRow, groqKeyRow, geminiKeyRow, hfTokenRow].forEach((row, index) => {
-            const buttons = [openaiTestBtn, anthropicTestBtn, groqTestBtn, geminiTestBtn, hfTestBtn];
+        [openaiKeyRow, anthropicKeyRow, groqKeyRow, geminiKeyRow, hfTokenRow, openrouterKeyRow].forEach((row, index) => {
+            const buttons = [openaiTestBtn, anthropicTestBtn, groqTestBtn, geminiTestBtn, hfTestBtn, openrouterTestBtn];
             const button = buttons[index];
             if (row && button && button.parentElement !== row) {
                 row.appendChild(button);
@@ -2598,12 +2636,14 @@ function initAiPresets(container, manager) {
         const isGroq = provider === "groq";
         const isGemini = provider === "gemini";
         const isHuggingFace = provider === "huggingface";
+        const isOpenRouter = provider === "openrouter";
 
         openaiKeyWrap.classList.toggle("is-hidden", !isOpenAI);
         anthropicKeyWrap.classList.toggle("is-hidden", !isAnthropic);
         groqKeyWrap.classList.toggle("is-hidden", !isGroq);
         geminiKeyWrap.classList.toggle("is-hidden", !isGemini);
         hfWrap.classList.toggle("is-hidden", !isHuggingFace);
+        openrouterKeyWrap.classList.toggle("is-hidden", !isOpenRouter);
         updateProviderHelperButton();
     }
 
@@ -2613,6 +2653,7 @@ function initAiPresets(container, manager) {
         if (provider === "groq") return t("ai_styler.provider.groq");
         if (provider === "gemini") return t("ai_styler.provider.gemini");
         if (provider === "huggingface") return t("ai_styler.provider.huggingface");
+        if (provider === "openrouter") return t("ai_styler.provider.openrouter");
         return t("ai_styler.provider.ollama");
     }
 
@@ -2648,6 +2689,10 @@ function initAiPresets(container, manager) {
         }
         if (provider === "huggingface") {
             hfTokenInput.focus();
+            return;
+        }
+        if (provider === "openrouter") {
+            openrouterKeyInput.focus();
         }
     }
 
@@ -4944,7 +4989,7 @@ function initAiPresets(container, manager) {
     }
 
     function getProviderPricingState(providerOptionId) {
-        if (providerOptionId === "openai" || providerOptionId === "anthropic") {
+        if (providerOptionId === "openai" || providerOptionId === "anthropic" || providerOptionId === "openrouter") {
             return { label: t("ai_styler.pricing.no_free_tier"), isFreeTier: false };
         }
         if (providerOptionId === "gemini" || providerOptionId === "groq" || providerOptionId === "huggingface" || providerOptionId === "ollama_local" || providerOptionId === "ollama_cloud") {
@@ -5034,7 +5079,8 @@ function initAiPresets(container, manager) {
         const isGroqSelected = provider === "groq";
         const isGeminiSelected = provider === "gemini";
         const isHuggingFaceSelected = provider === "huggingface";
-        const isCloudApiSelected = isOpenAISelected || isAnthropicSelected || isGroqSelected || isGeminiSelected || isHuggingFaceSelected;
+        const isOpenRouterSelected = provider === "openrouter";
+        const isCloudApiSelected = isOpenAISelected || isAnthropicSelected || isGroqSelected || isGeminiSelected || isHuggingFaceSelected || isOpenRouterSelected;
         const providerHasApiKey = !isCloudApiSelected || !!getProviderApiKeySnapshot(provider);
         const hasSelectableModel = Array.from(modelSelect?.options || []).some(
             (option) => !option.disabled && String(option.value || "").trim()
@@ -5054,6 +5100,8 @@ function initAiPresets(container, manager) {
         geminiTestBtn.disabled = state.isGenerating || !isGeminiSelected || !providerHasApiKey;
         hfTokenInput.disabled = state.isGenerating || !isHuggingFaceSelected;
         hfTestBtn.disabled = state.isGenerating || !isHuggingFaceSelected || !providerHasApiKey;
+        openrouterKeyInput.disabled = state.isGenerating || !isOpenRouterSelected;
+        openrouterTestBtn.disabled = state.isGenerating || !isOpenRouterSelected || !providerHasApiKey;
         
         // Update button text and styling based on state
         if (showCancelAction) {
@@ -5113,6 +5161,8 @@ function initAiPresets(container, manager) {
         geminiTestBtn.style.opacity = geminiTestBtn.disabled ? "0.6" : "1";
         hfTokenInput.style.opacity = hfTokenInput.disabled ? "0.6" : "1";
         hfTestBtn.style.opacity = hfTestBtn.disabled ? "0.6" : "1";
+        openrouterKeyInput.style.opacity = openrouterKeyInput.disabled ? "0.6" : "1";
+        openrouterTestBtn.style.opacity = openrouterTestBtn.disabled ? "0.6" : "1";
 
         if (!state.isGenerating || !state.isLocalQueryRun) {
             hideOmitButton();
@@ -5391,6 +5441,7 @@ function initAiPresets(container, manager) {
                     groq: GROQ_MODEL_SET,
                     gemini: GEMINI_MODEL_SET,
                     huggingface: HUGGINGFACE_MODEL_SET,
+                    openrouter: OPENROUTER_MODEL_SET,
                 },
                 setPersistedJSON,
             },
@@ -5409,6 +5460,7 @@ function initAiPresets(container, manager) {
                 groq: GROQ_MODEL_SET,
                 gemini: GEMINI_MODEL_SET,
                 huggingface: HUGGINGFACE_MODEL_SET,
+                openrouter: OPENROUTER_MODEL_SET,
             },
             getPersistedJSON,
         });
@@ -5472,6 +5524,7 @@ function initAiPresets(container, manager) {
                 groq: GROQ_MODEL_SET,
                 gemini: GEMINI_MODEL_SET,
                 huggingface: HUGGINGFACE_MODEL_SET,
+                openrouter: OPENROUTER_MODEL_SET,
             },
             providerSelectValue: providerSelect.value,
             modelSelectValue: modelSelect.value,
@@ -5590,6 +5643,15 @@ function initAiPresets(container, manager) {
                     HUGGINGFACE_MODEL_OPTIONS.map((entry) => ({ id: entry.id, label: entry.label }))
                 ),
                 emptyLabel: t("ai_styler.model_list.no_huggingface_models"),
+            },
+            {
+                id: "openrouter",
+                label: t("ai_styler.provider.openrouter_api"),
+                models: getModelsForProvider(
+                    "openrouter",
+                    OPENROUTER_MODEL_OPTIONS.map((entry) => ({ id: entry.id, label: entry.label }))
+                ),
+                emptyLabel: t("ai_styler.model_list.no_openrouter_models"),
             },
         ];
 
@@ -6302,6 +6364,12 @@ function initAiPresets(container, manager) {
         updateGenerateButton();
     });
 
+    openrouterKeyInput.addEventListener("input", () => {
+        state.openrouterApiKey = (openrouterKeyInput.value || "").trim();
+        updateModelStatus();
+        updateGenerateButton();
+    });
+
     timeoutInput.addEventListener("input", () => {
         applyRequestTimeoutSeconds(timeoutInput.value, { persist: false });
     });
@@ -6540,6 +6608,51 @@ function initAiPresets(container, manager) {
             releaseBusy();
             hfTestBtn.disabled = previousDisabled;
             hfTestBtn.textContent = previousLabel;
+            updateGenerateButton();
+            updateModelStatus();
+        }
+    });
+
+    openrouterTestBtn.addEventListener("click", async () => {
+        const selectedModel = getCurrentModelSnapshot();
+        const requestTimeoutMs = getCurrentRequestTimeoutMsSnapshot();
+        if (!isOpenRouterModelName(selectedModel)) {
+            showToast("warn", t("ai_styler.toast.openrouter_test.title"), t("ai_styler.toast.openrouter_test.wrong_model"));
+            return;
+        }
+
+        const apiKey = getCurrentOpenRouterApiKeySnapshot();
+        if (!apiKey) {
+            showToast("error", t("ai_styler.toast.api_key_required.title"), t("ai_styler.toast.openrouter_key_required.body"));
+            openrouterKeyInput.focus();
+            return;
+        }
+
+        const previousDisabled = openrouterTestBtn.disabled;
+        const previousLabel = openrouterTestBtn.textContent;
+        openrouterTestBtn.disabled = true;
+        openrouterTestBtn.textContent = t("ai_styler.btn.testing.label");
+        setInlinePromptError("");
+        const releaseBusy = beginBusyRequest();
+
+        try {
+            persistLastUsedProviderModel("openrouter", selectedModel);
+            await openrouterTestApiKey({
+                apiKey,
+                model: selectedModel,
+                timeoutMs: requestTimeoutMs,
+            });
+            showToast("success", t("ai_styler.toast.openrouter_test.title"), t("ai_styler.toast.test_success.body"));
+        } catch (err) {
+            reportLlmRequestFailure(err, {
+                provider: "openrouter",
+                modelName: selectedModel,
+                toastSummary: t("ai_styler.toast.openrouter_test.title"),
+            });
+        } finally {
+            releaseBusy();
+            openrouterTestBtn.disabled = previousDisabled;
+            openrouterTestBtn.textContent = previousLabel;
             updateGenerateButton();
             updateModelStatus();
         }
