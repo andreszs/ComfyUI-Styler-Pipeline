@@ -1052,7 +1052,7 @@ async function discoverModelsForProvider(providerId, {
             Authorization: `Bearer ${apiKey}`,
         }, fetchImpl, requestTimeoutMs);
         const models = Array.isArray(payload?.data) ? payload.data : [];
-        return models.slice(0, 10).map((entry) => {
+        return models.map((entry) => {
             const id = String(entry?.id || "").trim();
             return { id, label: id };
         }).filter((entry) => entry.id);

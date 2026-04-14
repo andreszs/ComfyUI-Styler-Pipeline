@@ -265,6 +265,8 @@ const GROQ_STYLER_BUDGET_PRIORITY = ["llama-3.1-8b-instant", "groq/compound-mini
 
 const OPENROUTER_MODEL_OPTIONS = [];
 const OPENROUTER_MODEL_SET = new Set();
+const OPENROUTER_FILTER_OTHER_ID = "__openrouter_filter_other__";
+const OPENROUTER_DEFAULT_DISPLAY_COUNT = 100;
 
 /* -- Placeholder rotation state -- */
 let cachedPlaceholders = null;
@@ -1156,6 +1158,7 @@ function initAiPresets(container, manager) {
         geminiApiKey: "",
         huggingFaceToken: "",
         openrouterApiKey: "",
+        openrouterModelFilter: null,
         huggingFaceCustomModelId: String(getPersistedSetting(PERSIST_KEY_HF_CUSTOM_MODEL, "") || "").trim(),
         lastHuggingFaceNonCustomModel: isHuggingFaceCustomModelOption(initialLastHuggingFaceNonCustomModel)
             ? ""
@@ -5698,7 +5701,9 @@ function initAiPresets(container, manager) {
             seenAvailableModelIds.add(id);
             uniqueAvailableModels.push({ id, label: id });
         });
-        availableModels = uniqueAvailableModels.sort((a, b) => a.id.localeCompare(b.id));
+        availableModels = selectedProviderId === "openrouter"
+            ? uniqueAvailableModels
+            : uniqueAvailableModels.sort((a, b) => a.id.localeCompare(b.id));
         if (selectedProviderId === "huggingface") {
             availableModels = availableModels.filter((entry) => !isHuggingFaceCustomModelOption(entry.id));
             availableModels.push({
@@ -5709,6 +5714,12 @@ function initAiPresets(container, manager) {
         const openAiCatalog = selectedProviderId === "openai" ? state.openAiStylerCatalog : null;
         const groqCatalog = selectedProviderId === "groq" ? state.groqStylerCatalog : null;
         const geminiCatalog = selectedProviderId === "gemini" ? state.geminiStylerCatalog : null;
+        if (selectedProviderId === "openrouter") {
+            const needle = typeof state.openrouterModelFilter === "string" ? state.openrouterModelFilter.toLowerCase() : "";
+            availableModels = needle
+                ? availableModels.filter((entry) => entry.id.toLowerCase().includes(needle))
+                : availableModels.slice(0, OPENROUTER_DEFAULT_DISPLAY_COUNT);
+        }
         const preSelectionModelId = String(state.selectedModel || "").trim();
         const preSelectionProviderId = String(
             state.selectedProvider || getProviderOptionIdForModel(preSelectionModelId) || ""
@@ -5813,17 +5824,32 @@ function initAiPresets(container, manager) {
                     : entry.id;
                 modelSelect.appendChild(option);
             });
+            if (selectedProviderId === "openrouter") {
+                const filterOpt = document.createElement("option");
+                filterOpt.value = OPENROUTER_FILTER_OTHER_ID;
+                filterOpt.textContent = "Filter / Other\u2026";
+                modelSelect.appendChild(filterOpt);
+            }
             modelSelect.value = state.selectedModel || availableModels[0].id;
             modelSelect.disabled = false;
         } else {
-            const placeholder = document.createElement("option");
-            placeholder.value = "";
-            placeholder.textContent = selectedProviderEntry?.emptyLabel || t("ai_styler.model_list.no_models");
-            placeholder.disabled = true;
-            placeholder.selected = true;
-            modelSelect.appendChild(placeholder);
-            modelSelect.value = "";
-            modelSelect.disabled = true;
+            if (selectedProviderId === "openrouter") {
+                const filterOpt = document.createElement("option");
+                filterOpt.value = OPENROUTER_FILTER_OTHER_ID;
+                filterOpt.textContent = "Filter / Other\u2026";
+                modelSelect.appendChild(filterOpt);
+                modelSelect.value = OPENROUTER_FILTER_OTHER_ID;
+                modelSelect.disabled = false;
+            } else {
+                const placeholder = document.createElement("option");
+                placeholder.value = "";
+                placeholder.textContent = selectedProviderEntry?.emptyLabel || t("ai_styler.model_list.no_models");
+                placeholder.disabled = true;
+                placeholder.selected = true;
+                modelSelect.appendChild(placeholder);
+                modelSelect.value = "";
+                modelSelect.disabled = true;
+            }
         }
 
         if (
@@ -6221,6 +6247,36 @@ function initAiPresets(container, manager) {
         const selectedValue = String(modelSelect.value || "").trim();
         const selectedProvider = String(providerSelect.value || getProviderOptionIdForModel(selectedValue) || state.selectedProvider || "").trim();
 
+        if (selectedProvider === "openrouter" && selectedValue === OPENROUTER_FILTER_OTHER_ID) {
+            const previousModel = String(state.selectedModel || "").trim();
+            const filterInput = window.prompt(
+                "Filter models by ID (leave empty to show all):",
+                state.openrouterModelFilter || ""
+            );
+            if (filterInput === null) {
+                // Cancelled – restore previous selection without rebuilding the list
+                const prevOption = Array.from(modelSelect.options).find(
+                    (opt) => opt.value === previousModel && opt.value !== OPENROUTER_FILTER_OTHER_ID
+                );
+                if (prevOption) {
+                    modelSelect.value = previousModel;
+                } else {
+                    const firstReal = Array.from(modelSelect.options).find(
+                        (opt) => opt.value && opt.value !== OPENROUTER_FILTER_OTHER_ID
+                    );
+                    if (firstReal) {
+                        modelSelect.value = firstReal.value;
+                        state.selectedModel = firstReal.value;
+                    }
+                }
+                return;
+            }
+            const normalized = filterInput.trim();
+            state.openrouterModelFilter = normalized || null;
+            populateModelSelect(selectedProvider);
+            return;
+        }
+
         if (selectedProvider === "huggingface" && isHuggingFaceCustomModelOption(selectedValue)) {
             const fallbackModel = (() => {
                 const preferred = String(state.lastHuggingFaceNonCustomModel || "").trim();
@@ -6306,6 +6362,9 @@ function initAiPresets(container, manager) {
     modelRefreshBtn.addEventListener("click", async () => {
         const providerId = String(state.selectedProvider || providerSelect.value || "").trim();
         persistLastUsedProviderModel(providerId, String(state.selectedModel || modelSelect.value || "").trim());
+        if (providerId === "openrouter") {
+            state.openrouterModelFilter = null;
+        }
         await refreshModelsForProvider(providerId);
     });
 
