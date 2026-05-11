@@ -261,14 +261,20 @@ API key 或 token 仅用于本次运行，插件 **不会保存**；但你可以
 
 > 仅适用于 **advanced users**。目前通过 JSON 编辑是修改风格的唯一方式；未来版本计划提供 Editor 的可视化 UI。包含的 prompt 经过 AI 打磨，但未做全面测试 —— 一些可能需要少量手动调整。
 
-advanced users 可以自由自定义风格：
+为了避免插件更新时丢失自己的风格，请把个人 JSON 文件放在这里：
 
-- **添加或移除完整的 `data/*.json` 文件。** 任何放在 `data/` 下的 JSON 文件都会自动成为新的风格类别，并出现在类别列表中。
-- **在任意 JSON 文件中添加/移除/重命名单个风格条目**，并按需编辑 prompt。
+`ComfyUI/user/default/styler_pipeline/`
+
+- 在这个文件夹中放入一个或多个 `*.json` 文件，并使用下方显示的相同 JSON 结构。
+- 如果要把风格添加到现有类别，请使用与内置类别相同的文件名，例如 `mood.json`。
+- 如果要创建新类别，请使用新的文件名，例如 `cinematic_portrait.json`。
+- 内置风格会先加载，然后再添加你的个人风格。如果你的文件在同一类别中包含相同 `name` 的风格，会使用你的版本。
+
+因为这个文件夹位于 `ComfyUI/user/default/`，而不是插件内置的 `data/` 文件夹，所以更新插件时不会替换你的自定义风格。为了兼容性，之前已经放在旧路径 `ComfyUI/user/styler_pipeline/*.json` 的文件目前仍会加载。
 
 **可复现性说明：** 只要引用的风格条目不被重命名或删除，已有 workflows 仍可复现。如果老 workflow 使用的风格被重命名或删除，该 workflow 将无法找到风格定义，也就无法复现相同结果。
 
-保持 `data/*.json` 风格文件的一致性，以便 styler nodes 继续可预测。
+保持自定义 `*.json` 风格文件的一致性，以便 styler nodes 继续可预测。
 
 ### JSON shape
 

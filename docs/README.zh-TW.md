@@ -261,14 +261,20 @@ API key 或 token 僅用於本次執行，外掛 **不會保存**；但你可以
 
 > 僅適用於 **advanced users**。目前透過 JSON 編輯是修改風格的唯一方式；未來版本計畫提供 Editor 的視覺化 UI。包含的 prompt 經 AI 打磨，但未做全面測試 —— 有些可能需要少量手動調整。
 
-advanced users 可以自由自訂風格：
+為了避免外掛更新時遺失自己的風格，請把個人 JSON 檔案放在這裡：
 
-- **新增或移除完整的 `data/*.json` 檔案。** 任何放在 `data/` 下的 JSON 檔案都會自動成為新的風格類別，並出現在類別清單中。
-- **在任意 JSON 檔案中新增/移除/重新命名單個風格條目**，並視需要編輯 prompt。
+`ComfyUI/user/default/styler_pipeline/`
+
+- 在這個資料夾中放入一個或多個 `*.json` 檔案，並使用下方顯示的相同 JSON 結構。
+- 若要將風格加入現有類別，請使用與內建類別相同的檔名，例如 `mood.json`。
+- 若要建立新類別，請使用新的檔名，例如 `cinematic_portrait.json`。
+- 內建風格會先載入，接著才加入你的個人風格。如果你的檔案在同一類別中包含相同 `name` 的風格，會使用你的版本。
+
+因為這個資料夾位於 `ComfyUI/user/default/`，而不是外掛內建的 `data/` 資料夾，所以更新外掛時不會取代你的自訂風格。為了相容性，先前已放在舊路徑 `ComfyUI/user/styler_pipeline/*.json` 的檔案目前仍會載入。
 
 **可重現性說明：** 只要引用的風格條目不被重新命名或刪除，既有 workflows 仍可重現。如果舊 workflow 使用的風格被重新命名或刪除，該 workflow 將找不到風格定義，也就無法重現相同結果。
 
-保持 `data/*.json` 風格檔案的一致性，以便 styler nodes 仍可預測。
+保持自訂 `*.json` 風格檔案的一致性，以便 styler nodes 仍可預測。
 
 ### JSON shape
 

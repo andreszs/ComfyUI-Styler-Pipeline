@@ -261,14 +261,20 @@ Mantené los prompts cortos y específicos. Describí la dirección visual, no u
 
 > Solo para **usuarios avanzados**. La edición por JSON es actualmente la única forma de modificar estilos; se planea una UI visual de Editor para una versión futura. Los prompts incluidos fueron refinados con AI pero no se testearon exhaustivamente — algunos pueden requerir pequeños ajustes manuales.
 
-Los usuarios avanzados pueden personalizar estilos libremente:
+Para que tus estilos propios no se pierdan al actualizar el plugin, colocá tus archivos JSON personales aquí:
 
-- **Agregar o remover archivos completos `data/*.json`.** Cualquier archivo JSON colocado bajo `data/` se vuelve automáticamente una nueva categoría de estilo y aparece en la lista de categorías.
-- **Agregar, remover o renombrar entradas de estilo individuales** dentro de cualquier archivo JSON, y editar prompts según sea necesario.
+`ComfyUI/user/default/styler_pipeline/`
+
+- Colocá uno o más archivos `*.json` en esa carpeta, usando la misma forma de JSON que se muestra abajo.
+- Para agregar estilos a una categoría existente, usá el mismo nombre de archivo que la categoría incluida, por ejemplo `mood.json`.
+- Para crear una categoría nueva, usá un nombre de archivo nuevo, por ejemplo `cinematic_portrait.json`.
+- Los estilos incluidos se cargan primero y luego se agregan tus estilos personales. Si tu archivo contiene un estilo con el mismo `name` en la misma categoría, se usa tu versión.
+
+Como esta carpeta está dentro de `ComfyUI/user/default/` y no en la carpeta `data/` incluida con el plugin, tus estilos personalizados no se reemplazan al actualizar el plugin. Por compatibilidad, los archivos ya colocados en la ruta anterior `ComfyUI/user/styler_pipeline/*.json` todavía se cargan por ahora.
 
 **Nota de reproducibilidad:** Los workflows existentes siguen siendo reproducibles siempre y cuando las entradas de estilo que referencian no sean renombradas o eliminadas. Si un estilo usado por un workflow antiguo se renombra o se borra, ese workflow ya no encontrará su definición de estilo y no reproducirá el mismo resultado.
 
-Mantené los archivos de estilos `data/*.json` consistentes para que los nodos styler sigan siendo predecibles.
+Mantené consistentes tus archivos de estilos `*.json` personalizados para que los nodos styler sigan siendo predecibles.
 
 ### Forma del JSON
 

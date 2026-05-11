@@ -261,14 +261,20 @@ Halte Prompts kurz und spezifisch. Beschreibe die visuelle Richtung, nicht eine 
 
 > Nur für **advanced users**. JSON Editing ist derzeit der einzige Weg, Styles zu verändern; eine visuelle Editor UI ist für eine zukünftige Version geplant. Die enthaltenen Prompts wurden mit AI verfeinert, aber nicht exhaustiv getestet – einige benötigen evtl. kleine manuelle Anpassungen.
 
-Advanced users können Styles frei anpassen:
+Damit deine eigenen Styles bei Plugin-Updates erhalten bleiben, lege persönliche JSON-Dateien hier ab:
 
-- **Komplette `data/*.json` Dateien hinzufügen oder entfernen.** Jede JSON-Datei unter `data/` wird automatisch zu einer neuen Style-Kategorie und erscheint in der Kategorie-Liste.
-- **Einzelne Style-Einträge hinzufügen, entfernen oder umbenennen** innerhalb einer JSON-Datei und Prompts nach Bedarf anpassen.
+`ComfyUI/user/default/styler_pipeline/`
+
+- Lege eine oder mehrere `*.json` Dateien in diesem Ordner ab und verwende die unten gezeigte JSON-Struktur.
+- Um Styles zu einer vorhandenen Kategorie hinzuzufügen, verwende denselben Dateinamen wie die enthaltene Kategorie, zum Beispiel `mood.json`.
+- Um eine neue Kategorie zu erstellen, verwende einen neuen Dateinamen, zum Beispiel `cinematic_portrait.json`.
+- Die enthaltenen Styles werden zuerst geladen, danach werden deine persönlichen Styles ergänzt. Wenn deine Datei in derselben Kategorie einen Style mit demselben `name` enthält, wird deine Version verwendet.
+
+Da dieser Ordner unter `ComfyUI/user/default/` liegt und nicht im enthaltenen `data/` Ordner des Plugins, werden deine eigenen Styles bei Plugin-Updates nicht ersetzt. Aus Kompatibilitätsgründen werden Dateien im früheren Pfad `ComfyUI/user/styler_pipeline/*.json` vorerst weiterhin geladen.
 
 **Reproducibility note:** Bestehende Workflows bleiben reproduzierbar, solange die referenzierten Style-Einträge nicht umbenannt oder gelöscht werden. Wenn ein Style, den ein älterer Workflow nutzt, umbenannt oder gelöscht wird, findet dieser Workflow die Definition nicht mehr und kann das gleiche Ergebnis nicht reproduzieren.
 
-Halte die `data/*.json` Style-Dateien konsistent, damit die Styler-Nodes vorhersehbar bleiben.
+Halte deine eigenen `*.json` Style-Dateien konsistent, damit die Styler-Nodes vorhersehbar bleiben.
 
 ### JSON shape
 

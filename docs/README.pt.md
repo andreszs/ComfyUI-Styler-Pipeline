@@ -261,14 +261,20 @@ Mantenha prompts curtos e específicos. Descreva a direção visual, não uma hi
 
 > Apenas para **advanced users**. A edição por JSON é atualmente a única forma de modificar estilos; uma UI visual do Editor está planejada para uma versão futura. Os prompts incluídos foram refinados com AI mas não foram testados exaustivamente — alguns podem exigir pequenos ajustes manuais.
 
-Advanced users podem personalizar estilos livremente:
+Para manter seus próprios estilos seguros durante atualizações do plugin, coloque os arquivos JSON pessoais aqui:
 
-- **Adicionar ou remover arquivos completos `data/*.json`.** Qualquer arquivo JSON colocado em `data/` se torna automaticamente uma nova categoria de estilo e aparece na lista de categorias.
-- **Adicionar, remover ou renomear entradas de estilo individuais** dentro de qualquer arquivo JSON e editar prompts conforme necessário.
+`ComfyUI/user/default/styler_pipeline/`
+
+- Coloque um ou mais arquivos `*.json` nessa pasta, usando o mesmo formato JSON mostrado abaixo.
+- Para adicionar estilos a uma categoria existente, use o mesmo nome de arquivo da categoria incluída, por exemplo `mood.json`.
+- Para criar uma nova categoria, use um novo nome de arquivo, por exemplo `cinematic_portrait.json`.
+- Os estilos incluídos são carregados primeiro e depois seus estilos pessoais são adicionados. Se seu arquivo contiver um estilo com o mesmo `name` na mesma categoria, a sua versão será usada.
+
+Como essa pasta fica em `ComfyUI/user/default/` em vez da pasta `data/` incluída no plugin, seus estilos personalizados não são substituídos quando o plugin é atualizado. Por compatibilidade, arquivos já colocados no caminho anterior `ComfyUI/user/styler_pipeline/*.json` ainda são carregados por enquanto.
 
 **Nota de reprodutibilidade:** Workflows existentes permanecem reproduzíveis desde que as entradas de estilo referenciadas não sejam renomeadas ou removidas. Se um estilo usado por um workflow antigo for renomeado ou removido, esse workflow não encontrará a definição do estilo e não reproduzirá o mesmo resultado.
 
-Mantenha os arquivos de estilo `data/*.json` consistentes para que os nodes styler permaneçam previsíveis.
+Mantenha seus arquivos de estilo personalizados `*.json` consistentes para que os nodes styler permaneçam previsíveis.
 
 ### JSON shape
 

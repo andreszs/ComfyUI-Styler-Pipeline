@@ -12,6 +12,32 @@ YELLOW = "\033[93m"
 RESET = "\033[0m"
 
 
+def _user_root_dir():
+    try:
+        import folder_paths
+
+        return pathlib.Path(folder_paths.get_user_directory())
+    except Exception:
+        try:
+            return pathlib.Path(__file__).resolve().parents[3] / "user"
+        except IndexError:
+            return None
+
+
+def _default_user_styles_dir():
+    user_root = _user_root_dir()
+    if user_root is None:
+        return None
+    return user_root / "default" / "styler_pipeline"
+
+
+def _legacy_user_styles_dir():
+    user_root = _user_root_dir()
+    if user_root is None:
+        return None
+    return user_root / "styler_pipeline"
+
+
 class Template:
     """Represents a style template with positive and negative prompts"""
 
@@ -29,22 +55,30 @@ class Template:
 
 
 class StylerData:
-    """Loads and manages style templates from the /data directory"""
+    """Loads and manages style templates from bundled and user JSON files"""
 
-    def __init__(self, datadir=None):
+    def __init__(self, datadir=None, user_datadir=None):
         self._data = defaultdict(dict)
 
         if datadir is None:
             datadir = pathlib.Path(__file__).parent.parent / "data"
+            if user_datadir is None:
+                user_datadir = [_legacy_user_styles_dir(), _default_user_styles_dir()]
 
-        self._datadir = datadir
+        self._datadir = pathlib.Path(datadir)
+        if isinstance(user_datadir, (list, tuple)):
+            self._user_datadirs = [
+                pathlib.Path(path) for path in user_datadir if path
+            ]
+        else:
+            self._user_datadirs = [pathlib.Path(user_datadir)] if user_datadir else []
         self._load(verbose=True)
 
-    def _load(self, verbose=False):
-        """Read all JSON style files from the data directory."""
-        self._data.clear()
+    def _load_directory(self, datadir):
+        if not datadir or not datadir.exists():
+            return
 
-        for j in self._datadir.glob("*.json"):
+        for j in datadir.glob("*.json"):
             try:
                 with j.open("r", encoding="utf-8") as f:
                     content = json.load(f)
@@ -78,6 +112,13 @@ class StylerData:
                     f"{YELLOW}[comfyui-styler-pipeline] WARNING: Skipping style JSON '{j.name}': {e}{RESET}"
                 )
 
+    def _load(self, verbose=False):
+        """Read bundled JSON styles, then merge user JSON styles if present."""
+        self._data.clear()
+        self._load_directory(self._datadir)
+        for user_datadir in self._user_datadirs:
+            self._load_directory(user_datadir)
+
     def reload(self):
         """Re-read all JSON style files from disk (hot-reload)."""
         self._load(verbose=False)
@@ -105,7 +146,14 @@ def debug_menu_choices(node_name, menu, choices):
     Notes:
     - The 'None' option is injected by the node itself.
     - JSON files must only define real style entries.
+    - Categories may originate from bundled data/ or from user/default/styler_pipeline/.
     """
+    # Remove auto-injected sentinel before validating
+    real_choices = [c for c in choices if c != "None"]
+
+    if real_choices:
+        return  # Entries loaded fine (from bundled or user directory)
+
     json_path = pathlib.Path(__file__).parent.parent / "data" / f"{menu}.json"
 
     if not json_path.exists():
@@ -113,18 +161,12 @@ def debug_menu_choices(node_name, menu, choices):
             f"{RED}[comfyui-styler-pipeline][ERROR]{RESET} "
             f"Node '{node_name}': missing styles file '{json_path.name}' (not found in data/)."
         )
-        return
-
-    # Remove auto-injected sentinel before validating
-    real_choices = [c for c in choices if c != "None"]
-
-    if not real_choices:
+    else:
         print(
             f"{RED}[comfyui-styler-pipeline][ERROR]{RESET} "
             f"Node '{node_name}': menu '{menu}' has no usable style entries. "
             f"Check '{json_path.name}' content/format."
         )
-        return
 
 
 def encode_style_to_conditioning(clip, text, strength=1.0):

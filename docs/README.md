@@ -261,14 +261,20 @@ Keep prompts short and specific. Describe the visual direction, not a full story
 
 > For **advanced users** only. JSON editing is currently the only way to modify styles; a visual Editor UI is planned for a future version. Built-in prompts were AI-refined but not exhaustively tested — some may need small manual tweaks.
 
-Advanced users can customize styles freely:
+To keep your own styles safe during plugin updates, place personal JSON files here:
 
-- **Add or remove entire `data/*.json` files.** Any JSON file placed under `data/` automatically becomes a new style category and appears in the category list.
-- **Add, remove, or rename individual style entries** inside any JSON file, and edit prompts as needed.
+`ComfyUI/user/default/styler_pipeline/`
+
+- Put one or more `*.json` files in that folder, using the same JSON shape shown below.
+- To add styles to an existing category, use the same filename as the bundled category, such as `mood.json`.
+- To create a new category, use a new filename, such as `cinematic_portrait.json`.
+- Bundled styles load first, then your personal styles are added. If your file contains a style with the same `name` in the same category, your version is used.
+
+Because this folder is stored under `ComfyUI/user/default/` instead of the plugin's bundled `data/` folder, your custom styles are not replaced when the plugin is updated. For compatibility, files already placed under the earlier `ComfyUI/user/styler_pipeline/*.json` path are still loaded for now.
 
 **Reproducibility note:** Existing workflows stay reproducible as long as the style entries they reference are not renamed or removed. If a style used by an older workflow is renamed or deleted, that workflow will no longer find its style definition and will not reproduce the same result.
 
-Keep `data/*.json` style files consistent so styler nodes stay predictable.
+Keep custom `*.json` style files consistent so styler nodes stay predictable.
 
 ### JSON shape
 
