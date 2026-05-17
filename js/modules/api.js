@@ -1869,14 +1869,20 @@ export function isLocalModelName(modelName) {
 
 export function buildLocalStyleIndex(styleIndex, canonicalCategories = CANONICAL_CATEGORIES) {
     const byCategory = {};
-    canonicalCategories.forEach((category) => {
-        byCategory[category] = [];
+    (Array.isArray(canonicalCategories) ? canonicalCategories : []).forEach((category) => {
+        const normalizedCategory = normalizeCategoryKey(category);
+        if (normalizedCategory && !byCategory[normalizedCategory]) {
+            byCategory[normalizedCategory] = [];
+        }
     });
 
-    (styleIndex || []).forEach((item) => {
+    (Array.isArray(styleIndex) ? styleIndex : []).forEach((item) => {
         const category = normalizeCategoryKey(item?.category);
         const title = normalizeWhitespace(item?.title);
         if (!category || !title) return;
+        if (!byCategory[category]) {
+            byCategory[category] = [];
+        }
 
         const positivePrompt = normalizeWhitespace(item?.positive_prompt || item?.prompt || "");
         byCategory[category].push({
