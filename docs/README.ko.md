@@ -35,6 +35,7 @@
 - 실행 간 재현성을 유지하도록 설계된 결정론적 styler-pipeline 노드.
 - AI 기반 스타일 선택: 카테고리별로 LLM을 호출해 점수(score)와 함께 랭킹된 스타일 후보를 반환합니다.
 - 카테고리 내비게이션이 있는 Browser 워크플로를 통한 수동 스타일 탐색 및 선택.
+- Browse의 카테고리별 `Randomize` 모드로 워크플로 실행마다 선택한 카테고리에서 다른 스타일을 고를 수 있습니다.
 - 기존 conditioning에 안전하게 스타일을 적용하는 Dynamic Styler.
 - 그래프에서 카테고리별로 제어할 수 있는 드롭다운 기반의 클래식 `Advanced Styler` 노드.
 - OpenPose 기반 케이스를 포함해 ControlNet 워크플로와 호환.
@@ -105,6 +106,10 @@ AI Styler를 사용하지 않으려면 **Browse** 탭에서 스타일을 수동�
 아래 이미지는 같은 패널의 **Browser** 탭으로, 카테고리와 스타일을 수동으로 선택하는 화면입니다.
 
 ![Browser module tab](../locales/en/styler_pipeline_browser.gif)
+
+각 카테고리의 `Randomize` 칩을 사용하면 워크플로를 큐에 넣을 때마다 해당 카테고리에서 임의의 스타일이 선택됩니다.
+
+**참고:** 재현성을 위해 생성된 이미지는 확정된 스타일을 임베드된 workflow 메타데이터에 저장합니다. 생성된 이미지에서 workflow를 다시 불러오면 해당 카테고리의 `Randomize`는 더 이상 활성화되지 않으며, 그 생성에서 무작위로 선택된 정확한 스타일이 대신 사용됩니다. 구체적인 스타일을 선택해도 해당 카테고리의 `Randomize`가 비활성화됩니다.
 
 **Editor module:**
 Editor에서는 카테고리별 JSON 파일(`data/*.json`)에서 로드된 스타일을 확인할 수 있습니다.

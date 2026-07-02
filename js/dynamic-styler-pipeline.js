@@ -12,6 +12,7 @@ const LAST_ACTIVE_TAB_KEY = "last_active_tab";
 const LAST_BROWSE_CATEGORY_KEY = "last_browse_category";
 const NODE_JSON_META_KEY = "__dsp_meta__";
 const NODE_JSON_META_PROMPT_KEY = "last_llm_prompt";
+const NODE_JSON_META_RANDOMIZE_KEY = "randomize";
 const CONTRIBUTE_BADGE_STYLESHEET_ID = "dsp-contribute-badge-stylesheet";
 const EXTENSION_ASSETS_FALLBACK_DIR = "ComfyUI-Styler-Pipeline";
 
@@ -112,7 +113,32 @@ function parseNodeJsonState(rawValue) {
     return { selections, meta, prompt };
 }
 
-function buildNodeJsonState(selections, prompt = "") {
+function normalizeRandomizeMap(value) {
+    if (!value || typeof value !== "object" || Array.isArray(value)) return {};
+    const out = {};
+    Object.entries(value).forEach(([key, enabled]) => {
+        if (!key || enabled !== true) return;
+        out[key] = true;
+    });
+    return out;
+}
+
+function cloneMeta(meta) {
+    const out = {};
+    if (!meta || typeof meta !== "object" || Array.isArray(meta)) return out;
+    Object.entries(meta).forEach(([key, value]) => {
+        if (!key || value === undefined) return;
+        if (key === NODE_JSON_META_RANDOMIZE_KEY) {
+            const randomize = normalizeRandomizeMap(value);
+            if (Object.keys(randomize).length) out[key] = randomize;
+            return;
+        }
+        out[key] = value;
+    });
+    return out;
+}
+
+function buildNodeJsonState(selections, prompt = "", meta = null) {
     const payload = {};
     Object.entries(selections || {}).forEach(([key, value]) => {
         if (!key || key === NODE_JSON_META_KEY || key.startsWith("__")) return;
@@ -120,11 +146,15 @@ function buildNodeJsonState(selections, prompt = "") {
         payload[key] = value;
     });
 
+    const payloadMeta = cloneMeta(meta);
+    delete payloadMeta[NODE_JSON_META_PROMPT_KEY];
+
     const normalizedPrompt = (typeof prompt === "string" ? prompt : "").trim();
     if (normalizedPrompt) {
-        payload[NODE_JSON_META_KEY] = {
-            [NODE_JSON_META_PROMPT_KEY]: normalizedPrompt,
-        };
+        payloadMeta[NODE_JSON_META_PROMPT_KEY] = normalizedPrompt;
+    }
+    if (Object.keys(payloadMeta).length) {
+        payload[NODE_JSON_META_KEY] = payloadMeta;
     }
     return payload;
 }
@@ -134,8 +164,55 @@ function parseSelectionsValue(rawValue) {
 }
 
 function countSelections(rawValue) {
-    const obj = parseSelectionsValue(rawValue);
-    return Object.keys(obj).filter((k) => !k.startsWith("__") && obj[k] && obj[k] !== "None").length;
+    const parsed = parseNodeJsonState(rawValue);
+    const active = new Set(
+        Object.keys(parsed.selections).filter((k) => !k.startsWith("__") && parsed.selections[k] && parsed.selections[k] !== "None")
+    );
+    Object.keys(normalizeRandomizeMap(parsed.meta[NODE_JSON_META_RANDOMIZE_KEY])).forEach((category) => {
+        active.add(category);
+    });
+    return active.size;
+}
+
+function getStylesByCategory() {
+    const stylesByCategory = {};
+    for (const item of getStyleIndex()) {
+        if (!item?.category || !item?.title) continue;
+        if (!stylesByCategory[item.category]) stylesByCategory[item.category] = [];
+        stylesByCategory[item.category].push(item.title);
+    }
+    return stylesByCategory;
+}
+
+function pickRandomStyle(styles) {
+    if (!Array.isArray(styles) || !styles.length) return null;
+    const index = Math.floor(Math.random() * styles.length);
+    return styles[index] || null;
+}
+
+function resolveRandomizedNodeState(rawValue) {
+    const parsed = parseNodeJsonState(rawValue);
+    const randomize = normalizeRandomizeMap(parsed.meta[NODE_JSON_META_RANDOMIZE_KEY]);
+    if (!Object.keys(randomize).length) return null;
+
+    const stylesByCategory = getStylesByCategory();
+    const selections = { ...parsed.selections };
+    Object.keys(randomize).forEach((category) => {
+        const selectedStyle = pickRandomStyle(stylesByCategory[category]);
+        if (selectedStyle) selections[category] = selectedStyle;
+        else delete selections[category];
+    });
+
+    const meta = cloneMeta(parsed.meta);
+    delete meta[NODE_JSON_META_RANDOMIZE_KEY];
+    return JSON.stringify(buildNodeJsonState(selections, parsed.prompt, meta));
+}
+
+function findWorkflowNode(workflow, nodeId) {
+    const nodes = workflow?.nodes;
+    if (!Array.isArray(nodes)) return null;
+    const normalizedNodeId = String(nodeId);
+    return nodes.find((node) => String(node?.id) === normalizedNodeId) || null;
 }
 
 function makeNodeButtonStyle(btn) {
@@ -170,6 +247,38 @@ function getPersistedBrowseCategory() {
 
 app.registerExtension({
     name: "styler-pipeline.dynamic-styler",
+
+    init() {
+        const graphToPrompt = app.graphToPrompt;
+        app.graphToPrompt = async function () {
+            await fetchStyleIndex();
+            const res = await graphToPrompt.apply(this, arguments);
+            const output = res?.output || {};
+            for (const node of app.graph?._nodes || []) {
+                if (node?.comfyClass !== NODE_TYPE && node?.type !== NODE_TYPE) continue;
+                const widget = node.widgets?.find((w) => w.name === "selected_styles_json");
+                const resolvedJson = resolveRandomizedNodeState(widget?.value);
+                if (!resolvedJson) continue;
+
+                const outputNode = output[String(node.id)];
+                if (outputNode?.inputs) {
+                    outputNode.inputs.selected_styles_json = resolvedJson;
+                }
+
+                const workflowNode = findWorkflowNode(res?.workflow, node.id);
+                const widgetIndex = node.widgets?.findIndex((w) => w.name === "selected_styles_json") ?? -1;
+                if (workflowNode && widgetIndex >= 0 && Array.isArray(workflowNode.widgets_values)) {
+                    let workflowWidgetIndex = widgetIndex;
+                    if (workflowNode.widgets_values[workflowWidgetIndex] !== widget.value) {
+                        const matchingIndex = workflowNode.widgets_values.findIndex((value) => value === widget.value);
+                        if (matchingIndex >= 0) workflowWidgetIndex = matchingIndex;
+                    }
+                    workflowNode.widgets_values[workflowWidgetIndex] = resolvedJson;
+                }
+            }
+            return res;
+        };
+    },
 
     async nodeCreated(node) {
         if (node.comfyClass !== NODE_TYPE) return;
@@ -354,6 +463,7 @@ app.registerExtension({
         let manager = null;
         let activeTab = null;
         let pendingSelections = null;
+        let pendingMeta = null;
         let closeModalPromise = null;
         let suppressBackdropCloseUntil = 0;
         const modalAnimationMs = 150;
@@ -362,17 +472,21 @@ app.registerExtension({
             return parseSelectionsValue(widget.value);
         }
 
+        function getNodeMeta() {
+            return parseNodeJsonState(widget.value).meta || {};
+        }
+
         function getNodePrompt() {
             return parseNodeJsonState(widget.value).prompt || "";
         }
 
-        function setNodeState(selections, prompt = "") {
-            widget.value = JSON.stringify(buildNodeJsonState(selections, prompt));
+        function setNodeState(selections, prompt = "", meta = null) {
+            widget.value = JSON.stringify(buildNodeJsonState(selections, prompt, meta));
             updateStatus();
         }
 
-        function setSelections(sel) {
-            setNodeState(sel, getNodePrompt());
+        function setSelections(sel, meta = null) {
+            setNodeState(sel, getNodePrompt(), meta || getNodeMeta());
         }
 
         function getLastLLMPromptFromNodeState() {
@@ -385,7 +499,7 @@ app.registerExtension({
             const currentPrompt = getNodePrompt();
             if (currentPrompt === normalizedPrompt) return false;
             const parsed = parseNodeJsonState(widget.value);
-            setNodeState(parsed.selections, normalizedPrompt);
+            setNodeState(parsed.selections, normalizedPrompt, parsed.meta);
             return true;
         }
 
@@ -393,24 +507,58 @@ app.registerExtension({
             return { ...(sel || {}) };
         }
 
+        function getPendingMeta() {
+            return pendingMeta ? cloneMeta(pendingMeta) : cloneMeta(getNodeMeta());
+        }
+
         function getPendingSelections() {
             return pendingSelections ? cloneSelections(pendingSelections) : getSelections();
         }
 
-        function setPendingSelections(sel) {
+        function setPendingState(sel, meta = null) {
             pendingSelections = cloneSelections(sel);
-            refreshModules(pendingSelections);
+            pendingMeta = cloneMeta(meta || getPendingMeta());
+            refreshModules(pendingSelections, pendingMeta);
+        }
+
+        function setPendingSelections(sel) {
+            setPendingState(sel, getPendingMeta());
         }
 
         function handleStyleSelect(category, styleKey) {
             const current = getPendingSelections();
+            const meta = getPendingMeta();
+            const randomize = normalizeRandomizeMap(meta[NODE_JSON_META_RANDOMIZE_KEY]);
             if (styleKey === null) delete current[category];
-            else current[category] = styleKey;
-            setPendingSelections(current);
+            else {
+                current[category] = styleKey;
+                delete randomize[category];
+            }
+            if (styleKey === null) delete randomize[category];
+            if (Object.keys(randomize).length) meta[NODE_JSON_META_RANDOMIZE_KEY] = randomize;
+            else delete meta[NODE_JSON_META_RANDOMIZE_KEY];
+            setPendingState(current, meta);
+        }
+
+        function handleRandomizeSelect(category, enabled) {
+            const current = getPendingSelections();
+            const meta = getPendingMeta();
+            const randomize = normalizeRandomizeMap(meta[NODE_JSON_META_RANDOMIZE_KEY]);
+            if (enabled) {
+                randomize[category] = true;
+                delete current[category];
+            } else {
+                delete randomize[category];
+            }
+            if (Object.keys(randomize).length) meta[NODE_JSON_META_RANDOMIZE_KEY] = randomize;
+            else delete meta[NODE_JSON_META_RANDOMIZE_KEY];
+            setPendingState(current, meta);
         }
 
         function handleClearAllPending() {
-            setPendingSelections({});
+            const meta = getPendingMeta();
+            delete meta[NODE_JSON_META_RANDOMIZE_KEY];
+            setPendingState({}, meta);
         }
 
         function applyPendingAndClose() {
@@ -423,16 +571,19 @@ app.registerExtension({
                 persistLastBrowseCategory(currentBrowseCategory);
             }
             const committed = getPendingSelections();
-            setSelections(committed);
+            const committedMeta = getPendingMeta();
+            setSelections(committed, committedMeta);
             pendingSelections = null;
+            pendingMeta = null;
             void closeModal(false);
         }
 
 
-        function refreshModules(selOverride = null) {
+        function refreshModules(selOverride = null, metaOverride = null) {
             const sel = selOverride ? cloneSelections(selOverride) : getPendingSelections();
+            const meta = metaOverride ? cloneMeta(metaOverride) : getPendingMeta();
             const browseMod = manager?.getModule("browse");
-            if (browseMod?._render) browseMod._render(sel);
+            if (browseMod?._render) browseMod._render(sel, { meta });
             const aiPresetsMod = manager?.getModule("ai-presets");
             if (aiPresetsMod?._render) aiPresetsMod._render(sel, { preserveExistingSuggestions: true });
             const searchMod = manager?.getModule("search");
@@ -512,6 +663,7 @@ app.registerExtension({
 
             const browseMod = manager.getModule("browse");
             if (browseMod?._setOnSelect) browseMod._setOnSelect(handleStyleSelect);
+            if (browseMod?._setOnRandomize) browseMod._setOnRandomize(handleRandomizeSelect);
             if (browseMod?._setOnClearAll) browseMod._setOnClearAll(handleClearAllPending);
             if (browseMod?._setOnApply) browseMod._setOnApply(applyPendingAndClose);
             if (browseMod?._setOnCancel) browseMod._setOnCancel(() => {
@@ -555,10 +707,18 @@ app.registerExtension({
             for (const cat of Object.keys(sel)) {
                 if (!validKeys.has(`${cat}:${sel[cat]}`)) delete sel[cat];
             }
+            const meta = getNodeMeta();
+            const randomize = normalizeRandomizeMap(meta[NODE_JSON_META_RANDOMIZE_KEY]);
+            for (const cat of Object.keys(randomize)) {
+                if (!validBrowseCategories.has(cat)) delete randomize[cat];
+            }
+            if (Object.keys(randomize).length) meta[NODE_JSON_META_RANDOMIZE_KEY] = randomize;
+            else delete meta[NODE_JSON_META_RANDOMIZE_KEY];
             pendingSelections = cloneSelections(sel);
+            pendingMeta = cloneMeta(meta);
 
             const browseModRender = manager.getModule("browse");
-            if (browseModRender?._render) browseModRender._render(pendingSelections);
+            if (browseModRender?._render) browseModRender._render(pendingSelections, { meta: pendingMeta });
             const aiPresetsModRender = manager.getModule("ai-presets");
             if (aiPresetsModRender?._render) aiPresetsModRender._render(pendingSelections);
             const searchModRender = manager.getModule("search");
@@ -621,6 +781,7 @@ app.registerExtension({
 
                 if (discardPending) {
                     pendingSelections = null;
+                    pendingMeta = null;
                 }
                 stopPanelDrag();
                 panel.classList.add("dsp-is-closing");
@@ -739,8 +900,9 @@ app.registerExtension({
         makeNodeButtonStyle(clearBtn);
         clearBtn.addEventListener("click", () => {
             pendingSelections = null;
-            setSelections({});
-            refreshModules({});
+            pendingMeta = null;
+            setNodeState({}, getNodePrompt(), {});
+            refreshModules({}, {});
         });
         rowEl.appendChild(clearBtn);
 
@@ -763,4 +925,3 @@ app.registerExtension({
         };
     },
 });
-

@@ -35,6 +35,7 @@
 - 設計為在多次執行之間維持可重現的確定性 styler-pipeline nodes。
 - AI 輔助的風格選擇：按類別查詢 LLM，並回傳附帶 score 的風格候選排名清單。
 - 透過具備類別導覽的 Browser workflow 進行手動瀏覽與選擇風格。
+- Browse 支援依類別啟用 `Randomize`，讓 workflow 每次執行時從所選類別中選擇不同風格。
 - Dynamic Styler，可將風格安全地套用到既有 conditioning。
 - 經典的 `Advanced Styler` node：基於 dropdowns，可在圖中按類別逐一控制。
 - 相容於 ControlNet workflows，包括 OpenPose 驅動的情境。
@@ -105,6 +106,10 @@
 下圖展示的是同一面板中的 **Browser** 分頁，用於手動選擇類別與風格。
 
 ![Browser module tab](../locales/en/styler_pipeline_browser.gif)
+
+在任一類別中使用 `Randomize` chip，可在每次將 workflow 加入佇列時，從該類別隨機選擇一個風格。
+
+**注意：** 為了保持可重現性，生成圖片會把最終解析出的風格儲存在內嵌 workflow metadata 中。從生成圖片重新載入 workflow 時，該類別的 `Randomize` 將不再處於啟用狀態；workflow 會改用該次生成中隨機選中的確切風格。選擇具體風格也會關閉該類別的 `Randomize`。
 
 **Editor module:**
 Editor 可讓你查看按類別從 JSON 檔案（`data/*.json`）載入的風格。

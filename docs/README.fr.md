@@ -35,6 +35,7 @@
 - Nodes styler-pipeline déterministes conçus pour rester reproductibles d’un run à l’autre.
 - Sélection de styles assistée par AI : interroge un LLM par catégorie et renvoie des candidats de style classés avec des scores.
 - Parcours et sélection manuels de styles via le workflow Browser avec navigation par catégories.
+- Mode `Randomize` par catégorie dans Browse pour choisir un style différent parmi les catégories sélectionnées à chaque exécution du workflow.
 - Dynamic Styler qui applique le style de manière sûre au conditioning existant.
 - Node classique `Advanced Styler` basé sur des menus déroulants, pour un contrôle catégorie par catégorie dans le graphe.
 - Compatible avec les workflows ControlNet, y compris les setups pilotés par OpenPose.
@@ -105,6 +106,10 @@ Si vous préférez ne pas utiliser AI Styler, l’onglet **Browse** vous permet 
 Sur l’image ci-dessous, vous voyez l’onglet **Browser** dans le même panneau, où les catégories et styles sont sélectionnés manuellement.
 
 ![Browser module tab](../locales/en/styler_pipeline_browser.gif)
+
+Utilisez le chip `Randomize` dans n'importe quelle catégorie pour choisir un style aléatoire de cette catégorie à chaque mise en file du workflow.
+
+**Note :** Pour préserver la reproductibilité, les images générées enregistrent le style résolu dans les métadonnées du workflow intégré. Lorsque vous rechargez un workflow depuis une image générée, `Randomize` ne sera plus actif pour cette catégorie ; le workflow utilisera à la place le style exact choisi aléatoirement pour cette génération. Sélectionner un style précis désactive aussi `Randomize` pour cette catégorie.
 
 **Editor module :**
 Editor vous permet de voir les styles chargés depuis les fichiers JSON par catégorie (`data/*.json`).

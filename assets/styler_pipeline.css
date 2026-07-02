@@ -2156,6 +2156,12 @@
     color: var(--styler-primary-text);
 }
 
+.dsp-browse-ui .dsp-browse-style-chip--randomize.is-selected {
+    border-color: var(--styler-error);
+    background: color-mix(in srgb, var(--styler-error) 82%, var(--styler-panel-bg-secondary));
+    color: var(--styler-primary-text);
+}
+
 .dsp-browse-ui .dsp-browse-style-chip:not(.is-selected):hover {
     background: color-mix(in srgb, var(--styler-primary-bg) 28%, var(--styler-panel-bg-secondary));
 }

@@ -20,6 +20,9 @@ import {
     makeCategoryBtn,
 } from "./category-sidebar-shared.js";
 
+const NODE_JSON_META_RANDOMIZE_KEY = "randomize";
+const RANDOMIZE_LABEL = "Randomize";
+
 function formatStyleLabelForDisplay(label) {
     return typeof label === "string" ? label.replace(/\s*[>/]\s*/g, " / ").trim() : label;
 }
@@ -167,6 +170,44 @@ function makeStyleRow(item, isSelected) {
     return chip;
 }
 
+function makeRandomizeRow(isSelected) {
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.classList.add("dsp-ai-presets-candidate-pill", "dsp-browse-style-chip", "dsp-browse-style-chip--catalog", "dsp-browse-style-chip--randomize");
+    chip.classList.toggle("is-selected", !!isSelected);
+    chip.title = "Choose a random style from this category on each queue.";
+    chip.setAttribute("aria-pressed", isSelected ? "true" : "false");
+
+    const title = document.createElement("span");
+    title.textContent = RANDOMIZE_LABEL;
+    title.classList.add("dsp-browse-style-chip-title");
+    chip.appendChild(title);
+
+    return chip;
+}
+
+function normalizeRandomizeMap(meta) {
+    const value = meta?.[NODE_JSON_META_RANDOMIZE_KEY];
+    if (!value || typeof value !== "object" || Array.isArray(value)) return {};
+    const out = {};
+    Object.entries(value).forEach(([key, enabled]) => {
+        if (!key || enabled !== true) return;
+        out[key] = true;
+    });
+    return out;
+}
+
+function countActiveCategories(selections, randomize) {
+    const active = new Set();
+    Object.entries(selections || {}).forEach(([key, value]) => {
+        if (key && value) active.add(key);
+    });
+    Object.keys(randomize || {}).forEach((key) => {
+        if (key) active.add(key);
+    });
+    return active.size;
+}
+
 function initBrowse(container, manager) {
     applyBrowseStyles(container);
 
@@ -184,6 +225,7 @@ function initBrowse(container, manager) {
 
     let currentCategory = null;
     let onSelectCallback = null;
+    let onRandomizeCallback = null;
     let onApplyCallback = null;
     let onCancelCallback = null;
     let onClearAllCallback = null;
@@ -195,16 +237,19 @@ function initBrowse(container, manager) {
     let subcategoryCategory = null;
     let suppressAutoCategorySelection = false;
     let resizeRaf = null;
+    let currentMeta = {};
+    let currentRandomize = {};
     wholeWordsOnly = !!wholeWordToggleInput.checked;
 
     function setOnSelect(cb) { onSelectCallback = cb; }
+    function setOnRandomize(cb) { onRandomizeCallback = cb; }
     function setOnApply(cb) { onApplyCallback = cb; }
     function setOnCancel(cb) { onCancelCallback = cb; }
     function setOnClearAll(cb) { onClearAllCallback = cb; }
     function getCurrentCategory() { return currentCategory; }
 
-    function updateSelectedCountBadge(selections) {
-        const selectedCount = Object.keys(selections || {}).filter((key) => selections[key]).length;
+    function updateSelectedCountBadge(selections, randomize = currentRandomize) {
+        const selectedCount = countActiveCategories(selections, randomize);
         const hasActiveStyles = selectedCount > 0;
         selectedCountBadge.firstChild.textContent = `${hasActiveStyles ? formatStylesActiveChipText(selectedCount) : t("gallery.badge.no_styles_active")} `;
         selectedCountBadge.classList.toggle("is-active", hasActiveStyles);
@@ -376,7 +421,7 @@ function initBrowse(container, manager) {
         }
     }
 
-    updateSelectedCountBadge({});
+    updateSelectedCountBadge({}, {});
 
     function scheduleResizeRender() {
         if (resizeRaf) return;
@@ -404,13 +449,16 @@ function initBrowse(container, manager) {
         const categoryOrder = Object.keys(categories);
         
         // Update selected count badge
-        const selectedCount = Object.keys(selections).filter(key => selections[key]).length;
-        updateSelectedCountBadge(selections);
+        const selectedCount = countActiveCategories(selections, currentRandomize);
+        updateSelectedCountBadge(selections, currentRandomize);
         if (selectedCount > 0) {
             suppressAutoCategorySelection = false;
         }
 
         const onClearCategorySelection = (categoryName) => {
+            if (currentRandomize[categoryName] && onRandomizeCallback) {
+                onRandomizeCallback(categoryName, false);
+            }
             if (onSelectCallback) {
                 onSelectCallback(categoryName, null);
             }
@@ -442,7 +490,8 @@ function initBrowse(container, manager) {
         const density = computeCategoryDensity(listHeight, Math.max(1, allRows));
 
         visibleCats.forEach((cat) => {
-            const selectedKey = selections[cat];
+            const isRandomized = currentRandomize[cat] === true;
+            const selectedKey = isRandomized ? RANDOMIZE_LABEL : selections[cat];
             const categoryDisplayLabel = currentQuery
                 ? `${cat} (${categoryMatchCounts[cat] || 0})`
                 : cat;
@@ -493,6 +542,7 @@ function initBrowse(container, manager) {
         styleList.innerHTML = "";
         const category = styles[0]?.category;
         const selectedKey = selections[category];
+        const isRandomized = currentRandomize[category] === true;
         updateSubcategoryOptions(styles, category);
 
         // Update style count in header
@@ -533,8 +583,14 @@ function initBrowse(container, manager) {
             countLabel.classList.add("is-visible");
         }
 
+        const randomizeTile = makeRandomizeRow(isRandomized);
+        randomizeTile.addEventListener("click", () => {
+            if (onRandomizeCallback) onRandomizeCallback(category, !isRandomized);
+        });
+        styleList.appendChild(randomizeTile);
+
         visibleStyles.forEach((item) => {
-            const isSelected = item.title === selectedKey;
+            const isSelected = !isRandomized && item.title === selectedKey;
             const tile = makeStyleRow(item, isSelected);
 
             // Click handler: toggle selection
@@ -617,6 +673,7 @@ function initBrowse(container, manager) {
     const browseModule = manager.getModule("browse");
     if (browseModule) {
         browseModule._setOnSelect = setOnSelect;
+        browseModule._setOnRandomize = setOnRandomize;
         browseModule._setOnApply = setOnApply;
         browseModule._setOnCancel = setOnCancel;
         browseModule._setOnClearAll = setOnClearAll;
@@ -626,8 +683,10 @@ function initBrowse(container, manager) {
         
         // Wrap render to store current selections
         const originalRender = render;
-        browseModule._render = function(selections) {
+        browseModule._render = function(selections, options = null) {
             browseModule._currentSelections = selections || {};
+            currentMeta = options?.meta || {};
+            currentRandomize = normalizeRandomizeMap(currentMeta);
             originalRender(selections);
         };
     }

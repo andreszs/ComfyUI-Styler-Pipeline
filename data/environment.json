@@ -240,6 +240,11 @@
         "negative_prompt": ""
     },
     {
+        "name": "Historical/castle dungeon corridor",
+        "prompt": "medieval dungeon corridor, rough stone walls, iron doors, narrow passage, vaulted ceiling",
+        "negative_prompt": ""
+    },
+    {
         "name": "Historical/church",
         "prompt": "church interior, high vaulted ceilings, stained glass windows, wooden pews, altar",
         "negative_prompt": ""
@@ -260,6 +265,11 @@
         "negative_prompt": ""
     },
     {
+        "name": "Historical/monastery cloister interior",
+        "prompt": "monastery interior, stone arches, quiet corridors, wooden benches, old masonry",
+        "negative_prompt": ""
+    },
+    {
         "name": "Historical/neon sacred temple",
         "prompt": "sacred temple with neon illumination, symmetrical space, patterns, futuristic architecture",
         "negative_prompt": ""
@@ -270,6 +280,11 @@
         "negative_prompt": ""
     },
     {
+        "name": "Indoors/abandoned house interior",
+        "prompt": "abandoned house interior, peeling wallpaper, broken furniture, dusty rooms, decayed residential space",
+        "negative_prompt": ""
+    },
+    {
         "name": "Indoors/apartment",
         "prompt": "apartment interior, furniture, personal belongings, windows, residential space",
         "negative_prompt": ""
@@ -277,6 +292,11 @@
     {
         "name": "Indoors/aquarium",
         "prompt": "public aquarium, large glass tanks, swimming fish",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/barn interior",
+        "prompt": "rustic barn interior, exposed wooden beams, hay bales, farming tools, plank walls, wide central aisle",
         "negative_prompt": ""
     },
     {
@@ -312,6 +332,11 @@
     {
         "name": "Indoors/gym",
         "prompt": "gym interior, weight racks, treadmills, mirrors, rubber mats",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/hayloft",
+        "prompt": "hayloft interior, stacked hay bales, rough timber beams, ladder access, dusty storage space",
         "negative_prompt": ""
     },
     {
@@ -370,13 +395,28 @@
         "negative_prompt": ""
     },
     {
+        "name": "Indoors/old attic storage",
+        "prompt": "attic storage room, slanted rafters, stacked boxes, old furniture, enclosed upper floor",
+        "negative_prompt": ""
+    },
+    {
         "name": "Indoors/prison",
         "prompt": "prison interior, barred cells, concrete walls, metal gates",
         "negative_prompt": ""
     },
     {
+        "name": "Indoors/root cellar",
+        "prompt": "root cellar, stone walls, wooden shelves, stored jars, earth floor, underground storage room",
+        "negative_prompt": ""
+    },
+    {
         "name": "Indoors/school",
         "prompt": "school building, hallways, lockers, classroom doors, bulletin boards",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Indoors/stable interior",
+        "prompt": "horse stable interior, wooden stalls, straw bedding, tack hooks, narrow aisle, rural enclosure",
         "negative_prompt": ""
     },
     {
@@ -635,6 +675,16 @@
         "negative_prompt": ""
     },
     {
+        "name": "SciFi/escape pod interior",
+        "prompt": "escape pod interior, compact capsule, molded seats, control panels, sealed enclosure",
+        "negative_prompt": ""
+    },
+    {
+        "name": "SciFi/spaceship corridor",
+        "prompt": "spaceship corridor, wall panels, sealed doors, compact passageway, spacecraft interior",
+        "negative_prompt": ""
+    },
+    {
         "name": "Sky/northern lights tundra",
         "prompt": "northern lights tundra, vibrant aurora borealis, snow-covered expanse, star-filled sky",
         "negative_prompt": ""
@@ -652,6 +702,16 @@
     {
         "name": "Transport/airport",
         "prompt": "airport terminal, modern transit space, wide interiors",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Transport/subway train interior",
+        "prompt": "subway train interior, metal handrails, bench seating, narrow carriage, transit cabin",
+        "negative_prompt": ""
+    },
+    {
+        "name": "Transport/train carriage interior",
+        "prompt": "train carriage interior, rows of seats, luggage racks, narrow aisle, enclosed rail cabin",
         "negative_prompt": ""
     },
     {
