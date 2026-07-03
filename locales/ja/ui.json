@@ -48,6 +48,10 @@
   "gallery.badge.styles_active": "{count} スタイルがアクティブです",
   "gallery.btn.remove_all.title": "アクティブなスタイルをすべて削除します",
   "gallery.style_count.label": "{count} スタイル",
+  "gallery.style_count.builtin_label": "{count} 組み込みスタイル",
+  "gallery.user_styles.title": "ユーザー定義スタイル",
+  "gallery.category_badge.mixed.title": "ユーザー定義スタイルを含みます",
+  "gallery.category_badge.user.title": "ユーザー定義カテゴリ",
 
   "editor.categories.title": "カテゴリー",
   "category.lingerie": "ランジェリー",

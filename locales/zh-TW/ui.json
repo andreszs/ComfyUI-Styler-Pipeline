@@ -48,6 +48,10 @@
   "gallery.badge.styles_active": "{count} 樣式處於活動狀態",
   "gallery.btn.remove_all.title": "刪除所有活動樣式",
   "gallery.style_count.label": "{count} 風格",
+  "gallery.style_count.builtin_label": "{count} 內建風格",
+  "gallery.user_styles.title": "使用者定義風格",
+  "gallery.category_badge.mixed.title": "包含使用者定義風格",
+  "gallery.category_badge.user.title": "使用者定義類別",
 
   "editor.categories.title": "類別",
   "category.lingerie": "內衣",

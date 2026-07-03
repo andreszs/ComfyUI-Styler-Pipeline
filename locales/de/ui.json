@@ -48,6 +48,10 @@
   "gallery.badge.styles_active": "{count} Stile aktiv",
   "gallery.btn.remove_all.title": "Entfernen Sie alle aktiven Stile",
   "gallery.style_count.label": "{count} STILE",
+  "gallery.style_count.builtin_label": "{count} INTEGRIERTE STILE",
+  "gallery.user_styles.title": "Benutzerdefinierte Stile",
+  "gallery.category_badge.mixed.title": "Enthält benutzerdefinierte Stile",
+  "gallery.category_badge.user.title": "Benutzerdefinierte Kategorie",
 
   "editor.categories.title": "Kategorien",
   "category.lingerie": "Unterwäsche",

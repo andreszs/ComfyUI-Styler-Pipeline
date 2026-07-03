@@ -48,6 +48,10 @@
   "gallery.badge.styles_active": "{count} 스타일 활성화됨",
   "gallery.btn.remove_all.title": "모든 활성 스타일 제거",
   "gallery.style_count.label": "{count} 스타일",
+  "gallery.style_count.builtin_label": "{count} 기본 제공 스타일",
+  "gallery.user_styles.title": "사용자 정의 스타일",
+  "gallery.category_badge.mixed.title": "사용자 정의 스타일 포함",
+  "gallery.category_badge.user.title": "사용자 정의 카테고리",
 
   "editor.categories.title": "카테고리",
   "category.lingerie": "란제리",

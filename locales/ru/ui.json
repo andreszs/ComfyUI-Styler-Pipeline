@@ -48,6 +48,10 @@
   "gallery.badge.styles_active": "{count} стилей активно",
   "gallery.btn.remove_all.title": "Удалить все активные стили",
   "gallery.style_count.label": "{count} СТИЛИ",
+  "gallery.style_count.builtin_label": "{count} ВСТРОЕННЫХ СТИЛЕЙ",
+  "gallery.user_styles.title": "Пользовательские стили",
+  "gallery.category_badge.mixed.title": "Содержит пользовательские стили",
+  "gallery.category_badge.user.title": "Пользовательская категория",
 
   "editor.categories.title": "Категории",
   "category.lingerie": "Нижнее белье",

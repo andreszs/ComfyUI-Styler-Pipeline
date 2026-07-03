@@ -97,6 +97,9 @@ export function makeCategoryBtn(categoryName, selectedStyleName, isActive, densi
     const categoryDisplayLabel = typeof options.categoryDisplayLabel === "string" && options.categoryDisplayLabel
         ? options.categoryDisplayLabel
         : categoryName;
+    const sourceBadge = options.sourceBadge && typeof options.sourceBadge === "object"
+        ? options.sourceBadge
+        : null;
     const hasSelectedStyle = !!selectedStyleName;
 
     const btn = document.createElement("button");
@@ -138,6 +141,19 @@ export function makeCategoryBtn(categoryName, selectedStyleName, isActive, densi
     nameSpan.classList.add("dsp-category-name");
     nameSpan.title = categoryDisplayLabel;
     iconAndName.appendChild(nameSpan);
+
+    if (sourceBadge && sourceBadge.label) {
+        const badge = document.createElement("span");
+        badge.classList.add("dsp-category-source-badge");
+        if (sourceBadge.kind) {
+            badge.classList.add(`dsp-category-source-badge--${sourceBadge.kind}`);
+        }
+        badge.textContent = sourceBadge.label;
+        if (sourceBadge.title) {
+            badge.title = sourceBadge.title;
+        }
+        iconAndName.appendChild(badge);
+    }
 
     if (hasSelectedStyle && showSelectedStyleLabel) {
         const displayedSelection = formatStyleLabelForDisplay(selectedStyleName);

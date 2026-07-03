@@ -186,6 +186,55 @@ function makeRandomizeRow(isSelected) {
     return chip;
 }
 
+function isUserDefinedStyle(item) {
+    return item?.source === "user";
+}
+
+function getCategorySourceBadge(styles) {
+    let hasBuiltInStyles = false;
+    let hasUserDefinedStyles = false;
+
+    (styles || []).forEach((style) => {
+        if (isUserDefinedStyle(style)) {
+            hasUserDefinedStyles = true;
+        } else {
+            hasBuiltInStyles = true;
+        }
+    });
+
+    if (!hasUserDefinedStyles) return null;
+    if (!hasBuiltInStyles) {
+        return {
+            kind: "user",
+            label: "USER",
+            title: t("gallery.category_badge.user.title"),
+        };
+    }
+
+    return {
+        kind: "mixed",
+        label: "+U",
+        title: t("gallery.category_badge.mixed.title"),
+    };
+}
+
+function makeUserDefinedSectionHeader(count) {
+    const header = document.createElement("div");
+    header.classList.add("dsp-browse-user-styles-header");
+
+    const title = document.createElement("div");
+    title.classList.add("dsp-browse-user-styles-title");
+    title.textContent = t("gallery.user_styles.title");
+    header.appendChild(title);
+
+    const badge = document.createElement("div");
+    badge.classList.add("dsp-browse-style-count", "dsp-ai-presets-provider-badge", "is-visible");
+    badge.textContent = t("gallery.style_count.label", { count });
+    header.appendChild(badge);
+
+    return header;
+}
+
 function normalizeRandomizeMap(meta) {
     const value = meta?.[NODE_JSON_META_RANDOMIZE_KEY];
     if (!value || typeof value !== "object" || Array.isArray(value)) return {};
@@ -501,7 +550,10 @@ function initBrowse(container, manager) {
                 cat === currentCategory,
                 density,
                 onClearCategorySelection,
-                { categoryDisplayLabel }
+                {
+                    categoryDisplayLabel,
+                    sourceBadge: getCategorySourceBadge(categories[cat]),
+                }
             );
             btn.addEventListener("click", () => {
                 suppressAutoCategorySelection = false;
@@ -576,10 +628,14 @@ function initBrowse(container, manager) {
             return;
         }
 
-        // Update count label
+        const userDefinedStyles = visibleStyles.filter(isUserDefinedStyle);
+        const builtInStyles = visibleStyles.filter((style) => !isUserDefinedStyle(style));
+
         if (countLabel) {
-            const count = visibleStyles.length;
-            countLabel.textContent = t("gallery.style_count.label", { count });
+            const count = userDefinedStyles.length > 0 ? builtInStyles.length : visibleStyles.length;
+            countLabel.textContent = userDefinedStyles.length > 0
+                ? t("gallery.style_count.builtin_label", { count })
+                : t("gallery.style_count.label", { count });
             countLabel.classList.add("is-visible");
         }
 
@@ -589,21 +645,30 @@ function initBrowse(container, manager) {
         });
         styleList.appendChild(randomizeTile);
 
-        visibleStyles.forEach((item) => {
-            const isSelected = !isRandomized && item.title === selectedKey;
-            const tile = makeStyleRow(item, isSelected);
+        const appendStyleRows = (items) => {
+            items.forEach((item) => {
+                const isSelected = !isRandomized && item.title === selectedKey;
+                const tile = makeStyleRow(item, isSelected);
 
-            // Click handler: toggle selection
-            tile.addEventListener("click", () => {
-                if (isSelected) {
-                    if (onSelectCallback) onSelectCallback(item.category, null);
-                } else {
-                    if (onSelectCallback) onSelectCallback(item.category, item.title);
-                }
+                // Click handler: toggle selection
+                tile.addEventListener("click", () => {
+                    if (isSelected) {
+                        if (onSelectCallback) onSelectCallback(item.category, null);
+                    } else {
+                        if (onSelectCallback) onSelectCallback(item.category, item.title);
+                    }
+                });
+
+                styleList.appendChild(tile);
             });
+        };
 
-            styleList.appendChild(tile);
-        });
+        appendStyleRows(builtInStyles);
+
+        if (userDefinedStyles.length > 0) {
+            styleList.appendChild(makeUserDefinedSectionHeader(userDefinedStyles.length));
+            appendStyleRows(userDefinedStyles);
+        }
     }
 
     // Search input handler

@@ -48,6 +48,10 @@
   "gallery.badge.styles_active": "{count} estilos ativos",
   "gallery.btn.remove_all.title": "Remover todos os estilos ativos",
   "gallery.style_count.label": "{count} ESTILOS",
+  "gallery.style_count.builtin_label": "{count} ESTILOS INTEGRADOS",
+  "gallery.user_styles.title": "Estilos definidos pelo usuário",
+  "gallery.category_badge.mixed.title": "Inclui estilos definidos pelo usuário",
+  "gallery.category_badge.user.title": "Categoria definida pelo usuário",
 
   "editor.categories.title": "Categorias",
   "category.lingerie": "Lingerie",

@@ -44,6 +44,7 @@ class Template:
     def __init__(self, prompt, negative_prompt, **kwargs):
         self.prompt = prompt
         self.negative_prompt = negative_prompt
+        self.source = kwargs.get("source", "builtin")
 
     def replace_prompts(self, positive_prompt, negative_prompt):
         """Replace {prompt} in the template with the user's prompt"""
@@ -74,7 +75,7 @@ class StylerData:
             self._user_datadirs = [pathlib.Path(user_datadir)] if user_datadir else []
         self._load(verbose=True)
 
-    def _load_directory(self, datadir):
+    def _load_directory(self, datadir, source="builtin"):
         if not datadir or not datadir.exists():
             return
 
@@ -86,7 +87,9 @@ class StylerData:
                 group = j.stem
 
                 for template in content:
-                    self._data[group][template["name"]] = Template(**template)
+                    loaded_template = Template(**template)
+                    loaded_template.source = source
+                    self._data[group][template["name"]] = loaded_template
 
             except PermissionError:
                 print(
@@ -115,9 +118,9 @@ class StylerData:
     def _load(self, verbose=False):
         """Read bundled JSON styles, then merge user JSON styles if present."""
         self._data.clear()
-        self._load_directory(self._datadir)
+        self._load_directory(self._datadir, source="builtin")
         for user_datadir in self._user_datadirs:
-            self._load_directory(user_datadir)
+            self._load_directory(user_datadir, source="user")
 
     def reload(self):
         """Re-read all JSON style files from disk (hot-reload)."""
@@ -233,6 +236,7 @@ def build_style_index():
         category  - the JSON group name (e.g. "mood", "gothic")
         title     - the style entry key/name
         text      - concatenated positive + negative template for search
+        source    - "builtin" for bundled plugin styles, "user" for user JSON
     """
     index = []
     for category in sorted(styler_data.keys()):
@@ -250,6 +254,7 @@ def build_style_index():
                     "title": style_key,
                     "positive_prompt": template.prompt or "",
                     "text": search_text,
+                    "source": getattr(template, "source", "builtin"),
                 }
             )
     return index
