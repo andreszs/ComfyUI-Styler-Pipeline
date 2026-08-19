@@ -19,5 +19,5 @@ Documentation = "https://github.com/andreszs/comfyui-styler-pipeline#readme"
 [tool.comfy]
 PublisherId = "andreszs"
 DisplayName = "Styler Pipeline"
-Icon = ""
+Icon = "https://raw.githubusercontent.com/andreszs/comfyui-styler-pipeline/main/assets/icon.svg"
 Banner = "https://raw.githubusercontent.com/andreszs/comfyui-styler-pipeline/refs/heads/main/assets/banner_109.gif"
