@@ -156,6 +156,7 @@ function getProviderModelCacheStorageKey(providerId) {
 }
 
 function getProviderOptionDisplayName(providerId) {
+    if (providerId === "chatgpt_plan") return "ChatGPT Plan";
     if (providerId === "openai") return "OpenAI";
     if (providerId === "anthropic") return "Anthropic";
     if (providerId === "groq") return "Groq";
@@ -832,7 +833,7 @@ function persistProviderModelCacheEntry({ state, dynamicModelSetsByProvider, set
 }
 
 function loadProviderModelCachesFromStorage({ state, dynamicModelSetsByProvider, getPersistedJSON }) {
-    const refreshableProviderIds = ["ollama_local", "ollama_cloud", "openai", "anthropic", "groq", "gemini", "huggingface", "openrouter"];
+    const refreshableProviderIds = ["ollama_local", "ollama_cloud", "chatgpt_plan", "openai", "anthropic", "groq", "gemini", "huggingface", "openrouter"];
     refreshableProviderIds.forEach((providerId) => {
         const entry = loadProviderModelCacheEntry(providerId, { getPersistedJSON });
         if (!entry) return;
@@ -942,6 +943,21 @@ async function discoverModelsForProvider(providerId, {
             return providerId === "ollama_cloud" ? name.endsWith("-cloud") : !name.endsWith("-cloud");
         });
         return filtered.map((id) => ({ id, label: id }));
+    }
+
+    if (providerId === "chatgpt_plan") {
+        const payload = await fetchModelDiscoveryJson(
+            "/pipeline_control/chatgpt/models",
+            {},
+            fetchImpl,
+            requestTimeoutMs
+        );
+        const models = Array.isArray(payload?.models) ? payload.models : [];
+        return models.map((entry) => {
+            const id = String(entry?.id || "").trim();
+            const label = String(entry?.label || id).trim();
+            return { id, label };
+        }).filter((entry) => entry.id);
     }
 
     if (providerId === "openai") {

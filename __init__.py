@@ -172,11 +172,27 @@ try:
     from aiohttp import web
     from server import PromptServer
 
+    from .chatgpt_plan import ChatGPTPlanError, ChatGPTPlanService
     from .utils.styler_core import (
         build_style_catalog,
         build_style_index,
         styler_data,
     )
+
+    chatgpt_plan_service = ChatGPTPlanService()
+
+    def _chatgpt_plan_error_response(error):
+        status = error.status if isinstance(error, ChatGPTPlanError) else 500
+        message = str(error) if isinstance(error, ChatGPTPlanError) else "ChatGPT plan request failed."
+        headers = {}
+        retry_after = getattr(error, "retry_after", None)
+        if retry_after:
+            headers["Retry-After"] = str(retry_after)
+        return web.json_response(
+            {"error": {"message": message}},
+            status=status,
+            headers=headers,
+        )
 
     @PromptServer.instance.routes.get("/pipeline_control/styles")
     async def get_style_index(request):
@@ -212,6 +228,53 @@ try:
         except Exception:
             pass
         return web.json_response({"name": name, "version": version})
+
+    @PromptServer.instance.routes.get("/pipeline_control/chatgpt/status")
+    async def get_chatgpt_plan_status(request):
+        return web.json_response(chatgpt_plan_service.status())
+
+    @PromptServer.instance.routes.post("/pipeline_control/chatgpt/login")
+    async def start_chatgpt_plan_login(request):
+        try:
+            result = await chatgpt_plan_service.start_login()
+            return web.json_response(result)
+        except Exception as error:
+            return _chatgpt_plan_error_response(error)
+
+    @PromptServer.instance.routes.get("/pipeline_control/chatgpt/callback")
+    async def complete_chatgpt_plan_login(request):
+        return await chatgpt_plan_service.callback_response(request.query)
+
+    @PromptServer.instance.routes.post("/pipeline_control/chatgpt/logout")
+    async def disconnect_chatgpt_plan(request):
+        try:
+            result = await chatgpt_plan_service.logout()
+            return web.json_response(result)
+        except Exception as error:
+            return _chatgpt_plan_error_response(error)
+
+    @PromptServer.instance.routes.get("/pipeline_control/chatgpt/models")
+    async def get_chatgpt_plan_models(request):
+        try:
+            result = await chatgpt_plan_service.list_models()
+            return web.json_response(result)
+        except Exception as error:
+            return _chatgpt_plan_error_response(error)
+
+    @PromptServer.instance.routes.post("/pipeline_control/chatgpt/responses")
+    async def create_chatgpt_plan_response(request):
+        try:
+            payload = await request.json()
+            if not isinstance(payload, dict):
+                raise ChatGPTPlanError("Request body must be a JSON object.", 400)
+            result = await chatgpt_plan_service.create_response(payload)
+            return web.json_response(result)
+        except json.JSONDecodeError:
+            return _chatgpt_plan_error_response(
+                ChatGPTPlanError("Request body must contain valid JSON.", 400)
+            )
+        except Exception as error:
+            return _chatgpt_plan_error_response(error)
 
     @PromptServer.instance.routes.get("/pipeline_control/locales/{lang}/ui.json")
     async def get_pipeline_control_ui_locale(request):

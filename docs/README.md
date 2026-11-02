@@ -3,7 +3,7 @@
 </h4>
 
 <p align="center">
-  <img alt="Version" src="https://img.shields.io/github/v/tag/andreszs/comfyui-styler-pipeline?label=version" />
+  <img alt="Version" src="https://img.shields.io/github/v/tag/andreszs/comfyui-styler-pipeline?label=version&amp;v=1.1.0" />
   <img alt="Last Commit" src="https://img.shields.io/github/last-commit/andreszs/comfyui-styler-pipeline" />
   <img alt="License" src="https://img.shields.io/github/license/andreszs/comfyui-styler-pipeline" />
 </p>
@@ -33,7 +33,7 @@
 ## Features
 
 - Deterministic styler-pipeline nodes designed to stay reproducible across runs.
-- AI-assisted style selection that queries an LLM by category and returns ranked style candidates with scores.
+- AI-assisted style selection that queries an LLM by category and returns ranked style candidates with scores, with **ChatGPT Plan** recommended for the easiest setup.
 - Manual style browsing and selection through the Browser workflow with category navigation.
 - Per-category `Randomize` mode in Browse to choose a different style from selected categories on each workflow run.
 - Dynamic Styler that applies style safely to existing conditioning.
@@ -96,7 +96,7 @@ If a model is resistant, increasing `strength` can help. But beyond a point, it 
 
 **AI Styler module:**
 Describe the look you want, and **AI Styler** asks an LLM to automatically suggest the best matching styles by category.
-It supports major API providers (OpenAI, Anthropic, Groq, Gemini, Hugging Face), and it also supports **Ollama (Local)** so you can run in offline/no-internet environments.
+The recommended provider is **ChatGPT Plan**, which connects through your browser without requiring an API key. AI Styler also supports major API providers (OpenAI, Anthropic, Groq, Gemini, Hugging Face) and **Ollama (Local)** for offline/no-internet environments.
 In the image below, you are looking at the **AI Styler tab** opened from **Edit**, where prompt-driven suggestions are generated and applied.
 
 ![AI Styler module tab](../locales/en/styler_pipeline_ai_styler_module.png)
@@ -187,6 +187,19 @@ Classic menu-based styler with direct dropdowns for each JSON category.
 ## LLM Setup
 
 AI Styler uses the Provider and Model you choose in the UI. Open **Edit** and use the **AI Styler** tab to select a `Provider` first, then select a `Model` for that provider.
+
+### ChatGPT Plan (Recommended)
+
+**ChatGPT Plan is the recommended provider because it is the easiest to configure:** there is no API key to create, copy, or paste. It connects AI Styler to your eligible ChatGPT plan through a browser sign-in.
+
+1. Select **ChatGPT Plan** in the `Provider` dropdown.
+2. Click **Continue with ChatGPT** and authorize Styler Pipeline in the browser window.
+3. Return to ComfyUI. AI Styler detects the connected account and loads the models available to your plan.
+4. Select a model, describe the look you want in any language, and click **Query**.
+
+Use **Manage usage** to review plan usage or **Disconnect** to remove the local connection. Available models and usage limits depend on your ChatGPT plan.
+
+![AI Styler using the recommended ChatGPT Plan provider](../assets/ai-styler-chatgpt-plan.png)
 
 ### Cloud API providers
 

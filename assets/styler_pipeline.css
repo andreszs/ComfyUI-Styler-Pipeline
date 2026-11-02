@@ -744,6 +744,7 @@
 }
 
 /* ---- Provider API key / token wrappers (hidden by default) ---- */
+.dsp-styler-modal .dsp-ai-presets-chatgpt-plan-wrap,
 .dsp-styler-modal .dsp-ai-presets-openai-key-wrap,
 .dsp-styler-modal .dsp-ai-presets-anthropic-key-wrap,
 .dsp-styler-modal .dsp-ai-presets-groq-key-wrap,
@@ -758,6 +759,7 @@
 }
 
 /* ---- Provider API key input rows ---- */
+.dsp-styler-modal .dsp-ai-presets-chatgpt-plan-row,
 .dsp-styler-modal .dsp-ai-presets-openai-key-row,
 .dsp-styler-modal .dsp-ai-presets-anthropic-key-row,
 .dsp-styler-modal .dsp-ai-presets-groq-key-row,
@@ -769,6 +771,76 @@
     align-items: center;
     min-width: 0;
     width: 100%;
+}
+
+.dsp-styler-modal .dsp-ai-presets-chatgpt-plan-row {
+    width: max-content;
+    max-width: 100%;
+    height: 30px;
+    min-height: 30px;
+    padding: 2px 4px;
+    gap: 5px;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    border: 1px solid color-mix(in srgb, var(--styler-border) 78%, transparent);
+    border-radius: var(--styler-card-radius);
+    background: color-mix(in srgb, var(--styler-input-bg) 78%, transparent);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+.dsp-styler-modal .dsp-ai-presets-chatgpt-plan-account {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 1 auto;
+    min-width: 18px;
+    max-width: 120px;
+    padding: 0 3px;
+    color: var(--styler-text-muted);
+    font-size: 11px;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dsp-styler-modal .dsp-ai-presets-chatgpt-plan-account.is-connected {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    min-width: 18px;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid rgba(66, 165, 245, 0.65);
+    border-radius: 50%;
+    background: rgba(33, 150, 243, 0.16);
+    cursor: help;
+}
+
+.dsp-styler-modal .dsp-ai-presets-chatgpt-plan-account.is-connected::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #42a5f5;
+    transform: translateX(-50%);
+}
+
+.dsp-styler-modal .dsp-ai-presets-chatgpt-plan-account.is-connected::after {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    width: 9px;
+    height: 5px;
+    border-radius: 5px 5px 2px 2px;
+    background: #42a5f5;
+    transform: translateX(-50%);
 }
 
 /* ---- Provider helper wrap (hidden by default) ---- */
@@ -828,6 +900,42 @@
 
 .dsp-styler-modal .dsp-ai-presets-prompt-input-wrap {
     flex: 1 1 auto;
+}
+
+.dsp-styler-modal .dsp-ai-presets-prompt-label-group {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    min-width: 0;
+}
+
+.dsp-styler-modal .dsp-ai-presets-language-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    flex: 0 0 auto;
+    min-width: 0;
+    padding: 2px 6px;
+    border: 1px solid rgba(66, 165, 245, 0.52);
+    border-radius: 999px;
+    background: rgba(33, 150, 243, 0.13);
+    color: #64b5f6;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.1;
+    white-space: nowrap;
+    cursor: help;
+}
+
+.dsp-styler-modal .dsp-ai-presets-language-badge svg {
+    width: 12px;
+    height: 12px;
+    flex: 0 0 12px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .dsp-styler-modal .dsp-ai-presets-prompt-actions-row {
@@ -1954,6 +2062,7 @@
 .dsp-styler-modal .dsp-ai-presets-inline-error.is-hidden,
 .dsp-styler-modal .dsp-ai-presets-inline-warning.is-hidden,
 .dsp-styler-modal .dsp-ai-presets-provider-helper-wrap.is-hidden,
+.dsp-styler-modal .dsp-ai-presets-chatgpt-plan-wrap.is-hidden,
 .dsp-styler-modal .dsp-ai-presets-openai-key-wrap.is-hidden,
 .dsp-styler-modal .dsp-ai-presets-anthropic-key-wrap.is-hidden,
 .dsp-styler-modal .dsp-ai-presets-groq-key-wrap.is-hidden,
@@ -1964,6 +2073,7 @@
     display: none !important;
 }
 
+.dsp-styler-modal .dsp-ai-presets-chatgpt-plan-wrap:not(.is-hidden),
 .dsp-styler-modal .dsp-ai-presets-openai-key-wrap:not(.is-hidden),
 .dsp-styler-modal .dsp-ai-presets-anthropic-key-wrap:not(.is-hidden),
 .dsp-styler-modal .dsp-ai-presets-groq-key-wrap:not(.is-hidden),

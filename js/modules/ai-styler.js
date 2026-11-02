@@ -74,6 +74,7 @@ const AI_PRESETS_README_PROMPT_ANCHOR = "#writing-a-good-prompt-for-ai-presets-s
 const AI_PRESETS_SCROLLBAR_STYLE_ID = "dsp-ai-presets-category-list-scrollbar-style";
 const AI_PRESETS_STATUS_BAR_FONT_SIZE = "11px";
 const AI_PRESETS_QUERYING_ROW_BG = "rgba(0, 122, 255, 0.08)";
+const CHATGPT_PLAN_USAGE_URL = "https://chatgpt.com/settings/usage";
 
 const PROVIDER_API_KEY_URLS = {
     openai: "https://platform.openai.com/docs/overview",
@@ -90,7 +91,7 @@ const PERSIST_KEY_MODEL = "ai_presets.last_model";
 const PERSIST_KEY_MODEL_BY_PROVIDER = "ai_presets.last_model_by_provider";
 const PERSIST_KEY_HF_CUSTOM_MODEL = "ai_presets.hf_custom_model";
 const PERSIST_KEY_REQUEST_TIMEOUT_SECONDS = "ai_presets.request_timeout_seconds";
-const DEFAULT_REQUEST_TIMEOUT_SECONDS = 25;
+const DEFAULT_REQUEST_TIMEOUT_SECONDS = 30;
 const MODEL_CACHE_KEY_PREFIX = "dsp_llm_models_cache:";
 const HUGGINGFACE_CUSTOM_MODEL_OPTION_ID = "__hf_custom_model__";
 const RATE_LIMIT_FALLBACK_SECONDS = 10;
@@ -108,6 +109,7 @@ const OPENAI_MODEL_OPTIONS = [
     "gpt-5-mini",
 ];
 const OPENAI_MODEL_SET = new Set(OPENAI_MODEL_OPTIONS);
+const CHATGPT_PLAN_MODEL_SET = new Set();
 const OPENAI_STYLER_EXCLUDED_TOKENS = [
     "dall-e",
     "gpt-image",
@@ -435,7 +437,7 @@ function getProviderOptionIdForModel(modelName) {
 }
 
 function getApiProviderForProviderOption(providerId) {
-    if (providerId === "openai" || providerId === "anthropic" || providerId === "groq" || providerId === "gemini" || providerId === "huggingface" || providerId === "openrouter") {
+    if (providerId === "chatgpt_plan" || providerId === "openai" || providerId === "anthropic" || providerId === "groq" || providerId === "gemini" || providerId === "huggingface" || providerId === "openrouter") {
         return providerId;
     }
     return "ollama";
@@ -596,6 +598,17 @@ function buildAiPresetsHtml() {
                                 </div>
                                 <div class="dsp-ai-presets-token-col csp-form-col">
                                     <button class="dsp-btn csp-small-btn dsp-ai-presets-get-ollama" type="button" title="${t("ai_styler.btn.get_ollama.title")}" aria-label="${t("ai_styler.btn.get_ollama.label")}">${t("ai_styler.btn.get_ollama.label")}</button>
+                                    <div class="dsp-ai-presets-chatgpt-plan-wrap is-hidden">
+                                        <div class="dsp-ai-presets-key-label-row">
+                                            <span class="dsp-ai-presets-label">${t("ai_styler.chatgpt_plan.label")}</span>
+                                        </div>
+                                        <div class="dsp-ai-presets-chatgpt-plan-row">
+                                            <span class="dsp-ai-presets-chatgpt-plan-account"></span>
+                                            <button class="dsp-btn csp-small-btn dsp-ai-presets-chatgpt-connect" type="button">${t("ai_styler.chatgpt_plan.connect")}</button>
+                                            <button class="dsp-btn csp-small-btn dsp-ai-presets-chatgpt-disconnect is-hidden" type="button">${t("ai_styler.chatgpt_plan.disconnect")}</button>
+                                            <button class="dsp-btn csp-small-btn dsp-ai-presets-chatgpt-usage" type="button">${t("ai_styler.chatgpt_plan.manage_usage")}</button>
+                                        </div>
+                                    </div>
                                     <div class="dsp-ai-presets-openai-key-wrap is-hidden">
                                         <div class="dsp-ai-presets-key-label-row">
                                             <label class="dsp-ai-presets-label" for="dsp-ai-presets-openai-key">${t("ai_styler.openai.key.label")}</label>
@@ -655,7 +668,7 @@ function buildAiPresetsHtml() {
                                     <div class="dsp-ai-presets-select-header dsp-ai-presets-timeout-header">
                                         <label class="dsp-ai-presets-label dsp-ai-presets-col-label" for="dsp-ai-presets-timeout">${t("ai_styler.timeout.label")}</label>
                                     </div>
-                                    <input type="number" id="dsp-ai-presets-timeout" class="dsp-ai-presets-timeout-input csp-form-control csp-form-control--number" value="25" min="1" step="1" inputmode="numeric" aria-label="${t("ai_styler.timeout.aria_label")}" title="${t("ai_styler.timeout.title")}" />
+                                    <input type="number" id="dsp-ai-presets-timeout" class="dsp-ai-presets-timeout-input csp-form-control csp-form-control--number" value="30" min="1" step="1" inputmode="numeric" aria-label="${t("ai_styler.timeout.aria_label")}" title="${t("ai_styler.timeout.title")}" />
                                 </div>
                             </div>
                             <div class="dsp-ai-presets-model-row-badges">
@@ -687,7 +700,16 @@ function buildAiPresetsHtml() {
                             <div class="dsp-ai-presets-prompt-row">
                                 <div class="dsp-ai-presets-prompt-input-wrap csp-form-col">
                                     <div class="dsp-ai-presets-label-row">
-                                        <label class="dsp-ai-presets-label" for="dsp-ai-presets-prompt">${t("ai_styler.prompt.label")}</label>
+                                        <div class="dsp-ai-presets-prompt-label-group">
+                                            <label class="dsp-ai-presets-label" for="dsp-ai-presets-prompt">${t("ai_styler.prompt.label")}</label>
+                                            <span class="dsp-ai-presets-language-badge" role="note" title="${t("ai_styler.prompt.any_language.tooltip")}" aria-label="${t("ai_styler.prompt.any_language.tooltip")}">
+                                                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                                    <circle cx="12" cy="12" r="9"></circle>
+                                                    <path d="M3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9S14.5 18.5 12 21M12 3C9.5 5.5 8.2 8.5 8.2 12S9.5 18.5 12 21"></path>
+                                                </svg>
+                                                <span>${t("ai_styler.prompt.any_language.label")}</span>
+                                            </span>
+                                        </div>
                                         <div class="dsp-ai-presets-prompt-actions-row">
                                             <button class="dsp-btn csp-small-btn dsp-ai-presets-randomize" type="button" title="${randomizePromptLabel}" aria-label="${randomizePromptLabel}">${randomizePromptLabel}</button>
                                             <button class="dsp-ai-presets-help-btn dsp-btn dsp-btn-icon csp-small-btn csp-small-btn--icon" type="button" data-ai-presets-help="prompt" title="${t("ai_styler.btn.prompt_help.title")}" aria-label="${t("ai_styler.btn.prompt_help.aria_label")}">${t("ai_styler.btn.prompt_help.text")}</button>
@@ -1053,6 +1075,11 @@ function initAiPresets(container, manager) {
     const providerBadge = container.querySelector(".dsp-ai-presets-provider-badge");
     const providerPricingBadge = container.querySelector(".dsp-ai-presets-provider-pricing-badge");
     const warningBadge = container.querySelector(".dsp-ai-presets-model-warning-badge");
+    const chatgptPlanWrap = container.querySelector(".dsp-ai-presets-chatgpt-plan-wrap");
+    const chatgptPlanAccount = container.querySelector(".dsp-ai-presets-chatgpt-plan-account");
+    const chatgptPlanConnectBtn = container.querySelector(".dsp-ai-presets-chatgpt-connect");
+    const chatgptPlanDisconnectBtn = container.querySelector(".dsp-ai-presets-chatgpt-disconnect");
+    const chatgptPlanUsageBtn = container.querySelector(".dsp-ai-presets-chatgpt-usage");
     const openaiKeyWrap = container.querySelector(".dsp-ai-presets-openai-key-wrap");
     const openaiKeyRow = container.querySelector(".dsp-ai-presets-openai-key-row");
     const openaiKeyInput = container.querySelector("#dsp-ai-presets-openai-key");
@@ -1084,6 +1111,7 @@ function initAiPresets(container, manager) {
     const promptClearBtn = container.querySelector(".dsp-ai-presets-prompt-clear");
     const inlineErrorLabel = container.querySelector(".dsp-ai-presets-inline-error");
     const inlineWarningLabel = container.querySelector(".dsp-ai-presets-inline-warning");
+    const inlineWarningBody = container.querySelector(".dsp-ai-presets-inline-warning-body");
     const modelHelpBtn = container.querySelector('[data-ai-presets-help="model"]');
     const promptHelpBtn = container.querySelector('[data-ai-presets-help="prompt"]');
     const randomizePromptBtn = container.querySelector(".dsp-ai-presets-randomize");
@@ -1096,7 +1124,7 @@ function initAiPresets(container, manager) {
     const suggestionsContent = container.querySelector(".dsp-ai-presets-suggestions-content");
     const statusBar = container.querySelector(".dsp-ai-presets-status-bar");
 
-    if (!categoryList || !providerSelect || !modelSelect || !timeoutInput || !modelRefreshBtn || !getOllamaBtn || !providerHelperWrap || !getApiKeyBtn || !saveTokenBtn || !tokenSaveTarget || !tokenSaveForm || !tokenSaveUsernameInput || !tokenSavePasswordInput || !modelStatus || !providerBadge || !providerPricingBadge || !openaiKeyWrap || !openaiKeyRow || !openaiKeyInput || !openaiTestBtn || !anthropicKeyWrap || !anthropicKeyRow || !anthropicKeyInput || !anthropicTestBtn || !groqKeyWrap || !groqKeyRow || !groqKeyInput || !groqTestBtn || !geminiKeyWrap || !geminiKeyRow || !geminiKeyInput || !geminiTestBtn || !hfWrap || !hfTokenRow || !hfTokenInput || !hfTestBtn || !openrouterKeyWrap || !openrouterKeyRow || !openrouterKeyInput || !openrouterTestBtn || !promptInput || !inlineErrorLabel || !inlineWarningLabel || !generateBtn || !applyBtn || !cancelBtn || !selectedCountBadge || !clearAllBtn || !suggestionsHeader || !suggestionsContent || !statusBar) {
+    if (!categoryList || !providerSelect || !modelSelect || !timeoutInput || !modelRefreshBtn || !getOllamaBtn || !providerHelperWrap || !getApiKeyBtn || !saveTokenBtn || !tokenSaveTarget || !tokenSaveForm || !tokenSaveUsernameInput || !tokenSavePasswordInput || !modelStatus || !providerBadge || !providerPricingBadge || !chatgptPlanWrap || !chatgptPlanAccount || !chatgptPlanConnectBtn || !chatgptPlanDisconnectBtn || !chatgptPlanUsageBtn || !openaiKeyWrap || !openaiKeyRow || !openaiKeyInput || !openaiTestBtn || !anthropicKeyWrap || !anthropicKeyRow || !anthropicKeyInput || !anthropicTestBtn || !groqKeyWrap || !groqKeyRow || !groqKeyInput || !groqTestBtn || !geminiKeyWrap || !geminiKeyRow || !geminiKeyInput || !geminiTestBtn || !hfWrap || !hfTokenRow || !hfTokenInput || !hfTestBtn || !openrouterKeyWrap || !openrouterKeyRow || !openrouterKeyInput || !openrouterTestBtn || !promptInput || !inlineErrorLabel || !inlineWarningLabel || !inlineWarningBody || !generateBtn || !applyBtn || !cancelBtn || !selectedCountBadge || !clearAllBtn || !suggestionsHeader || !suggestionsContent || !statusBar) {
         console.error("[AI Presets] Missing required elements");
         return;
     }
@@ -1111,6 +1139,7 @@ function initAiPresets(container, manager) {
     let disposeHeaderRefineMenu = null;
     let disposeHeaderAddMenu = null;
     let headerRefineBtn = null;
+    let chatgptPlanPollTimer = null;
     const nodePromptBindings = {
         getLastLLMPrompt: null,
         setLastLLMPrompt: null,
@@ -1143,6 +1172,9 @@ function initAiPresets(container, manager) {
         models: [],
         providerModelCache: {},
         openAiStylerCatalog: null,
+        chatgptPlanConnected: false,
+        chatgptPlanEmail: "",
+        chatgptPlanChecking: true,
         groqStylerCatalog: null,
         geminiStylerCatalog: null,
         selectedProvider: initialProviderSelection,
@@ -1999,6 +2031,17 @@ function initAiPresets(container, manager) {
         return selectedModelId.toLowerCase() !== String(RECOMMENDED_LOCAL_MODEL).toLowerCase();
     }
 
+    function shouldShowOllamaTimeoutWarning() {
+        const selectedProviderId = String(
+            state.selectedProvider
+            || providerSelect.value
+            || getProviderOptionIdForModel(state.selectedModel)
+            || ""
+        ).trim();
+        if (selectedProviderId !== "ollama_local") return false;
+        return normalizeRequestTimeoutSeconds(timeoutInput.value) < 90;
+    }
+
     function updateSetupNotices() {
         const nextText = String(state.inlinePromptErrorText || "").trim();
         if (nextText) {
@@ -2009,9 +2052,18 @@ function initAiPresets(container, manager) {
             inlineErrorLabel.classList.add("is-hidden");
         }
 
+        const warningMessages = [];
         if (shouldShowOllamaRecommendedModelWarning()) {
+            warningMessages.push(t("ai_styler.warning.ollama_recommended_model"));
+        }
+        if (shouldShowOllamaTimeoutWarning()) {
+            warningMessages.push(t("ai_styler.warning.ollama_timeout_recommendation"));
+        }
+        if (warningMessages.length > 0) {
+            inlineWarningBody.textContent = warningMessages.join(" ");
             inlineWarningLabel.classList.remove("is-hidden");
         } else {
+            inlineWarningBody.textContent = "";
             inlineWarningLabel.classList.add("is-hidden");
         }
     }
@@ -2212,6 +2264,7 @@ function initAiPresets(container, manager) {
         const raw = String(text || "").trim();
         if (!raw) return t("ai_styler.chip_status.network_error");
         if (/^cancelled$/i.test(raw)) return t("ai_styler.chip_status.cancelled");
+        if (/timeout|timed out/i.test(raw)) return t("ai_styler.status_icon.timeout");
         const match = raw.match(/\bHTTP\s+(\d{3})\b/i) || raw.match(/\b(\d{3})\b/);
         if (match) return t("ai_styler.chip_status.http_error", { code: match[1] });
         return t("ai_styler.chip_status.network_error");
@@ -2219,11 +2272,25 @@ function initAiPresets(container, manager) {
 
     function normalizeLlmRequestFailure(err, { provider = "ollama", modelName = "", fallbackInlineText = "" } = {}) {
         const statusCode = getLlmErrorStatusCode(err);
-        const statusTextForChip = statusCode ? toChipStatusText(`HTTP ${statusCode}`) : t("ai_styler.chip_status.network_error");
+        const rawErrorMessage = typeof err?.message === "string" ? err.message : String(err || "");
+        const isTimeout = err?.name === "RequestTimeoutError" || /timeout|timed out/i.test(rawErrorMessage);
+        const statusTextForChip = statusCode
+            ? toChipStatusText(`HTTP ${statusCode}`)
+            : isTimeout
+                ? t("ai_styler.status_icon.timeout")
+                : t("ai_styler.chip_status.network_error");
         const modelLabel = String(modelName || "").trim() || "(model)";
 
         let inlineErrorText = "";
-        if (typeof err?.detail === "string" && err.detail.trim()) {
+        if (isTimeout) {
+            const timeoutMs = Number(err?.timeoutMs);
+            const timeoutSeconds = Number.isFinite(timeoutMs) && timeoutMs > 0
+                ? Math.max(1, Math.round(timeoutMs / 1000))
+                : normalizeRequestTimeoutSeconds(timeoutInput.value);
+            inlineErrorText = t("ai_styler.error.request_timeout", {
+                seconds: timeoutSeconds,
+            });
+        } else if (typeof err?.detail === "string" && err.detail.trim()) {
             inlineErrorText = err.detail.trim();
         } else if (typeof err?.message === "string" && err.message.trim()) {
             inlineErrorText = err.message.trim().replace(/^HTTP\s+\d{3}\s*:\s*/i, "");
@@ -2312,6 +2379,7 @@ function initAiPresets(container, manager) {
         if (persist) {
             setPersistedSetting(PERSIST_KEY_REQUEST_TIMEOUT_SECONDS, normalized);
         }
+        updateSetupNotices();
         return normalized;
     }
 
@@ -2329,7 +2397,10 @@ function initAiPresets(container, manager) {
             state.selectedModel = liveModel;
         }
         if (state.selectedModel) {
-            const providerOption = getProviderOptionIdForModel(state.selectedModel);
+            const liveProviderOption = String(providerSelect?.value || state.selectedProvider || "").trim();
+            const providerOption = liveProviderOption === "chatgpt_plan"
+                ? liveProviderOption
+                : getProviderOptionIdForModel(state.selectedModel);
             if (providerOption) {
                 state.selectedProvider = providerOption;
                 state.lastSelectedModelByProvider[providerOption] = state.selectedModel;
@@ -2379,11 +2450,15 @@ function initAiPresets(container, manager) {
     }
 
     function getCurrentProviderSnapshot(modelName = null) {
+        const selectedProviderId = String(providerSelect?.value || state.selectedProvider || "").trim();
+        if (selectedProviderId === "chatgpt_plan") {
+            state.selectedProvider = selectedProviderId;
+            return selectedProviderId;
+        }
         const resolvedModel = modelName == null ? getCurrentModelSnapshot() : String(modelName || "").trim();
         if (resolvedModel) {
             return getModelProvider(resolvedModel);
         }
-        const selectedProviderId = String(state.selectedProvider || providerSelect?.value || "").trim();
         return getApiProviderForProviderOption(selectedProviderId);
     }
 
@@ -2629,6 +2704,7 @@ function initAiPresets(container, manager) {
 
     function updateProviderKeyVisibility() {
         const provider = getCurrentProviderSnapshot(state.selectedModel);
+        const isChatGPTPlan = provider === "chatgpt_plan";
         const isOpenAI = provider === "openai";
         const isAnthropic = provider === "anthropic";
         const isGroq = provider === "groq";
@@ -2636,6 +2712,7 @@ function initAiPresets(container, manager) {
         const isHuggingFace = provider === "huggingface";
         const isOpenRouter = provider === "openrouter";
 
+        chatgptPlanWrap.classList.toggle("is-hidden", !isChatGPTPlan);
         openaiKeyWrap.classList.toggle("is-hidden", !isOpenAI);
         anthropicKeyWrap.classList.toggle("is-hidden", !isAnthropic);
         groqKeyWrap.classList.toggle("is-hidden", !isGroq);
@@ -2645,7 +2722,102 @@ function initAiPresets(container, manager) {
         updateProviderHelperButton();
     }
 
+    async function fetchChatGPTPlanJson(url, options = {}) {
+        const response = await fetch(url, options);
+        let payload = null;
+        try {
+            payload = await response.json();
+        } catch {
+            payload = null;
+        }
+        if (!response.ok) {
+            const message = String(payload?.error?.message || payload?.message || `HTTP ${response.status}`).trim();
+            const error = new Error(message);
+            error.status = response.status;
+            throw error;
+        }
+        return payload || {};
+    }
+
+    function updateChatGPTPlanUi() {
+        const checking = !!state.chatgptPlanChecking;
+        const connected = !!state.chatgptPlanConnected;
+        const selected = String(providerSelect.value || state.selectedProvider || "").trim() === "chatgpt_plan";
+        chatgptPlanConnectBtn.classList.toggle("is-hidden", connected);
+        chatgptPlanDisconnectBtn.classList.toggle("is-hidden", !connected);
+        chatgptPlanConnectBtn.disabled = checking || state.isGenerating || !selected;
+        chatgptPlanDisconnectBtn.disabled = checking || state.isGenerating || !selected;
+        chatgptPlanUsageBtn.disabled = state.isGenerating || !selected;
+        chatgptPlanAccount.classList.toggle("is-connected", connected && !checking);
+        if (checking) {
+            chatgptPlanAccount.textContent = t("ai_styler.chatgpt_plan.checking");
+            chatgptPlanAccount.title = "";
+            chatgptPlanAccount.removeAttribute("aria-label");
+        } else if (connected) {
+            const accountLabel = state.chatgptPlanEmail || t("ai_styler.chatgpt_plan.connected");
+            chatgptPlanAccount.textContent = "";
+            chatgptPlanAccount.title = accountLabel;
+            chatgptPlanAccount.setAttribute(
+                "aria-label",
+                t("ai_styler.chatgpt_plan.connected_account", { account: accountLabel })
+            );
+        } else {
+            chatgptPlanAccount.textContent = t("ai_styler.chatgpt_plan.not_connected");
+            chatgptPlanAccount.title = "";
+            chatgptPlanAccount.removeAttribute("aria-label");
+        }
+    }
+
+    async function refreshChatGPTPlanStatus() {
+        state.chatgptPlanChecking = true;
+        updateChatGPTPlanUi();
+        try {
+            const status = await fetchChatGPTPlanJson("/pipeline_control/chatgpt/status");
+            state.chatgptPlanConnected = !!status.connected;
+            state.chatgptPlanEmail = String(status.email || "").trim();
+        } catch (error) {
+            state.chatgptPlanConnected = false;
+            state.chatgptPlanEmail = "";
+            if (String(state.selectedProvider || providerSelect.value || "").trim() === "chatgpt_plan") {
+                showToast("error", t("ai_styler.chatgpt_plan.title"), error.message);
+            }
+        } finally {
+            state.chatgptPlanChecking = false;
+            updateChatGPTPlanUi();
+            updateModelStatus();
+            updateGenerateButton();
+        }
+        return state.chatgptPlanConnected;
+    }
+
+    function stopChatGPTPlanPolling() {
+        if (chatgptPlanPollTimer !== null) {
+            clearTimeout(chatgptPlanPollTimer);
+            chatgptPlanPollTimer = null;
+        }
+    }
+
+    function startChatGPTPlanPolling() {
+        stopChatGPTPlanPolling();
+        const deadline = Date.now() + 180000;
+        const poll = async () => {
+            const connected = await refreshChatGPTPlanStatus();
+            if (connected) {
+                showToast("success", t("ai_styler.chatgpt_plan.title"), t("ai_styler.chatgpt_plan.connected_success"));
+                await refreshModelsForProvider("chatgpt_plan");
+                return;
+            }
+            if (Date.now() < deadline) {
+                chatgptPlanPollTimer = setTimeout(poll, 1500);
+            } else {
+                showToast("warn", t("ai_styler.chatgpt_plan.title"), t("ai_styler.chatgpt_plan.sign_in_timeout"));
+            }
+        };
+        chatgptPlanPollTimer = setTimeout(poll, 1000);
+    }
+
     function getProviderDisplayName(provider) {
+        if (provider === "chatgpt_plan") return t("ai_styler.provider.chatgpt_plan");
         if (provider === "openai") return t("ai_styler.provider.openai");
         if (provider === "anthropic") return t("ai_styler.provider.anthropic");
         if (provider === "groq") return t("ai_styler.provider.groq");
@@ -2656,6 +2828,12 @@ function initAiPresets(container, manager) {
     }
 
     function getProviderCredentialPrompt(provider) {
+        if (provider === "chatgpt_plan") {
+            return {
+                title: t("ai_styler.chatgpt_plan.sign_in_required_title"),
+                message: t("ai_styler.chatgpt_plan.sign_in_required_body"),
+            };
+        }
         if (provider === "huggingface") {
             return {
                 title: t("ai_styler.toast.token_required.title"),
@@ -2669,6 +2847,10 @@ function initAiPresets(container, manager) {
     }
 
     function focusProviderApiKeyInput(provider) {
+        if (provider === "chatgpt_plan") {
+            chatgptPlanConnectBtn.focus();
+            return;
+        }
         if (provider === "openai") {
             openaiKeyInput.focus();
             return;
@@ -3096,7 +3278,7 @@ function initAiPresets(container, manager) {
             showToast("error", t("ai_styler.toast.model_required.title"), t("ai_styler.toast.model_required.body"));
             return;
         }
-        if (isCloudApiProvider(providerAtStart) && !providerApiKeyAtStart) {
+        if ((providerAtStart === "chatgpt_plan" && !state.chatgptPlanConnected) || (isCloudApiProvider(providerAtStart) && !providerApiKeyAtStart)) {
             const credentialPrompt = getProviderCredentialPrompt(providerAtStart);
             showToast("error", credentialPrompt.title, credentialPrompt.message);
             focusProviderApiKeyInput(providerAtStart);
@@ -3250,7 +3432,7 @@ function initAiPresets(container, manager) {
             }
             return;
         }
-        if (isCloudApiProvider(providerAtStart) && !providerApiKeyAtStart) {
+        if ((providerAtStart === "chatgpt_plan" && !state.chatgptPlanConnected) || (isCloudApiProvider(providerAtStart) && !providerApiKeyAtStart)) {
             const credentialPrompt = getProviderCredentialPrompt(providerAtStart);
             showToast("error", credentialPrompt.title, credentialPrompt.message);
             focusProviderApiKeyInput(providerAtStart);
@@ -4948,6 +5130,24 @@ function initAiPresets(container, manager) {
     function updateModelStatus() {
         const currentModel = (state.selectedModel || modelSelect.value || "").trim();
         const provider = getCurrentProviderSnapshot(currentModel);
+        if (provider === "chatgpt_plan") {
+            modelStatus.style.display = "inline-flex";
+            if (state.chatgptPlanChecking) {
+                modelStatus.textContent = t("ai_styler.model_status.connecting");
+                modelStatus.style.background = "rgba(128, 128, 128, 0.15)";
+                modelStatus.style.color = "var(--styler-text-muted)";
+            } else if (state.chatgptPlanConnected) {
+                modelStatus.textContent = t("ai_styler.model_status.ready_caps");
+                modelStatus.style.background = "rgba(76, 175, 80, 0.15)";
+                modelStatus.style.color = "rgb(76, 175, 80)";
+            } else {
+                modelStatus.textContent = t("ai_styler.chatgpt_plan.sign_in_required_status");
+                modelStatus.style.background = "rgba(255, 193, 7, 0.18)";
+                modelStatus.style.color = "#e6a700";
+            }
+            modelStatus.removeAttribute("title");
+            return;
+        }
         if (provider === "openai" || provider === "anthropic" || provider === "groq" || provider === "gemini" || provider === "huggingface") {
             const hasKey = !!getProviderApiKeySnapshot(provider);
             modelStatus.style.display = hasKey ? "inline-flex" : "none";
@@ -4985,6 +5185,9 @@ function initAiPresets(container, manager) {
     }
 
     function getProviderPricingState(providerOptionId) {
+        if (providerOptionId === "chatgpt_plan") {
+            return { label: t("ai_styler.pricing.included_in_plan"), isFreeTier: true };
+        }
         if (providerOptionId === "openai" || providerOptionId === "anthropic") {
             return { label: t("ai_styler.pricing.no_free_tier"), isFreeTier: false };
         }
@@ -5014,7 +5217,9 @@ function initAiPresets(container, manager) {
     function updateProviderBadge() {
         const model = state.selectedModel || "";
         const selectedProviderId = String(state.selectedProvider || providerSelect.value || getProviderOptionIdForModel(model) || "").trim();
-        const resolvedProviderOptionId = String(getProviderOptionIdForModel(model) || selectedProviderId || "").trim();
+        const resolvedProviderOptionId = selectedProviderId === "chatgpt_plan"
+            ? selectedProviderId
+            : String(getProviderOptionIdForModel(model) || selectedProviderId || "").trim();
         updateProviderPricingBadge(resolvedProviderOptionId);
         if (!model) {
             providerBadge.style.display = "none";
@@ -5070,6 +5275,7 @@ function initAiPresets(container, manager) {
         const provider = getCurrentProviderSnapshot(selectedModel);
         const showCancelAction = state.isGenerating || isRefineProcessActive();
         updateSetupNotices();
+        const isChatGPTPlanSelected = provider === "chatgpt_plan";
         const isOpenAISelected = provider === "openai";
         const isAnthropicSelected = provider === "anthropic";
         const isGroqSelected = provider === "groq";
@@ -5098,6 +5304,10 @@ function initAiPresets(container, manager) {
         hfTestBtn.disabled = state.isGenerating || !isHuggingFaceSelected || !providerHasApiKey;
         openrouterKeyInput.disabled = state.isGenerating || !isOpenRouterSelected;
         openrouterTestBtn.disabled = state.isGenerating || !isOpenRouterSelected || !providerHasApiKey;
+        chatgptPlanConnectBtn.disabled = state.isGenerating || state.chatgptPlanChecking || !isChatGPTPlanSelected;
+        chatgptPlanDisconnectBtn.disabled = state.isGenerating || state.chatgptPlanChecking || !isChatGPTPlanSelected;
+        chatgptPlanUsageBtn.disabled = state.isGenerating || !isChatGPTPlanSelected;
+        updateChatGPTPlanUi();
         
         // Update button text and styling based on state
         if (showCancelAction) {
@@ -5196,6 +5406,7 @@ function initAiPresets(container, manager) {
     }
 
     function getProviderOptionDisplayName(providerId) {
+        if (providerId === "chatgpt_plan") return t("ai_styler.provider.chatgpt_plan");
         if (providerId === "openai") return t("ai_styler.provider.openai");
         if (providerId === "anthropic") return t("ai_styler.provider.anthropic");
         if (providerId === "groq") return t("ai_styler.provider.groq");
@@ -5407,6 +5618,7 @@ function initAiPresets(container, manager) {
 
     function registerDynamicProviderModels(providerId, models) {
         const targetSet = {
+            chatgpt_plan: CHATGPT_PLAN_MODEL_SET,
             openai: OPENAI_MODEL_SET,
             anthropic: ANTHROPIC_MODEL_SET,
             groq: GROQ_MODEL_SET,
@@ -5432,6 +5644,7 @@ function initAiPresets(container, manager) {
             {
                 state,
                 dynamicModelSetsByProvider: {
+                    chatgpt_plan: CHATGPT_PLAN_MODEL_SET,
                     openai: OPENAI_MODEL_SET,
                     anthropic: ANTHROPIC_MODEL_SET,
                     groq: GROQ_MODEL_SET,
@@ -5451,6 +5664,7 @@ function initAiPresets(container, manager) {
         return modelFns.loadProviderModelCachesFromStorage({
             state,
             dynamicModelSetsByProvider: {
+                chatgpt_plan: CHATGPT_PLAN_MODEL_SET,
                 openai: OPENAI_MODEL_SET,
                 anthropic: ANTHROPIC_MODEL_SET,
                 groq: GROQ_MODEL_SET,
@@ -5508,6 +5722,11 @@ function initAiPresets(container, manager) {
     }
 
     async function refreshModelsForProvider(providerId) {
+        if (providerId === "chatgpt_plan" && !state.chatgptPlanConnected) {
+            showToast("warn", t("ai_styler.chatgpt_plan.sign_in_required_title"), t("ai_styler.chatgpt_plan.sign_in_required_body"));
+            chatgptPlanConnectBtn.focus();
+            return;
+        }
         if (!ensureOllamaLocalRunning({ providerOptionId: providerId })) {
             return;
         }
@@ -5515,6 +5734,7 @@ function initAiPresets(container, manager) {
             providerId,
             state,
             dynamicModelSetsByProvider: {
+                chatgpt_plan: CHATGPT_PLAN_MODEL_SET,
                 openai: OPENAI_MODEL_SET,
                 anthropic: ANTHROPIC_MODEL_SET,
                 groq: GROQ_MODEL_SET,
@@ -5600,6 +5820,14 @@ function initAiPresets(container, manager) {
                     cloudModels.map((modelName) => ({ id: modelName, label: modelName }))
                 ),
                 emptyLabel: cloudEmptyLabel,
+            },
+            {
+                id: "chatgpt_plan",
+                label: t("ai_styler.provider.chatgpt_plan"),
+                models: state.chatgptPlanConnected ? getModelsForProvider("chatgpt_plan", []) : [],
+                emptyLabel: state.chatgptPlanConnected
+                    ? t("ai_styler.model_list.no_chatgpt_plan_models")
+                    : t("ai_styler.model_list.chatgpt_plan_sign_in"),
             },
             {
                 id: "openai",
@@ -5692,7 +5920,7 @@ function initAiPresets(container, manager) {
             const id = String(entry?.id || "").trim();
             if (!id || seenAvailableModelIds.has(id)) return;
             seenAvailableModelIds.add(id);
-            uniqueAvailableModels.push({ id, label: id });
+            uniqueAvailableModels.push({ id, label: String(entry?.label || id).trim() });
         });
         availableModels = selectedProviderId === "openrouter"
             ? uniqueAvailableModels
@@ -5812,9 +6040,11 @@ function initAiPresets(container, manager) {
             availableModels.forEach((entry) => {
                 const option = document.createElement("option");
                 option.value = entry.id;
-                option.textContent = selectedProviderId === "huggingface" && isHuggingFaceCustomModelOption(entry.id)
-                    ? (entry.label || getHuggingFaceCustomModelOptionLabel())
-                    : entry.id;
+                option.textContent = selectedProviderId === "chatgpt_plan"
+                    ? (entry.label || entry.id)
+                    : selectedProviderId === "huggingface" && isHuggingFaceCustomModelOption(entry.id)
+                        ? (entry.label || getHuggingFaceCustomModelOptionLabel())
+                        : entry.id;
                 modelSelect.appendChild(option);
             });
             if (selectedProviderId === "openrouter") {
@@ -6388,6 +6618,82 @@ function initAiPresets(container, manager) {
         });
     }
 
+    chatgptPlanConnectBtn.addEventListener("click", async () => {
+        persistLastUsedProviderModel("chatgpt_plan", String(state.selectedModel || modelSelect.value || "").trim());
+        state.chatgptPlanChecking = true;
+        updateChatGPTPlanUi();
+        const authWindow = window.open(
+            "about:blank",
+            "dsp-chatgpt-plan-auth",
+            "popup=yes,width=620,height=760,resizable=yes,scrollbars=yes"
+        );
+        try {
+            const result = await fetchChatGPTPlanJson("/pipeline_control/chatgpt/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: "{}",
+            });
+            const authorizationUrl = String(result.authorization_url || "").trim();
+            if (!authorizationUrl.startsWith("https://auth.openai.com/")) {
+                throw new Error(t("ai_styler.chatgpt_plan.invalid_authorization_url"));
+            }
+            if (authWindow) {
+                authWindow.location.replace(authorizationUrl);
+                startChatGPTPlanPolling();
+            } else {
+                showToast("warn", t("ai_styler.chatgpt_plan.title"), t("ai_styler.chatgpt_plan.popup_blocked"));
+            }
+        } catch (error) {
+            try {
+                authWindow?.close();
+            } catch {
+                // Ignore popup cleanup failures.
+            }
+            showToast("error", t("ai_styler.chatgpt_plan.title"), error.message);
+        } finally {
+            state.chatgptPlanChecking = false;
+            updateChatGPTPlanUi();
+            updateModelStatus();
+        }
+    });
+
+    chatgptPlanDisconnectBtn.addEventListener("click", async () => {
+        const confirmed = await showConfirm(
+            t("ai_styler.chatgpt_plan.disconnect_title"),
+            t("ai_styler.chatgpt_plan.disconnect_confirm"),
+            { type: "default" }
+        );
+        if (!confirmed) return;
+        stopChatGPTPlanPolling();
+        state.chatgptPlanChecking = true;
+        updateChatGPTPlanUi();
+        try {
+            await fetchChatGPTPlanJson("/pipeline_control/chatgpt/logout", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: "{}",
+            });
+            state.chatgptPlanConnected = false;
+            state.chatgptPlanEmail = "";
+            delete state.providerModelCache.chatgpt_plan;
+            CHATGPT_PLAN_MODEL_SET.clear();
+            setPersistedJSON(getProviderModelCacheStorageKey("chatgpt_plan"), undefined);
+            populateModelSelect("chatgpt_plan");
+            showToast("success", t("ai_styler.chatgpt_plan.title"), t("ai_styler.chatgpt_plan.disconnected_success"));
+        } catch (error) {
+            showToast("error", t("ai_styler.chatgpt_plan.title"), error.message);
+        } finally {
+            state.chatgptPlanChecking = false;
+            updateChatGPTPlanUi();
+            updateModelStatus();
+            updateGenerateButton();
+        }
+    });
+
+    chatgptPlanUsageBtn.addEventListener("click", () => {
+        window.open(CHATGPT_PLAN_USAGE_URL, "_blank", "noopener,noreferrer");
+    });
+
     openaiKeyInput.addEventListener("input", () => {
         state.openaiApiKey = (openaiKeyInput.value || "").trim();
         updateModelStatus();
@@ -6834,7 +7140,7 @@ function initAiPresets(container, manager) {
             return;
         }
 
-        if (isCloudApiProvider(providerAtStart) && !providerApiKeyAtStart) {
+        if ((providerAtStart === "chatgpt_plan" && !state.chatgptPlanConnected) || (isCloudApiProvider(providerAtStart) && !providerApiKeyAtStart)) {
             const credentialPrompt = getProviderCredentialPrompt(providerAtStart);
             showToast("error", credentialPrompt.title, credentialPrompt.message);
             focusProviderApiKeyInput(providerAtStart);
@@ -7220,6 +7526,7 @@ function initAiPresets(container, manager) {
 
     renderCategoryList();
     populateModelSelect();
+    updateChatGPTPlanUi();
     updateModelRefreshButtonState();
     updateModelStatus();
     updateGenerateButton();
@@ -7247,12 +7554,14 @@ function initAiPresets(container, manager) {
         moduleDef._setNodePromptBindings = setNodePromptStateBindings;
         moduleDef._applyPersistedPrompt = () => applyPersistedPromptToInput();
         moduleDef._refreshPlaceholder = () => refreshPromptPlaceholder(promptInput);
+        moduleDef._refreshChatGPTPlanStatus = () => refreshChatGPTPlanStatus();
         moduleDef._updateTabActivityIndicator = updateTabActivityIndicator;
         moduleDef._shouldRefreshModelsOnTabActivate = shouldRefreshModelsOnTabActivate;
     }
 
     applyPersistedPromptToInput();
     void refreshPromptPlaceholder(promptInput);
+    void refreshChatGPTPlanStatus();
 
     fetchOllamaModels();
 }
@@ -7291,6 +7600,9 @@ registerModule({
 
         if (moduleDef._refreshPlaceholder) {
             await moduleDef._refreshPlaceholder();
+        }
+        if (moduleDef._refreshChatGPTPlanStatus) {
+            await moduleDef._refreshChatGPTPlanStatus();
         }
     },
     onDeactivate: ({ manager }) => {

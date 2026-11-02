@@ -43,6 +43,7 @@ export const OLLAMA_TAGS_URL = "http://127.0.0.1:11434/api/tags";
 export const OLLAMA_CHAT_URL = "http://127.0.0.1:11434/api/chat";
 export const OLLAMA_HEALTH_URL = "http://127.0.0.1:11434";
 export const OPENAI_RESPONSES_URL = "https://api.openai.com/v1/responses";
+export const CHATGPT_PLAN_RESPONSES_URL = "/pipeline_control/chatgpt/responses";
 export const ANTHROPIC_MESSAGES_URL = "https://api.anthropic.com/v1/messages";
 export const GROQ_CHAT_URL = "https://api.groq.com/openai/v1/chat/completions";
 export const GEMINI_GENERATE_CONTENT_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models";
@@ -56,7 +57,7 @@ export const RETRY_MAX_ATTEMPTS = 3;
 export const RETRY_BACKOFF_MS = [0, 1500, 3000]; // indexed by attempt (0-based)
 export const RETRY_JITTER_MAX_MS = 500;
 export const RETRYABLE_HTTP_CODES = new Set([429, 503, 504]);
-export const CATEGORY_REQUEST_TIMEOUT_MS = 25000;
+export const CATEGORY_REQUEST_TIMEOUT_MS = 30000;
 export const LOCAL_QUERY_REQUEST_TIMEOUT_MS = 120000;
 export const REFINE_SCORE_SCHEMA_CORRECTION_MESSAGE = 'Wrong format. Every candidate MUST have a numeric "score" (0.0-1.0). Reply with ONLY the corrected JSON: {"category":"...","candidates":[{"name":"...","score":0.95}]}';
 let ollamaRequestPreflight = null;
@@ -169,8 +170,11 @@ export function getRetryAfterMs(err) {
 }
 
 export function getHttpErrorLabel(err, provider = "ollama") {
-    if ((provider === "openai" || provider === "anthropic" || provider === "groq" || provider === "gemini" || provider === "huggingface" || provider === "openrouter") && err instanceof HttpError) {
+    if ((provider === "chatgpt_plan" || provider === "openai" || provider === "anthropic" || provider === "groq" || provider === "gemini" || provider === "huggingface" || provider === "openrouter") && err instanceof HttpError) {
         if (err.status === 401 || err.status === 403) {
+            if (provider === "chatgpt_plan") {
+                return "ChatGPT plan sign-in required.";
+            }
             return provider === "huggingface"
                 ? "Invalid token or missing access."
                 : "Invalid API key or missing API access.";
@@ -202,13 +206,15 @@ function parseGroqRateLimitWaitMs(errorMessage) {
 
 export function isConnectivityError(err) {
     const raw = (err && err.message) ? err.message : String(err || "");
-    return /HTTP\s\d+|failed to fetch|network|cors|timeout|aborted|No reply content received from (?:Ollama|OpenAI|Anthropic|Groq|Gemini|Hugging Face|OpenRouter)/i.test(raw);
+    return /HTTP\s\d+|failed to fetch|network|cors|timeout|aborted|No reply content received from (?:ChatGPT plan|Ollama|OpenAI|Anthropic|Groq|Gemini|Hugging Face|OpenRouter)/i.test(raw);
 }
 
 export function normalizeConnectivityError(err, provider = "ollama") {
     const raw = (err && err.message) ? err.message : String(err || "Unknown error");
-    const isCloud = provider === "openai" || provider === "anthropic" || provider === "groq" || provider === "gemini" || provider === "huggingface" || provider === "openrouter";
-    const cloudProviderName = provider === "anthropic"
+    const isCloud = provider === "chatgpt_plan" || provider === "openai" || provider === "anthropic" || provider === "groq" || provider === "gemini" || provider === "huggingface" || provider === "openrouter";
+    const cloudProviderName = provider === "chatgpt_plan"
+        ? "ChatGPT plan"
+        : provider === "anthropic"
         ? "Anthropic"
         : provider === "groq"
             ? "Groq"
@@ -1043,6 +1049,48 @@ export async function openaiTestApiKey({
     });
 }
 
+export async function chatgptPlanChat({
+    model,
+    messages,
+    timeoutMs = CATEGORY_REQUEST_TIMEOUT_MS,
+    signal,
+} = {}) {
+    const response = await fetchWithTimeout(
+        CHATGPT_PLAN_RESPONSES_URL,
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                model,
+                messages,
+                timeout_ms: timeoutMs,
+            }),
+            throwOnHttpError: false,
+        },
+        { timeoutMs: timeoutMs + 5000, signal },
+    );
+
+    let data = null;
+    try {
+        data = await response.json();
+    } catch {
+        data = null;
+    }
+    if (!response.ok) {
+        const detail = sanitizeOpenAIErrorMessage(
+            data?.error?.message || data?.message || ""
+        );
+        throw new HttpError(response.status, response.headers, detail);
+    }
+    const replyText = typeof data?.reply_text === "string" ? data.reply_text.trim() : "";
+    if (!replyText) {
+        throw new Error("No reply content received from ChatGPT plan");
+    }
+    return replyText;
+}
+
 function splitAnthropicSystemAndMessages(messages = []) {
     const systemParts = [];
     const outMessages = [];
@@ -1716,6 +1764,9 @@ export async function requestLLM({
     }
     if (provider === "openai") {
         return openaiChat({ apiKey, model, messages, timeoutMs, signal });
+    }
+    if (provider === "chatgpt_plan") {
+        return chatgptPlanChat({ model, messages, timeoutMs, signal });
     }
     if (provider === "anthropic") {
         return anthropicChat({ apiKey, model, messages, timeoutMs, signal });
