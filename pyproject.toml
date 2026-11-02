@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "comfyui-styler-pipeline"
 version = "1.1.0"
 description = "AI-assisted style suggestions and ControlNet/OpenPose-friendly conditioning for ComfyUI."
-readme = "README.md"
+readme = "docs/README.md"
 requires-python = ">=3.10"
 license = { file = "LICENSE" }
 dependencies = []
